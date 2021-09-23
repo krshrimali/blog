@@ -1,0 +1,47 @@
+# We use the generated html to prevent issues involving markdown frontmatter
+
+[[input.files]]
+path = "./posts/2021/08/prefer-deleted-functions-to-private-undefined-ones-notes/index.html"
+url = "https://krshrimali.github.io/posts/2021/08/prefer-deleted-functions-to-private-undefined-ones-notes/"
+title = "Prefer Deleted Functions to Private Undefined Ones (Notes)"
+
+[[input.files]]
+path = "./posts/2021/08/prefer-scoped-enums-over-unscoped-enums-notes/index.html"
+url = "https://krshrimali.github.io/posts/2021/08/prefer-scoped-enums-over-unscoped-enums-notes/"
+title = "Prefer Scoped Enums over Unscoped Enums (Notes)"
+
+[[input.files]]
+path = "./posts/2021/08/union-find-problem-and-a-naive-implementation-c-/index.html"
+url = "https://krshrimali.github.io/posts/2021/08/union-find-problem-and-a-naive-implementation-c-/"
+title = "Union Find Problem, and a naive implementation (C&#43;&#43;)"
+
+[[input.files]]
+path = "./posts/2021/08/prefer-alias-declarations-to-typedefs-notes/index.html"
+url = "https://krshrimali.github.io/posts/2021/08/prefer-alias-declarations-to-typedefs-notes/"
+title = "Prefer Alias Declarations to Typedefs (Notes)"
+
+[[input.files]]
+path = "./posts/2021/07/function-pointers-and-function-objects-in-c-/index.html"
+url = "https://krshrimali.github.io/posts/2021/07/function-pointers-and-function-objects-in-c-/"
+title = "Function Pointers and Function Objects in C&#43;&#43;"
+
+[[input.files]]
+path = "./posts/2020/04/understanding-how-vectors-work-in-c-part-2-what-happens-when-you-initialize-a-vector/index.html"
+url = "https://krshrimali.github.io/posts/2020/04/understanding-how-vectors-work-in-c-part-2-what-happens-when-you-initialize-a-vector/"
+title = "Understanding how Vectors work in C&#43;&#43; (Part-2): What happens when you initialize a vector?"
+
+[[input.files]]
+path = "./posts/2020/04/understanding-how-vectors-work-in-c-part-3-diving-deep-into-member-functions-of-vectors/index.html"
+url = "https://krshrimali.github.io/posts/2020/04/understanding-how-vectors-work-in-c-part-3-diving-deep-into-member-functions-of-vectors/"
+title = "Understanding how Vectors work in C&#43;&#43; (Part-3): Diving deep into member functions of vectors"
+
+[[input.files]]
+path = "./posts/2020/04/understanding-how-vectors-work-in-c-part-1-how-does-push_back-work/index.html"
+url = "https://krshrimali.github.io/posts/2020/04/understanding-how-vectors-work-in-c-part-1-how-does-push_back-work/"
+title = "Understanding how Vectors work in C&#43;&#43; (Part-1): How does push_back work?"
+
+[[input.files]]
+path = "./categories/index.html"
+url = "https://krshrimali.github.io/categories/"
+title = "Categories"
+

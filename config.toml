@@ -3,7 +3,7 @@ title   = "Kushashwa Ravi Shrimali (Kush)"
 
 DefaultContentLanguage = "en"
 
-themesDir = "themes/"
+themesDir = "."
 theme = "hello-friend-ng-hz"
 
 PygmentsCodeFences = true

@@ -1,0 +1,245 @@
+baseURL = "https://krshrimali.github.io"
+title   = "Kushashwa Ravi Shrimali (Kush)"
+
+DefaultContentLanguage = "en"
+
+themesDir = "themes/"
+theme = "hello-friend-ng-hz"
+
+PygmentsCodeFences = true
+PygmentsStyle = "monokai"
+
+rssLimit  = 10  # Maximum number of items in the RSS feed.
+copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
+
+# googleAnalytics = ""
+# disqusShortname = ""
+
+archetypeDir = "archetypes"
+contentDir   = "content"
+dataDir      = "data"
+layoutDir    = "layouts"
+publishDir   = "public"
+
+buildDrafts  = false
+buildFuture  = false
+buildExpored = false
+canonifyURLs = true
+
+enableRobotsTXT = true
+enableGitInfo   = false
+enableEmoji     = true
+enableMissingTranslationPlaceholders = false
+disableRSS     = false
+disableSitemap = false
+disable404     = false
+disableHugoGeneratorInject = false
+
+[permalinks]
+  posts = "/posts/:year/:month/:title/"
+
+[author]
+  name = "Kushashwa Ravi Shrimali"
+
+[blackfriday]
+  hrefTargetBlank = true
+
+[outputFormats]
+[outputFormats.TOML]
+mediaType = "application/toml"
+
+[outputs]
+  home = ["HTML", "RSS", "TOML", "JSON"]
+
+[taxonomies]
+  tag      = "tags"
+  category = "categories"
+  author   = "author"
+  search   = "search"
+
+[params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04 -0700"
+  isTheme = true # ONLY for the exampleSite!!
+  praiseNetlify = false
+
+  # Metadata mostly used in document's head
+  description = "Nice theme for homepages and blogs"
+  keywords = ""
+  images = [""]
+
+  homeSubtitle = "Find some of my profiles below"
+
+  # Prefix of link to the git commit detail page. GitInfo must be enabled.
+  # gitUrl = ""
+
+  # Set disableReadOtherPosts to true in order to hide the links to other posts.
+  disableReadOtherPosts = false
+
+  # Integrate Javascript files or stylesheets by adding the url to the external assets or by
+  # linking local files with their path relative to the static folder, e.g. "css/styles.css"
+  customCSS = []
+  customJS  = []
+
+  # Toggle this option need to rebuild SCSS, requires extended version of Hugo
+  justifyContent = false  # Set "text-align: justify" to .content.
+
+  # Directory name of your blog content (default is `content/posts`)
+  contentTypeName = "posts"
+
+  # Default theme "light" or "dark"
+  defaultTheme = "dark"
+  themeColor = "#252627"
+
+[params.search]
+  enable = true
+  backend = "fuse" # can be stork or fuse
+
+###############
+# Webmentions #
+###############
+# Manually setup webmention.js from here: https://sebastiandedeyne.com/webmentions-on-a-static-site-with-github-actions/
+[params.webmention]
+webmention = "https://webmention.io/example.com/webmention"
+pingback = "https://webmention.io/example.com/xmlrpc"
+
+#############
+# Analytics #
+#############
+   
+  # Alternative to Google Analytics
+  goatCounter = ""
+  # microsoftClarity = ""
+  # Another analytics alternative
+  # clicky = ""
+
+########
+# Code #
+########
+
+  # Syntax highlighting
+  prism = false # Use hugo logic by default
+  # Use codefolding logic
+  codefold = true
+
+[params.liberapay]
+accountID = "rohit"
+
+###################
+# Comment Systems #
+###################
+
+# [params.utterances]
+# issue = "pathname"
+# theme = "photon-dark"
+# repo  ="haozeke/hello-friend-ng-hz"
+# label = "Utterance 💬"
+
+# [params.remarkbox]
+# accountID = "rb_owner_key"
+
+# [params.graphcomments]
+# accountID = "rgoswami"
+
+# [params.commentbox]
+# accountID = "5662446949761024-proj"
+
+# [params.intensedebate]
+# accountID = "03433eb5474ac59759898fb85454590c"
+
+  # Colors for favicons
+  [params.favicon.color]
+    mask = "#252627"
+    msapplication = "#252627"
+    theme = "#252627"
+
+  [params.logo]
+    logoText     = "$ cd /home/"
+    logoHomeLink = "/"
+    # Set true to remove the logo cursor entirely.
+    # logoCursorDisabled = false
+    # Set to a valid CSS color to change the cursor in the logo.
+    # logoCursorColor    = "#67a2c9"
+    # Set to a valid CSS time value to change the animation duration, "0s" to disable.
+    # logoCursorAnimate  = "2s"
+
+  # Social icons
+  [[params.social]]
+    name = "twitter"
+    url  = "https://twitter.com/kushashwa"
+
+  # [[params.social]]
+    # name = "mastodon"
+    # rel  = "me"
+    # url  = "https://mastodon.cloud/@someone"
+
+  [[params.social]]
+    name = "email"
+    url  = "mailto:kushashwaravishrimali@gmail.com"
+
+  [[params.social]]
+    name = "linkedin"
+    url  = "https://www.linkedin.com/in/kushashwa-ravi-shrimali-b6780152/"
+
+  [[params.social]]
+    name = "stackoverflow"
+    url  = "https://stackoverflow.com/users/2218021/kushashwa-ravi-shrimali"
+
+  # [[params.social]]
+    # name = "keybase"
+    # url  = "https://keybase.io/person"
+
+  [[params.social]]
+    name = "github"
+    url  = "https://github.com/krshrimali"
+
+  # [[params.social]]
+    # name = "goodreads"
+    # url  = "https://www.goodreads.com/user/show/userid"
+
+  # [[params.social]]
+    # name = "googlescholar"
+    # url  = "https://scholar.google.co.in/citations?user=USER_ID"
+
+  # [[params.social]]
+    # name = "orcid"
+    # url  = "https://orcid.org/orcid_id"
+
+  # [[params.social]]
+    # name = "publons"
+    # url  = "https://publons.com/researcher/ID"
+
+  # [[params.social]]
+    # name = "calendly"
+    # url  = "https://calendly.com/scheduler"
+
+[languages]
+  [languages.en]
+    subtitle  = "Hello Friend NG HZ Theme"
+    weight    = 1
+    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+
+  # [languages.fr]
+    # subtitle  = "Hello Friend NG HZ Theme"
+    # weight    = 2
+    # copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name       = "About"
+    url        = "/about"
+  [[menu.main]]
+    identifier = "blog"
+    name       = "Blog"
+    url        = "/posts"
+  [[menu.other]]
+    identifier = "tags"
+    name       = "Tags"
+    url        = "/tags"
+  [[menu.other]]
+    identifier = "categories"
+    name       = "Categories"
+    url        = "/categories"

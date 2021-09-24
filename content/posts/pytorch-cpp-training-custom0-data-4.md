@@ -4,6 +4,16 @@ author:
 date: 2019-07-05
 linktitle: "PyTorch C++ API, Training Network on Custom Dataset"
 title: "Training a Network on Custom Dataset using PyTorch C++ API"
+categories:
+ - pytorch
+ - deep learning
+tags:
+ - development
+ - coding
+ - cpp
+ - notes
+ - pytorch-cpp
+ - libtorch
 type:
 - post
 - posts

@@ -4,6 +4,16 @@ author:
 date: 2020-02-23
 linktitle: "PyTorch C++ API, DCGAN Part-2"
 title: "[Training and Results] Deep Convolutional Generative Adversarial Networks on CelebA Dataset using PyTorch C++ API"
+categories:
+ - pytorch
+ - deep learning
+tags:
+ - development
+ - coding
+ - cpp
+ - notes
+ - pytorch-cpp
+ - libtorch
 type:
 - post
 - posts

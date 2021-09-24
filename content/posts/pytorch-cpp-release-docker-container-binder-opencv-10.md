@@ -4,6 +4,16 @@ author:
 date: 2020-09-15
 linktitle: "PyTorch C++ API, Docker Container with OpenCV"
 title: "Releasing Docker Container and Binder for using Xeus-Cling, Libtorch and OpenCV in C++"
+categories:
+ - pytorch
+ - deep learning
+tags:
+ - development
+ - coding
+ - cpp
+ - notes
+ - pytorch-cpp
+ - libtorch
 type:
 - post
 - posts

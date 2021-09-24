@@ -4,6 +4,14 @@
  date: 2021-07-18
  linktitle: Function Pointers And Objects 
  title: "Function Pointers and Function Objects in C++"
+ categories:
+ - cpp
+ tags:
+ - development
+ - coding
+ - cpp
+ - function pointers
+ - function objects
  type:
  - post
  - posts

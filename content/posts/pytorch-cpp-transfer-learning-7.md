@@ -4,6 +4,16 @@ author:
 date: 2019-08-16
 linktitle: "PyTorch C++ API, Transfer Learning"
 title: "Applying Transfer Learning on Dogs vs Cats Dataset (ResNet18) using PyTorch C++ API"
+categories:
+ - pytorch
+ - deep learning
+tags:
+ - development
+ - coding
+ - cpp
+ - notes
+ - pytorch-cpp
+ - libtorch
 type:
 - post
 - posts

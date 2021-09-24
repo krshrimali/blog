@@ -4,6 +4,16 @@ author:
 date: 2019-07-04
 linktitle: "PyTorch C++ API Series Announcement"
 title: "Announcing a series of blogs on PyTorch C++ API"
+categories:
+ - pytorch
+ - Deep Learning
+tags:
+ - development
+ - coding
+ - cpp
+ - notes
+ - pytorch-cpp
+ - libtorch
 type:
 - post
 - posts

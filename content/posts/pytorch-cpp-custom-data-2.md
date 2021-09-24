@@ -4,6 +4,16 @@ author:
 date: 2019-07-02
 linktitle: "PyTorch C++ API, Custom Data Loading"
 title: "Custom Data Loading using PyTorch C++ API"
+categories:
+ - pytorch
+ - deep learning
+tags:
+ - development
+ - coding
+ - cpp
+ - notes
+ - pytorch-cpp
+ - libtorch
 type:
 - post
 - posts

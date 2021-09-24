@@ -4,6 +4,15 @@
  date: 2021-08-14
  linktitle: Union Find Naive Implementation
  title: "Union Find Problem, and a naive implementation (C++)"
+ categories:
+ - cpp
+ - algorithms
+ tags:
+ - development
+ - coding
+ - cpp
+ - union find
+ - algorithms
  type:
  - post
  - posts

@@ -3,7 +3,7 @@ title   = "Kushashwa Ravi Shrimali (Kush)"
 
 DefaultContentLanguage = "en"
 
-themesDir = "themes/"
+themesDir = "."
 theme = "hello-friend-ng-hz"
 
 PygmentsCodeFences = true
@@ -12,8 +12,8 @@ PygmentsStyle = "monokai"
 rssLimit  = 10  # Maximum number of items in the RSS feed.
 copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
 
-# googleAnalytics = ""
-# disqusShortname = ""
+googleAnalytics = "UA-146662543-1"
+disqusShortname = "kushashwa"
 
 archetypeDir = "archetypes"
 contentDir   = "content"
@@ -101,16 +101,16 @@ mediaType = "application/toml"
 # Webmentions #
 ###############
 # Manually setup webmention.js from here: https://sebastiandedeyne.com/webmentions-on-a-static-site-with-github-actions/
-[params.webmention]
-webmention = "https://webmention.io/example.com/webmention"
-pingback = "https://webmention.io/example.com/xmlrpc"
+# [params.webmention]
+# webmention = "https://webmention.io/example.com/webmention"
+# pingback = "https://webmention.io/example.com/xmlrpc"
 
 #############
 # Analytics #
 #############
    
   # Alternative to Google Analytics
-  goatCounter = ""
+  # goatCounter = ""
   # microsoftClarity = ""
   # Another analytics alternative
   # clicky = ""
@@ -124,30 +124,15 @@ pingback = "https://webmention.io/example.com/xmlrpc"
   # Use codefolding logic
   codefold = true
 
-[params.liberapay]
-accountID = "rohit"
+# [params.liberapay]
+# accountID = "krshrimali"
 
 ###################
 # Comment Systems #
 ###################
 
-# [params.utterances]
-# issue = "pathname"
-# theme = "photon-dark"
-# repo  ="haozeke/hello-friend-ng-hz"
-# label = "Utterance 💬"
-
-# [params.remarkbox]
-# accountID = "rb_owner_key"
-
-# [params.graphcomments]
-# accountID = "rgoswami"
-
-# [params.commentbox]
-# accountID = "5662446949761024-proj"
-
-# [params.intensedebate]
-# accountID = "03433eb5474ac59759898fb85454590c"
+# [params.remarkBox]
+# accountID = "bd2f6e6d-1c8d-11ec-8ccc-040140774501"
 
   # Colors for favicons
   [params.favicon.color]

@@ -4,6 +4,13 @@
  date: 2020-12-07
  linktitle: OpenCV, Portrait Bokeh Part-1
  title: "Implementing Portrait Bokeh in OpenCV using Face Detection (Part-1)"
+ categories:
+ - opencv
+ tags:
+ - computer vision
+ - python
+ - portrait bokeh
+ - image processing
  type:
  - post
  - posts

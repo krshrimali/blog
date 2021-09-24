@@ -4,6 +4,15 @@
  date: 2021-08-25
  linktitle: Deleted Functions over Pvt Undefined Ones
  title: "Prefer Deleted Functions to Private Undefined Ones (Notes)"
+ categories:
+ - cpp
+ - book reading
+ tags:
+ - development
+ - coding
+ - cpp
+ - notes
+ - deleted functions
  type:
  - post
  - posts

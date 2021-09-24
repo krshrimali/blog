@@ -4,6 +4,16 @@ author:
 date: 2019-08-28
 linktitle: "PyTorch C++ API, Xeus Cling with OpenCV"
 title: "Setting up Jupyter Notebook (Xeus Cling) for Libtorch and OpenCV Libraries"
+categories:
+ - pytorch
+ - deep learning
+tags:
+ - development
+ - coding
+ - cpp
+ - notes
+ - pytorch-cpp
+ - libtorch
 type:
 - post
 - posts

@@ -4,6 +4,14 @@ author:
 date: 2020-04-18
 linktitle: Vectors in C++ Part 1
 title: "Understanding how Vectors work in C++ (Part-1): How does push_back work?"
+categories:
+ - cpp
+tags:
+ - development
+ - coding
+ - cpp
+ - notes
+ - vectors
 type:
 - post
 - posts

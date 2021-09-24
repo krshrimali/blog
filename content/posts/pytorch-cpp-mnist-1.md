@@ -4,6 +4,16 @@ author:
 date: 2019-06-07
 linktitle: "PyTorch C++ API, MNIST"
 title: "Introduction to PyTorch C++ API: MNIST Digit Recognition using VGG-16 Network"
+categories:
+ - pytorch
+ - deep learning
+tags:
+ - development
+ - coding
+ - cpp
+ - notes
+ - pytorch-cpp
+ - libtorch
 type:
 - post
 - posts

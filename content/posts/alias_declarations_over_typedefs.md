@@ -4,6 +4,16 @@
  date: 2021-08-12
  linktitle: Alias Declarations vs Typedefs
  title: "Prefer Alias Declarations to Typedefs (Notes)"
+ categories:
+ - cpp
+ - book reading
+ tags:
+ - development
+ - coding
+ - cpp
+ - notes
+ - aliases
+ - typedefs
  type:
  - post
  - posts

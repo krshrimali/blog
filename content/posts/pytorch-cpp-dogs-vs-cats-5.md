@@ -4,6 +4,16 @@ author:
 date: 2019-07-23
 linktitle: "PyTorch C++ API, Dogs vs Cats"
 title: "Classifying Dogs vs Cats using PyTorch C++ API: Part-1"
+categories:
+ - pytorch
+ - deep learning
+tags:
+ - development
+ - coding
+ - cpp
+ - notes
+ - pytorch-cpp
+ - libtorch
 type:
 - post
 - posts

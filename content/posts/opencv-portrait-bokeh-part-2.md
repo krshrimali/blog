@@ -4,6 +4,13 @@
  date: 2020-12-10
  linktitle: OpenCV, Portrait Bokeh Part-2
  title: "How to crop a circle in OpenCV? Implementing Portrait Bokeh - Part 2"
+ categories:
+ - opencv
+ tags:
+ - computer vision
+ - python
+ - portrait bokeh
+ - image processing
  type:
  - post
  - posts

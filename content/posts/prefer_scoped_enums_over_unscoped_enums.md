@@ -4,6 +4,16 @@
  date: 2021-08-14
  linktitle: Scoped Enums over Unscoped Enums
  title: "Prefer Scoped Enums over Unscoped Enums (Notes)"
+ categories:
+ - cpp
+ - book reading
+ tags:
+ - development
+ - coding
+ - cpp
+ - notes
+ - scoped enums
+ - unscoped enums
  type:
  - post
  - posts

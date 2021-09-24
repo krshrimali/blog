@@ -4,6 +4,16 @@ author:
 date: 2019-09-15
 linktitle: "PyTorch C++ API, DCGAN"
 title: "Deep Convolutional Generative Adversarial Networks: Review and Implementation using PyTorch C++ API"
+categories:
+ - pytorch
+ - deep learning
+tags:
+ - development
+ - coding
+ - cpp
+ - notes
+ - pytorch-cpp
+ - libtorch
 type:
 - post
 - posts

@@ -4,6 +4,14 @@ author:
 date: 2020-04-26
 linktitle: Vectors in C++ Part 3
 title: "Understanding how Vectors work in C++ (Part-3): Diving deep into member functions of vectors"
+categories:
+ - cpp
+tags:
+ - development
+ - coding
+ - cpp
+ - notes
+ - vectors
 type:
 - post
 - posts

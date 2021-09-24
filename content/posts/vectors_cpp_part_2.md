@@ -4,6 +4,14 @@ author:
 date: 2020-04-26
 linktitle: Vectors in C++ Part 2 
 title: "Understanding how Vectors work in C++ (Part-2): What happens when you initialize a vector?"
+categories:
+ - cpp
+tags:
+ - development
+ - coding
+ - cpp
+ - notes
+ - vectors
 type:
 - post
 - posts

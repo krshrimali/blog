@@ -21,7 +21,7 @@
  - CPP
  aliases:
  - /blog/notes-declaring-overriding-functions-override/
- toc: true
+ toc: false
  comments: true
 ---
 

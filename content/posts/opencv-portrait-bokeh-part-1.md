@@ -52,13 +52,11 @@ Let's discuss on how we can go ahead to solve this problem. We surely need to kn
 
 ## Video Tutorial
 
-I started a YouTube channel where I go live on the weekends, and upload videos on the week days (not so regularly) about Computer Vision, deploying models into production and more. If you haven't seen it before, please check it out <a href="http://youtube.com/c/kushashwaraviShrimali/">here</a>. For this blog, I have already uploaded a detailed tutorial. Check it out here:
-
-[![KRSHRIMALI'S YT CHANNEL](https://raw.githubusercontent.com/krshrimali/krshrimali.github.io/master/assets/opencv/preview/yt_preview_method1.jpeg)](https://www.youtube.com/watch?v=Nd3wFiSH-gw)
+I started a YouTube channel where I go live on the weekends, and upload videos on the week days (not so regularly) about Computer Vision, deploying models into production and more. If you haven't seen it before, please check it out [here](https://youtube.com/c/kushashwaraviShrimali). For this blog, I have already uploaded a detailed tutorial. Check it out [here](https://www.youtube.com/watch?v=Nd3wFiSH-gw).
 
 ## Step 1: Detecting Faces using Haarcascade
 
-We'll be using haarcascade model files to detect face in the image. To ease the computation and satisfy the input to the model, we need to first convert the image to GrayScale (if it's not already) - that is the image will now have only one channel instead of 3 (Blue, Green, Red). Download the model file to your directory from <a href="https://github.com/opencv/opencv/blob/master/data/haarcascades/haarcascade_frontalface_default.xml">here</a>. Let's go ahead and initialize our Face Detector.
+We'll be using haarcascade model files to detect face in the image. To ease the computation and satisfy the input to the model, we need to first convert the image to GrayScale (if it's not already) - that is the image will now have only one channel instead of 3 (Blue, Green, Red). Download the model file to your directory from [here](https://github.com/opencv/opencv/blob/master/data/haarcascades/haarcascade_frontalface_default.xml). Let's go ahead and initialize our Face Detector.
 
 ```python
 model_path = "haarcascade_frontalface_default.xml" # Assuming this is in our current directory

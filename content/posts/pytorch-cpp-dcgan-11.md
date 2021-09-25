@@ -24,7 +24,7 @@ aliases:
 - /blog/pytorch-cpp-dcgan-part-2/
 ---
 
-It's been around 5 months since I released my last blog on <a href="https://krshrimali.github.io/DCGAN-using-PyTorch-CPP/">DCGAN Review and Implementation using PyTorch C++ API</a> and I've missed writing blogs badly! Straight the to the point, I'm back!
+It's been around 5 months since I released my last blog on [DCGAN Review and Implementation using PyTorch C++ API](https://krshrimali.github.io/posts/2019/09/deep-convolutional-generative-adversarial-networks-review-and-implementation-using-pytorch-c-api/) and I've missed writing blogs badly! Straight the to the point, I'm back!
 
 ![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/cover-images/Cover-DCGAN-2.jpg)
 
@@ -34,7 +34,7 @@ But before we start, the PyTorch C++ Frontend has gone through several changes a
 
 There have been major changes in the PyTorch C++ Frontend API (Libtorch) and we'll be discussing some of them which were related to our implementation on DCGAN. Let's see, what parts of our code have changed in the recent Libtorch version. Well, the frontend API of PyTorch in C++ resembles closely to Python now:
 
-For what concerns our code on DCGAN, quoting the author (Will Feng) of PR <a href="https://github.com/pytorch/pytorch/pull/28917">#28917</a>:
+For what concerns our code on DCGAN, quoting the author (Will Feng) of PR [#28917](https://github.com/pytorch/pytorch/pull/28917).
 
 > In Conv{1,2,3}dOptions:
     - with_bias is renamed to bias.
@@ -44,7 +44,7 @@ For what concerns our code on DCGAN, quoting the author (Will Feng) of PR <a hre
 
 So, starting first, we need to change `with_bias` to `bias` in our model definitions. The generator class in DCGAN uses Transposed Convolutions, and that's why we need to migrate from `torch::nn::Conv2dOptions` class to `torch::nn::ConvTranspose2dOptions` (this is because using `.transposed(true/false)` does not work anymore on `torch::nn::Conv2dOptions`).
 
-That is all for the changes we needed to make. To make it easy to track changes and use the code I wrote, I've made the project public on <a href="https://github.com/BuffetCodes/DCGAN-CelebA-PyTorch-CPP.git">GitHub</a>. Feel free to file an issue in case you hit a bug/error. 
+That is all for the changes we needed to make. To make it easy to track changes and use the code I wrote, I've made the project public on [GitHub](https://github.com/BuffetCodes/DCGAN-CelebA-PyTorch-CPP.git). Feel free to file an issue in case you hit a bug/error. 
 
 Time to talk about results!
 
@@ -63,7 +63,7 @@ torch::Tensor samples = netG->forward(torch::randn({64, args.nz, 1, 1}, options)
 torch::save(samples, torch::str("dcgan-sample-", ++checkpoint_counter, ".pt"));
 ```
 
-Once we have the saved output, we can load the file and produce output (find the `display_samples.py` file in the <a href="https://github.com/BuffetCodes/DCGAN-PyTorch-Python-CPP">GitHub repo for this blog</a>). Here is how the output looks like, after 10 epochs of training:
+Once we have the saved output, we can load the file and produce output (find the `display_samples.py` file in the [GitHub repo for this blog](https://krshrimali.github.io/posts/2019/09/deep-convolutional-generative-adversarial-networks-review-and-implementation-using-pytorch-c-api/)). Here is how the output looks like, after 10 epochs of training:
 
 <img src="/assets/dcgan-output.png"/>
 

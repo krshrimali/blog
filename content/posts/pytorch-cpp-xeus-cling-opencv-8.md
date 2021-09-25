@@ -30,7 +30,7 @@ Today, we are going to run our C++ codes in the Jupyter Notebook. Sounds ambitio
 
 ![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/cover-images/Cover-Xeus-Cling.jpg)
 
-I'll quote the definition of Xeus Cling on the official <a href="https://xeus-cling.readthedocs.io/en/latest/#targetText=xeus%2Dcling%20is%20a%20Jupyter,of%20the%20Jupyter%20protocol%20xeus.">documentation website.</a>
+I'll quote the definition of Xeus Cling on the official [documentation website](https://xeus-cling.readthedocs.io/en/latest/#targetText=xeus%2Dcling%20is%20a%20Jupyter,of%20the%20Jupyter%20protocol%20xeus).
 
 > xeus-cling is a Jupyter kernel for C++ based on the C++ interpreter cling and the native implementation of the Jupyter protocol xeus.
 
@@ -218,7 +218,7 @@ Let's go ahead and include the libraries. I'll be sharing the code snippets as w
 
 ![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/Include-Libraries.png)
 
-After successfully importing libraries, we can define functions, write code and use the utilities Jupyter provides. Let's start with playing with Tensors and the code snippets mentioned in the official <a href="https://pytorch.org/cppdocs/">PyTorch C++ Frontend Docs</a>.
+After successfully importing libraries, we can define functions, write code and use the utilities Jupyter provides. Let's start with playing with Tensors and the code snippets mentioned in the official [PyTorch C++ Frontend Docs](https://pytorch.org/cppdocs).
 
 Starting with using `ATen` tensor library. We'll create two tensors and add them together. `ATen` comes up with functionalities of mathematical operations on the Tensors. 
 
@@ -277,7 +277,7 @@ torch::Tensor read_images(std::string location) {
 
 To solve, we can simply change the member from `size` to `Size`. One important point to consider is, that since this works on the top of Jupyter Interface, so whenever you re-run a cell, the variable names need to be changed as it will return an error of re-defining the variables which have already been defined.
 
-For testing, I have implemented Transfer Learning example that we discussed in the <a href="https://krshrimali.github.io/Applying-Transfer-Learning-Dogs-Cats/">previous blog</a>. This comes handy as I don't need to load the dataset again and again.
+For testing, I have implemented Transfer Learning example that we discussed in the [previous blog](https://krshrimali.github.io/posts/2019/08/applying-transfer-learning-on-dogs-vs-cats-dataset-resnet18-using-pytorch-c-api/). This comes handy as I don't need to load the dataset again and again.
 
 ![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/Training-Image.png)
 
@@ -285,7 +285,7 @@ For testing, I have implemented Transfer Learning example that we discussed in t
 
 With this blog, I'm also happy to share a Notebook file with implementation of Transfer Learning using ResNet18 Model on Dogs vs Cats Dataset. Additionally, I'm elated to open source the code for Transfer Learning using ResNet18 Model using PyTorch C++ API.
 
-The source code and the notebook file can be found <a href="https://github.com/krshrimali/Transfer-Learning-Dogs-Cats-Libtorch.git">here</a>.
+The source code and the notebook file can be found [here](https://github.com/krshrimali/Transfer-Learning-Dogs-Cats-Libtorch.git).
 
 ## Debugging - OSX Systems
 
@@ -298,5 +298,5 @@ In case of OSX Systems, if you see any errors similar to: `You are probably miss
 
 ## References
 
-1. <a href="https://www.learnopencv.com/xeus-cling-run-c-code-in-jupyter-notebook/">Xeus-Cling: Run C++ code in Jupyter Notebook by Vishwesh Ravi Shrimali</a>.
-2. <a href="https://xeus-cling.readthedocs.io/en/latest">Documentation of Xeus Cling</a>.
+1. [Xeus-Cling: Run C++ code in Jupyter Notebook by Vishwesh Ravi Shrimali](https://www.learnopencv.com/xeus-cling-run-c-code-in-jupyter-notebook/).
+2. [Documentation of Xeus-Cling](https://xeus-cling.readthedocs.io/en/latest).

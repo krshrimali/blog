@@ -218,4 +218,4 @@ For today, I think we discussed a lot about vectors and their implementation in 
 
 ## A request
 
-For the past year, I've been writing blogs on <a href="https://krshrimali.github.io/pytorch/">PyTorch C++ API</a>. I've been overwhelmed with your feedback, help and comments. Thank you! This series of blogs on C++, is experimental for now. I love reading source codes, and explaining it to readers. I hope this helps. Please leave your comment and feedback here, or reach out to me at kushashwaravishrimali@gmail.com if you wish. Even if you don't like this, say it! I promise, I'll be better next time.
+For the past year, I've been writing blogs on [PyTorch C++ API](https://krshrimali.github.io/categories/pytorch/). I've been overwhelmed with your feedback, help and comments. Thank you! This series of blogs on C++, is experimental for now. I love reading source codes, and explaining it to readers. I hope this helps. Please leave your comment and feedback here, or reach out to me at kushashwaravishrimali@gmail.com if you wish. Even if you don't like this, say it! I promise, I'll be better next time.

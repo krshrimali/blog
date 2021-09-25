@@ -26,7 +26,7 @@ In this blog, we'll continue diving deep into the source code of Vector Containe
 
 ![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/cover-images/Vector-Part-3.png)
 
-Before we start, if you haven't looked at the previous blogs in the C++ series, please take a look <a href="http://www.krshrimali.github.io/cpp">here</a>. If you are already familiar with memory allocation in vector containers and vector's base structs, then you can skip reading the previous blogs and continue here. If not, I suggest you reading them.
+Before we start, if you haven't looked at the previous blogs in the C++ series, please take a look [here](https://krshrimali.github.io/categories/cpp/). If you are already familiar with memory allocation in vector containers and vector's base structs, then you can skip reading the previous blogs and continue here. If not, I suggest you reading them.
 
 Let's start off with `pop_back` member function, which essentially deletes the last element from the vector and reduces the size by one. Let's take a look how it is used:
 
@@ -219,6 +219,6 @@ With this blog post, we are also done with the vector series in C++, and coming 
 
 I have received a lot of love and support for these blogs, and I am grateful to each and everyone of you! I write these blogs to share what I know with others and in a hope to motivate people to not fear when looking at the source code of any library. I think, reading codes is a good practice.
 
-I am thankful to <a href="https://www.linkedin.com/in/lokiastari/">Martin York</a> (aka Loki Astari on <a href="https://stackoverflow.com/users/14065/martin-york">stackoverflow</a>)) for his constructive feedback on my blogs. Special thanks to <a href="https://www.linkedin.com/in/ujval-kapasi/">Ujval Kapasi</a> for taking time to read through my blogs and giving valuable feedback.
+I am thankful to [Martin York](https://krshrimali.github.io/categories/cpp/) (aka Loki Astari on [stackoverflow](https://stackoverflow.com/users/14065/martin-york">stackoverflow)) for his constructive feedback on my blogs. Special thanks to [Ujval Kapasi](https://www.linkedin.com/in/ujval-kapasi) for taking time to read through my blogs and giving valuable feedback.
 
-I was, am and will always be grateful to my elder brother <a href="https://www.linkedin.com/in/vishwesh5/">Vishwesh Ravi Shrimali</a> (also my all time mentor) who helped me getting started with C++, AI and whatever I have been doing recently. He inspires me.
+I was, am and will always be grateful to my elder brother [Vishwesh Ravi Shrimali](https://www.linkedin.com/in/vishwesh5/) (also my all time mentor) who helped me getting started with C++, AI and whatever I have been doing recently. He inspires me.

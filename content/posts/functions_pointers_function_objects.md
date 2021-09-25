@@ -332,10 +332,6 @@ std::sort(input.begin(), input.end(), isLesser);
 
 This is mostly it for this blog, there is a lot to discuss about function pointers and objects, but I guess this should be enough for you to get started and follow us along in future blogs.
 
-## Acknowledgement
-
-Every blog is published after lots of reviews and corrections, and it's not just me but the efforts of the whole team which should be acknowledged. Thanks to <a href="https://github.com/kshitij12345">Kshitij Kalambarkar</a> for helping me with the reviews and corrections. Shoutout to the whole malloc(42) team for helping me with this.
-
 ## References and Good Reads
 
 1. <a href="https://www.learncpp.com/cpp-tutorial/function-pointers/">Learn CPP's Blog on Function Pointer</a>.

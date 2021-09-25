@@ -24,9 +24,7 @@ aliases:
 
 This blog is focused to explain how vectors work in the backend, and we'll specially look at `push_back` method of the vector container. Looking at the source code helps to understand the implementation, and how vectors can be used efficiently.
 
-<!--more-->
-
-<img src="/assets/Vector-Part-1.png"/>
+![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/cover-images/Vector-Part-1.png)
 
 Vector Containers are type of sequenced containers in C++ commonly uses as a better alternative of arrays. They are also known as dynamic arrays, and as the term suggests - it's one of the advantages they hold over native arrays in C++. You might have heard of Standard Library containers like `vector`, `set`, `queue`, `priority_queue` before. They all implement methods defined by the Container Concept.
 

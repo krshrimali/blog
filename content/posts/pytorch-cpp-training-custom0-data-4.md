@@ -67,7 +67,7 @@ int main(int argc, char** argv) {
 
 These were the steps we followed last time:
 
-<img src="/assets/Steps-Loading-Custom-Data.PNG"/>
+![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/Steps-Loading-Custom-Data.PNG)
 
 ## Overview: How to pass batches to our network?
 
@@ -91,7 +91,7 @@ In brief, we are loading our data using `SequentialSampler` class which samples 
 
 For the definition of this function: `torch::data::make_data_loader` [here](https://pytorch.org/cppdocs/api/function_namespacetorch_1_1data_1a0d29ca9900cae66957c5cc5052ecc122.html#exhale-function-namespacetorch-1-1data-1a0d29ca9900cae66957c5cc5052ecc122). A short screenshot from the documentation is given below. 
 
-<img src="/assets/Data-Loader-Function.PNG"/>
+![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/Data-Loader-Function.PNG)
 
 Let's go ahead and learn to iterate through our data loader and pass each batch of data and labels to our network. For once, imagine that we have a `struct` named `Net` which defines our network and `forward()` function which parses the data through each layer and returns the output.
 
@@ -131,7 +131,7 @@ torch::optim::Adam optimizer(net->parameters(), torch::optim::AdamOptions(1e-3))
 
 As mentioned in the documentation of `torch.optim` package:
 
-<img src="https://raw.githubusercontent.com/krshrimali/krshrimali.github.io/master/assets/Use-Optim.PNG"/>
+![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/Use-Optim.PNG)
 
 The documentation is self explanatory, so all we need to do is pass parameters of our Network which will be optimized using our optimizer, and pass in the learning rate like above. To know about parameters we can pass through `AdamOptions`, check out this [documentation page](https://pytorch.org/cppdocs/api/structtorch_1_1optim_1_1_adam_options.html#exhale-struct-structtorch-1-1optim-1-1-adam-options).
 

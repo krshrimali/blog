@@ -26,9 +26,7 @@ aliases:
 
 In the last blog, we had discussed all but training and results of our custom CNN network on Dogs vs Cats dataset. Today, we'll be making some small changes in the network and discussing training and results of the task.
 
-<!--more-->
-
-![Cover Pic](/assets/Classify-Dogs-Cats-Blog-05.jpg)
+![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/cover-images/Classify-Dogs-Cats-Blog-05.jpg)
 
 I'll start with the network overview again, where we used a network similar to VGG-16 (with one extra Fully Connected Layer in the end). While there are absolutely no problems with that network, but since the dataset contains a lot of images (25000 in training dataset) and we were using (200x200x3) input shape to the network (which is 120,000 floating point numbers), this leads to high memory consumption. In short, I was out of RAM to store these many images during program execution. 
 
@@ -314,19 +312,19 @@ Let's look at some of the correct and wrong predictions.
 
 ## Correct Predictions (Dogs)
 
-![Correct Predictions of Dogs](/assets/Correct-Predictions-Dogs.png)
+![Correct Predictions of Dogs](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/Correct-Predictions-Dogs.png)
 
 ## Correct Predictions (Cats)
 
+![Correct Predictions of Cats](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/Correct-Predictions-Cats.png)
 ![Correct Predictions of Cats](/assets/Correct-Predictions-Cats.png)
 
 ## Wrong Predictions (Dogs)
 
-![Wrong Predictions of Dogs](/assets/Wrong-Predictions-Dog.png)
-
+![Wrong Predictions of Dogs](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/Wrong-Predictions-Dog.png)
 ## Wrong Predictions (Cats)
 
-![Wrong Predictions of Cats](/assets/Wrong-Predictions-Cats.png)
+![Wrong Predictions of Cats](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/Wrong-Predictions-Cats.png)
 
 Clearly, the network has done well for just a 2 Convolutional and 3 FC Layer Network. It seems to have focused more on the posture of the animal (and body). We can make the network learn more robust features, with a more deeper CNN (like VGG-16). We'll be discussing on using pretrained weights on Dogs vs Cats Dataset using PyTorch C++ API and also Transfer Learning Approach in C++.
 

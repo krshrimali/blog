@@ -33,9 +33,7 @@ Hi Everyone, today I want to talk about Union Find Problem. This is going to be 
 * Cool project using Union Find
 * Solving some competitive programming questions using Union Find
 
-<!--more-->
-
-<img src="/assets/Union-Find-Intro.png"/>
+![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/cover-images/Union-Find-Intro.png)
 
 Each blog will try to cover very basic concepts behind the topic, and also what it's all about.
 

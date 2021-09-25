@@ -28,9 +28,7 @@ aliases:
 
 Today, we are going to run our C++ codes in the Jupyter Notebook. Sounds ambitious? Not much. Let's see how we do it using Xeus Cling. 
 
-<!--more-->
-
-<img src="/assets/Cover-Xeus-Cling.jpg"/>
+![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/cover-images/Cover-Xeus-Cling.jpg)
 
 I'll quote the definition of Xeus Cling on the official <a href="https://xeus-cling.readthedocs.io/en/latest/#targetText=xeus%2Dcling%20is%20a%20Jupyter,of%20the%20Jupyter%20protocol%20xeus.">documentation website.</a>
 
@@ -52,13 +50,13 @@ The conventional way to install any such library which can create conflicts with
 
 Once setup, let's go ahead and get started with Jupyter Notebook. When creating a new notebook, you will see different options for the kernel. One of them would be `C++XX` where XX is the `C++` version. 
 
-<img src="/assets/kernels-available.png"/>
+![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/kernels-available.png)
 
 Click on any of the kernel for C++ and let's start setting up environment for PyTorch C++ API.
 
 You can try and implement some of the basic commands in C++.
 
-<img src="/assets/Jupyter-Notebook-Sample.png"/>
+![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/Jupyter-Notebook-Sample.png)
 
 This looks great, right? Let's go ahead and set up the Deep Learning environment.
 
@@ -218,7 +216,7 @@ Let's go ahead and include the libraries. I'll be sharing the code snippets as w
 #include <opencv2/opencv.hpp>
 ```
 
-<img src="/assets/Include-Libraries.png"/>
+![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/Include-Libraries.png)
 
 After successfully importing libraries, we can define functions, write code and use the utilities Jupyter provides. Let's start with playing with Tensors and the code snippets mentioned in the official <a href="https://pytorch.org/cppdocs/">PyTorch C++ Frontend Docs</a>.
 
@@ -238,7 +236,7 @@ std::cout << std::endl;
 std::cout << "c: " << c << std::endl;
 ```
 
-<img src="/assets/ATen-Example.png"/>
+![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/ATen-Example.png)
 
 One of the reasons why `Xeus-Cling` is useful is, that you can print the outputs of intermediate steps and debug. Let's go ahead and experiment with `Autograd` system of PyTorch C++ API.
 
@@ -260,8 +258,8 @@ c_tensor.backward(); // a.grad() will now hold the gradient of c w.r.t a
 std::cout << c_tensor << std::endl;
 ```
 
-<img src="/assets/Autograd-Example-1.png"/>
-<img src="/assets/Autograd-Example-2.png"/>
+![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/Autograd-Example-1.png)
+![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/Autograd-Example-2.png)
 
 How about debugging? As you can see in the figure below, I get an error stating `no member named 'size' in namespace 'cv'`. This is because namespace `cv` has member called `Size` and not `size`. 
 
@@ -275,13 +273,13 @@ torch::Tensor read_images(std::string location) {
 }
 ```
 
-<img src="/assets/Debug-Example.png"/>
+![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/Debug-Example.png)
 
 To solve, we can simply change the member from `size` to `Size`. One important point to consider is, that since this works on the top of Jupyter Interface, so whenever you re-run a cell, the variable names need to be changed as it will return an error of re-defining the variables which have already been defined.
 
 For testing, I have implemented Transfer Learning example that we discussed in the <a href="https://krshrimali.github.io/Applying-Transfer-Learning-Dogs-Cats/">previous blog</a>. This comes handy as I don't need to load the dataset again and again.
 
-<img src="/assets/Training-Image.png"/>
+![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/Training-Image.png)
 
 ## Bonus!
 

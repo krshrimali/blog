@@ -28,7 +28,7 @@ Please note that, function objects are commonly referred as _functors_ but we ha
 
 <!--more-->
 
-<img src="/assets/blogs/cpp/fptr-fobj-cover.png"/>
+![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/cover-images/fptr-fobj-cover.png)
 
 ## Function Pointers
 

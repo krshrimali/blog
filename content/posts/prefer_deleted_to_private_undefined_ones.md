@@ -31,9 +31,7 @@ This item (11) in the chapter 3 focuses on:
 * C++-98 and C++-11 approach
 * What's the difference between deleting a function vs declaring a member function private (and not defining them)?
 
-<!--more-->
-
-<img src="/assets/Item-11-Notes.png"/>
+![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/cover-images/Item-11-Notes.png)
 
 ---
 **NOTE**

@@ -19,6 +19,8 @@
  - CPP
  aliases:
  - /blog/opencv-portrait-bokeh-part-1/
+ toc: true
+ comments: true
 ---
 
 ![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/cover-images/Dec_7_2020.jpg)
@@ -53,6 +55,8 @@ Let's discuss on how we can go ahead to solve this problem. We surely need to kn
 ## Video Tutorial
 
 I started a YouTube channel where I go live on the weekends, and upload videos on the week days (not so regularly) about Computer Vision, deploying models into production and more. If you haven't seen it before, please check it out [here](https://youtube.com/c/kushashwaraviShrimali). For this blog, I have already uploaded a detailed tutorial. Check it out [here](https://www.youtube.com/watch?v=Nd3wFiSH-gw).
+
+{{< youtube Nd3wFiSH-gw >}}
 
 ## Step 1: Detecting Faces using Haarcascade
 

@@ -21,6 +21,8 @@
  - CPP
  aliases:
  - /blog/notes-deleted-functions-over-pvt-undefined/
+ toc: true
+ comments: true
 ---
 
 ## Prefer deleted functions to private undefined ones

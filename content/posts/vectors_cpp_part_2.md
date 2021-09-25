@@ -20,6 +20,8 @@ series:
 - CPP
 aliases:
 - /blog/vectors-cpp-part-2/
+toc: true
+comments: true
 ---
 
 In the last blog post, I realized there were a lot of methods inherited from the base struct `_Vector_base_` and `_Vector_impl_data`. Instead of directly going to the source code of these structs, I'll go through their methods and objects by explaining what happens when we initialize a vector.

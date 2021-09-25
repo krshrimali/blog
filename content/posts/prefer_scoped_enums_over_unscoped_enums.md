@@ -22,6 +22,8 @@
  - CPP
  aliases:
  - /blog/notes-scoped-enums-over-unscoped-enums/
+ toc: true
+ comments: true
 ---
 
 ## Scoped vs Unscoped Enums 

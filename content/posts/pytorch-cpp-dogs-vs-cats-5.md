@@ -22,6 +22,8 @@ series:
 - CPP
 aliases:
 - /blog/pytorch-cpp-dogs-vs-cats/
+toc: true
+comments: true
 ---
 
 Hi Everyone! So excited to be back with another blog in the series of PyTorch C++ Blogs. 

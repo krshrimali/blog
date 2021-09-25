@@ -22,6 +22,8 @@ series:
 - CPP
 aliases:
 - /blog/pytorch-cpp-dogs-vs-cats-2/
+toc: true
+comments: true
 ---
 
 In the last blog, we had discussed all but training and results of our custom CNN network on Dogs vs Cats dataset. Today, we'll be making some small changes in the network and discussing training and results of the task.

@@ -22,6 +22,8 @@
  - CPP
  aliases:
  - /blog/notes-alias-vs-typedefs/
+ toc: true
+ comments: true
 ---
 
 One solution to avoiding using long type names:
@@ -134,3 +136,5 @@ std::add_lvalue_reference<T>
 * Thanks to [Kshitij Kalambarkar](https://kshitij12345.github.io/) for reviewing this blog.
 
 Thanks for reading!
+
+{{ template "_internal/disqus.html" . }}

@@ -20,6 +20,8 @@
  - CPP
  aliases:
  - /blog/function-pointers-and-objects
+ toc: true
+ comments: true
 ---
 
 In today's blog, we'll talk about two important concepts in C++: Function Pointers and Function Objects.

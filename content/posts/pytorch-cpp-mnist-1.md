@@ -22,10 +22,11 @@ series:
 - CPP
 aliases:
 - /blog/pytorch-cpp-mnist-vgg-16/
+toc: true
+comments: true
 ---
 
 # Environment Setup [Ubuntu 16.04, 18.04]
-<!--more-->
 *Note: If you have already finished installing PyTorch C++ API, please skip this section.*
 
 1. Download `libtorch`:

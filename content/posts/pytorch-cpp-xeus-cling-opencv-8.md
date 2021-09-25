@@ -22,6 +22,8 @@ series:
 - CPP
 aliases:
 - /blog/pytorch-cpp-xeus-cling-opencv/
+toc: true
+comments: true
 ---
 
 ##  Introduction to Xeus Cling

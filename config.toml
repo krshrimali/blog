@@ -13,7 +13,7 @@ rssLimit  = 10  # Maximum number of items in the RSS feed.
 copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
 
 googleAnalytics = "UA-146662543-1"
-disqusShortname = "kushashwa"
+# disqusShortname = "krshrimali"
 
 archetypeDir = "archetypes"
 contentDir   = "content"
@@ -66,7 +66,7 @@ mediaType = "application/toml"
   praiseNetlify = false
 
   # Metadata mostly used in document's head
-  description = "Nice theme for homepages and blogs"
+  description = "Welcome to Kushashwa's blog"
   keywords = ""
   images = [""]
 
@@ -131,8 +131,8 @@ mediaType = "application/toml"
 # Comment Systems #
 ###################
 
-# [params.remarkBox]
-# accountID = "bd2f6e6d-1c8d-11ec-8ccc-040140774501"
+[params.remarkBox]
+    accountID = "bd2f6e6d-1c8d-11ec-8ccc-040140774501"
 
   # Colors for favicons
   [params.favicon.color]
@@ -228,3 +228,11 @@ mediaType = "application/toml"
     identifier = "categories"
     name       = "Categories"
     url        = "/categories"
+
+# https://gohugo.io/getting-started/configuration-markup/#table-of-contents
+# [markup]
+    # [markup.tableOfContents]
+        # endLevel = 3
+        # ordered = false
+        # startLevel = 2
+

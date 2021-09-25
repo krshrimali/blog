@@ -22,6 +22,7 @@ series:
 - CPP
 aliases:
 - /blog/pytorch-cpp-announcement/
+comments: true
 ---
 
 **I'm happy to announce a Series of Blog Posts on PyTorch C++ API**. Check out the blogs in the series [here](https://krshrimali.github.io/categories/pytorch/).

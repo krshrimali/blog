@@ -22,6 +22,8 @@ series:
 - CPP
 aliases:
 - /blog/pytorch-cpp-opencv-docker/
+toc: true
+comments: true
 ---
 
 Today, I am elated to share Docker image for `OpenCV`, `Libtorch` and `Xeus-Cling`. We'll discuss how to use the `dockerfile` and `binder`.

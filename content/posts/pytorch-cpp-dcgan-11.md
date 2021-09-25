@@ -22,6 +22,8 @@ series:
 - CPP
 aliases:
 - /blog/pytorch-cpp-dcgan-part-2/
+toc: true
+comments: true
 ---
 
 It's been around 5 months since I released my last blog on [DCGAN Review and Implementation using PyTorch C++ API](https://krshrimali.github.io/posts/2019/09/deep-convolutional-generative-adversarial-networks-review-and-implementation-using-pytorch-c-api/) and I've missed writing blogs badly! Straight the to the point, I'm back!

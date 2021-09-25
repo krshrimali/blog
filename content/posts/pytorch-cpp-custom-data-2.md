@@ -22,6 +22,8 @@ series:
 - CPP
 aliases:
 - /blog/pytorch-cpp-data-loading
+toc: true
+comments: true
 ---
 
 ## Overview: How C++ API loads data?

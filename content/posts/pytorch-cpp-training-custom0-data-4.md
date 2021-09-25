@@ -22,6 +22,8 @@ series:
 - CPP
 aliases:
 - /blog/pytorch-cpp-training-custom-data/
+toc: true
+comments: true
 ---
 
 ## Recap of the last blog

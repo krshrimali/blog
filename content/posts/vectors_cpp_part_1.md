@@ -20,6 +20,8 @@ series:
 - CPP
 aliases:
 - /blog/vectors-cpp-part-1/
+toc: true
+comments: true
 ---
 
 This blog is focused to explain how vectors work in the backend, and we'll specially look at `push_back` method of the vector container. Looking at the source code helps to understand the implementation, and how vectors can be used efficiently.

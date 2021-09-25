@@ -22,6 +22,8 @@ series:
 - CPP
 aliases:
 - /blog/pytorch-cpp-transfer-learning/
+toc: true
+comments: true
 ---
 
 ## Transfer Learning

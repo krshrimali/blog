@@ -21,6 +21,8 @@
  - CPP
  aliases:
  - /blog/union-find-naive-implementation
+ toc: true
+ comments: true
 ---
 
 Hi Everyone, today I want to talk about Union Find Problem. This is going to be a series covering:

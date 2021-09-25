@@ -19,6 +19,8 @@
  - CPP
  aliases:
  - /blog/opencv-portrait-bokeh-part-2/
+ toc: true
+ comments: true
 ---
 
 ![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/cover-images/Dec_10_2020.jpg)
@@ -70,6 +72,8 @@ To have an option to add transparency, you need to convert the BGR input image t
 ## Video Tutorial
 
 I started a YouTube channel where I go live on the weekends, and upload videos on the week days (not so regularly) about Computer Vision, deploying models into production and more. If you haven't seen it before, please check it out [here](https://youtube.com/c/kushashwaraviShrimali). For this blog, I have already uploaded a detailed tutorial. Check it out [here](https://www.youtube.com/watch?v=7seEhDVGvn4).
+
+{{< youtube 7seEhDVGvn4 >}}
 
 ## Step 1: Get face from face detection
 

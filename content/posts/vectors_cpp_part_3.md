@@ -20,6 +20,8 @@ series:
 - CPP
 aliases:
 - /blog/vectors-cpp-part-3/
+toc: true
+comments: true
 ---
 
 In this blog, we'll continue diving deep into the source code of Vector Containers in GCC compiler. Today, we will be discussing some of the most commonly used methods of vectors, and how they are implemented.

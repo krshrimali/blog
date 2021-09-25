@@ -22,6 +22,8 @@ series:
 - CPP
 aliases:
 - /blog/pytorch-cpp-dcgan-intro/
+toc: true
+comments: true
 ---
 
 I'm pleased to start a series of blogs on GANs and their implementation with PyTorch C++ API. We'll be starting with one of the initial GANs - DCGANs (Deep Convolutional Generative Adversarial Networks).

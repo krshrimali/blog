@@ -69,13 +69,11 @@ To have an option to add transparency, you need to convert the BGR input image t
 
 ## Video Tutorial
 
-I started a YouTube channel where I go live on the weekends, and upload videos on the week days (not so regularly) about Computer Vision, deploying models into production and more. If you haven't seen it before, please check it out <a href="http://youtube.com/c/kushashwaraviShrimali/">here</a>. For this blog, I have already uploaded a detailed tutorial. Check it out here:
-
-[![KRSHRIMALI'S YT CHANNEL](https://raw.githubusercontent.com/krshrimali/krshrimali.github.io/master/assets/opencv/preview/yt_preview_method2.jpg)](https://www.youtube.com/watch?v=7seEhDVGvn4)
+I started a YouTube channel where I go live on the weekends, and upload videos on the week days (not so regularly) about Computer Vision, deploying models into production and more. If you haven't seen it before, please check it out [here](https://youtube.com/c/kushashwaraviShrimali). For this blog, I have already uploaded a detailed tutorial. Check it out [here](https://www.youtube.com/watch?v=7seEhDVGvn4).
 
 ## Step 1: Get face from face detection
 
-We have discussed this <a href="https://krshrimali.github.io/Implementing-Portrait-Bokeh-using-Face-Detection-OpenCV/">before</a>, so we won't go in details but for the sake of continuity, I'll add the code for Face Detection.
+We have discussed this [before](https://krshrimali.github.io/posts/2020/12/implementing-portrait-bokeh-in-opencv-using-face-detection-part-1/), so we won't go in details but for the sake of continuity, I'll add the code for Face Detection.
 
 ```python
 import cv2, sys
@@ -299,4 +297,4 @@ Here is how the output looks like. While I understand that there is still some b
 
 <img src="/assets/opencv/imgPortraitBokehCroppingCircle.png"/>
 
-This should be it for this blog, and I hope you learnt something new today. If you liked the content, please leave a comment below. I would love to read your feedbacks, suggestions and if this helped you out in any way. I also go live on weekends, and upload videos on weekdays on my <a href="https://youtube.com/c/kushashwaraviShrimali/">YouTube channel</a>, so make sure to subscribe there and join me in if you find it interesting! Thank you for reading this blog.
+This should be it for this blog, and I hope you learnt something new today. If you liked the content, please leave a comment below. I would love to read your feedbacks, suggestions and if this helped you out in any way. I also go live on weekends, and upload videos on weekdays on my [YouTube Channel](https://youtube.com/c/kushashwaraviShrimali), so make sure to subscribe there and join me in if you find it interesting! Thank you for reading this blog.

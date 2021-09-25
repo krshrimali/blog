@@ -26,7 +26,7 @@ In the last blog post, I realized there were a lot of methods inherited from the
 
 ![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/cover-images/Vector-Part-2.png)
 
-That is, we will start from calling a vector constructor and then see how memory is allocated. If you haven't looked at the previous blog post, please take a look <a href="https://krshrimali.github.io/How-Vectors-Work-in-C++-Part-1">here</a>. I want to be thorough with the blog post, so I'll divide this into multiple posts. By the end of this post, you'll go through the following structs:
+That is, we will start from calling a vector constructor and then see how memory is allocated. If you haven't looked at the previous blog post, please take a look [here](https://krshrimali.github.io/posts/2020/04/understanding-how-vectors-work-in-c-part-1-how-does-push_back-work/). I want to be thorough with the blog post, so I'll divide this into multiple posts. By the end of this post, you'll go through the following structs:
 
 1. `_Vector_impl_data` struct which contains pointers to memory locations (start, finish and end of storage).
 2. `_Vector_impl` struct (inherits `_Vector_impl_data` as well)).
@@ -53,7 +53,7 @@ If you are curious what `_Base` is, `_Base` is declared as: `typedef _Vector_bas
 
 Note that the iterators are Forward Iterators, that is: we can use these iterators to access elements from begin (accessed using `.begin()`) till the end (accessed using `.end()`).
 
-We are using `random_access_iterator_tag` as `forward_iterator_tag`. This tag helps us to categorize the iterator as random-access iterator. Random-access iterators allow accessing elements by passing arbitrary offset position (see: <a href="documentation">http://www.cplusplus.com/reference/iterator/RandomAccessIterator/</a> for more details).
+We are using `random_access_iterator_tag` as `forward_iterator_tag`. This tag helps us to categorize the iterator as random-access iterator. Random-access iterators allow accessing elements by passing arbitrary offset position (see: [documentation](http://www.cplusplus.com/reference/iterator/RandomAccessIterator) for more details).
 
 Let's go ahead and see what `_M_range_initialize` does.
 

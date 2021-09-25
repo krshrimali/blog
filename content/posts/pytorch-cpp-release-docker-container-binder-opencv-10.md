@@ -28,21 +28,21 @@ Today, I am elated to share Docker image for `OpenCV`, `Libtorch` and `Xeus-Clin
 
 ![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/cover-images/Cover-Docker-Binder.jpg)
 
-Before I move on, the credits for creating and maintaining Docker image goes to <a href="https://github.com/vishwesh5">Vishwesh Ravi Shrimali</a>. He has been working on some cool stuff, please do get in touch with him if you're interested to know.
+Before I move on, the credits for creating and maintaining Docker image goes to [Vishwesh Ravi Shrimali](https://github.com/vishwesh5). He has been working on some cool stuff, please do get in touch with him if you're interested to know.
 
-First question in your mind would be, **Why use Docker or Binder?** The answer to it lies in the frequency of queries on <a href="http://www.discuss.pytorch.org">the discussion forum of PyTorch</a> and Stackoverflow on **Installation of Libtorch with OpenCV in Windows/Linux/OSX**. I've had nightmares setting up the Windows system myself for `Libtorch` and nothing could be better than using `Docker`. Read on, to know why.
+First question in your mind would be, **Why use Docker or Binder?** The answer to it lies in the frequency of queries on [the discussion forum of PyTorch](http://www.discuss.pytorch.org) and Stackoverflow on **Installation of Libtorch with OpenCV in Windows/Linux/OSX**. I've had nightmares setting up the Windows system myself for `Libtorch` and nothing could be better than using `Docker`. Read on, to know why.
 
 ## Installing Docker on Mac OS
 
-To install docker (community edition - CE) desktop in Mac OS system, simply navigate to the Stable Channel section <a href="https://docs.docker.com/v17.12/docker-for-mac/install/#download-docker-for-mac">here</a>. Once setup, you can use docker (command line and desktop). Once done, navigate to <a href="https://docs.docker.com/v17.12/docker-for-mac/install/#install-and-run-docker-for-mac">Install and run Docker for Mac</a> section and get used to the commands.
+To install docker (community edition - CE) desktop in Mac OS system, simply navigate to the Stable Channel section [here](https://docs.docker.com/v17.12/docker-for-mac/install/#download-docker-for-mac). Once setup, you can use docker (command line and desktop). Once done, navigate to [Install and run Docker for Mac](https://docs.docker.com/v17.12/docker-for-mac/install/#install-and-run-docker-for-mac) section and get used to the commands.
 
 ## Installing Docker on Ubuntu
 
-Before moving on, please consider reading the <a href="https://docs.docker.com/v17.12/install/linux/docker-ce/ubuntu/">requirements to install Docker Community Edition</a>. For the steps to install `Docker CE`, refer <a href="https://docs.docker.com/v17.12/install/linux/docker-ce/ubuntu/#install-docker-ce-1">this</a>.
+Before moving on, please consider reading the requirements to install Docker Community Edition](https://docs.docker.com/v17.12/install/linux/docker-ce/ubuntu/). For the steps to install `Docker CE`, refer [this](https://docs.docker.com/v17.12/install/linux/docker-ce/ubuntu/#install-docker-ce-1).
 
 ## Installing Docker on Windows
 
-To install Docker on Windows, download docker (stable channel) from <a href="https://docs.docker.com/v17.12/docker-for-windows/install/#download-docker-for-windows">here</a>. The installation steps to install `Docker Desktop` on Windows can be found <a href="https://docs.docker.com/v17.12/docker-for-windows/install/#install-docker-for-windows-desktop-app">here</a>.
+To install Docker on Windows, download docker (stable channel) from [here](https://docs.docker.com/v17.12/docker-for-windows/install/#download-docker-for-windows). The installation steps to install `Docker Desktop` on Windows can be found [here](https://docs.docker.com/v17.12/docker-for-windows/install/#install-docker-for-windows-desktop-app).
 
 ## Using Docker Image 
 
@@ -94,4 +94,4 @@ Thanks to Vishwesh Ravi Shrimali, for creating the docker container and binder f
 
 ## References
 
-1. <a href="https://www.learnopencv.com/install-opencv-docker-image-ubuntu-macos-windows/">Install OpenCV Docker Image on Ubuntu, MacOS or Windows by Vishwesh Ravi Shrimali</a>.
+1. [Install OpenCV Docker Image on Ubuntu, MacOS or Windows by Vishwesh Ravi Shrimali](https://www.learnopencv.com/install-opencv-docker-image-ubuntu-macos-windows).

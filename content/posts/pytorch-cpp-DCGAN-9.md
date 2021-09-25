@@ -28,7 +28,7 @@ I'm pleased to start a series of blogs on GANs and their implementation with PyT
 
 ![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/cover-images/Cover-DCGAN.jpg)
 
-The authors (Soumith Chintala, Radford and Luke Metz) in <a href="https://arxiv.org/pdf/1511.06434.pdf">this</a> Seminal Paper on DCGANs introduced DCGANs to the world like this:
+The authors (Soumith Chintala, Radford and Luke Metz) in [this](https://arxiv.org/pdf/1511.06434.pdf) Seminal Paper on DCGANs introduced DCGANs to the world like this:
 
 > We introduce a class of CNNs called deep convolutional generative adversarial networks (DCGANs), that have certain architectural constraints, and demonstrate that they are a strong candidate for unsupervised learning. Training on various image datasets, we show convincing evidence that our deep convolutional adversarial pair learns a hierarchy of representations from object parts to scenes in both the generator and discriminator. Additionally, we use the learned features for novel tasks - demonstrating their applicability as general image representations.
 
@@ -93,7 +93,7 @@ Let's start with defining the architectures of both Generators and Discriminator
 As mentioned before, Generator uses Transposed Convolutional Layers and has no pooling and FC layers. It also uses ReLU Activation Function (except the last layer). The parameters used for the Generator include:
 
 1. `dataroot`: (type: `std::string`) Path of the dataset's root directory. 
-2. `workers`: (type: `int`) Having more `workers` will increase CPU memory usage. (Check this link <a href="https://discuss.pytorch.org/t/guidelines-for-assigning-num-workers-to-dataloader/813/2">for more details</a>)
+2. `workers`: (type: `int`) Having more `workers` will increase CPU memory usage. (Check this link [for more details](https://discuss.pytorch.org/t/guidelines-for-assigning-num-workers-to-dataloader/813/2))
 3. `batch_size`: (type: `int`) Batch Size to consider. 
 4. `image_size`: (type: `int`) Size of the image to resize it to.
 5. `nc`: (type: `int`) Number of channels in the Input Image.
@@ -336,4 +336,4 @@ In the coming blog, I'll share the results and answer a few common questions on 
 
 ## Acknowledgement and References
 
-I would like to thank <a href="https://github.com/yf225">Will Feng</a> and <a href="https://discuss.pytorch.org/u/ptrblck/summary">Piotr</a> for their useful suggestions. The code used in this blog, is partially analogous to the official <a href="https://github.com/pytorch/examples/tree/master/cpp/dcgan">PyTorch examples repo on DCGAN using Libtorch</a>. I've also referred the original paper by <a href="https://twitter.com/soumithchintala">Soumith Chintala</a> and others. The sources of reference images (for Network architectures) have been acknowledged in the captions of respective images.
+I would like to thank [Will Feng](https://github.com/yf225) and [Piotr](https://discuss.pytorch.org/u/ptrblck/summary) for their useful suggestions. The code used in this blog, is partially analogous to the official [PyTorch examples repo on DCGAN using LibTorch](https://github.com/pytorch/examples/tree/master/cpp/dcgan). I've also referred the original paper by [Soumith Chintala](https://twitter.com/soumithchintala) and others. The sources of reference images (for Network architectures) have been acknowledged in the captions of respective images.

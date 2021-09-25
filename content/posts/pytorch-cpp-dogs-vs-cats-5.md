@@ -26,7 +26,7 @@ aliases:
 
 Hi Everyone! So excited to be back with another blog in the series of PyTorch C++ Blogs. 
 
-Today, we are going to see a practical example of applying a CNN to a Custom Dataset - Dogs vs Cats. This is going to be a short post of showing results and discussion about hyperparameters and loss functions for the task, as code snippets and explanation has been provided <a href="https://krshrimali.github.io/Training-Network-Using-Custom-Dataset-PyTorch-CPP/">here</a>, <a href="https://krshrimali.github.io/Custom-Data-Loading-Using-PyTorch-CPP-API/">here</a> and <a href="https://krshrimali.github.io/PyTorch-C++-API/">here</a>.
+Today, we are going to see a practical example of applying a CNN to a Custom Dataset - Dogs vs Cats. This is going to be a short post of showing results and discussion about hyperparameters and loss functions for the task, as code snippets and explanation has been provided [here](https://krshrimali.github.io/Training-Network-Using-Custom-Dataset-PyTorch-CPP/), [here](https://krshrimali.github.io/Custom-Data-Loading-Using-PyTorch-CPP-API/) and [here](https://krshrimali.github.io/PyTorch-C++-API/).
 
 ![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/cover-images/Cover-Dogs-Cats.jpg)
 
@@ -36,9 +36,9 @@ Today, we are going to see a practical example of applying a CNN to a Custom Dat
 
 ## Dataset Overview
 
-Let's have a look at the dataset and it's statistics. **Dogs vs Cats** dataset has been taken from the famous <a href="https://www.kaggle.com/c/dogs-vs-cats">Kaggle Competition</a>. 
+Let's have a look at the dataset and it's statistics. **Dogs vs Cats** dataset has been taken from the famous [Kaggle Competition](https://www.kaggle.com/c/dogs-vs-cats). 
 
-The training set contains 25k images combined of dogs and cats. The data can be downloaded from <a href="https://www.kaggle.com/c/dogs-vs-cats/data">this</a> link. 
+The training set contains 25k images combined of dogs and cats. The data can be downloaded from [this](https://www.kaggle.com/c/dogs-vs-cats/data) link. 
 
 Let's have a look at sample of the data:
 
@@ -50,7 +50,7 @@ As we can see, the dataset contains images of cats and dogs with multiple instan
 
 ## Loading Data
 
-Although we have discussed this before (<a href="https://krshrimali.github.io/Custom-Data-Loading-Using-PyTorch-CPP-API/">here</a>), but let's just see how we load the data. Since this is a binary classification problem (2 classes: Dog and Cat), we will have labels as 0 (for a Cat) and 1 (for a Dog). The data comes in two zip files:
+Although we have discussed this before ([here](https://krshrimali.github.io/Custom-Data-Loading-Using-PyTorch-CPP-API/)), but let's just see how we load the data. Since this is a binary classification problem (2 classes: Dog and Cat), we will have labels as 0 (for a Cat) and 1 (for a Dog). The data comes in two zip files:
 
 1. `train.zip`: Data to be used for training
 2. `test.zip`: Data to be used for testing
@@ -80,7 +80,7 @@ for file in files:
 		shutil.copy('test/' + file, 'train/dog/' + str(count_dog) + '.jpg')
 ```
 
-Once done, let's go ahead and load this data. Since we have discussed this <a href="https://krshrimali.github.io/Custom-Data-Loading-Using-PyTorch-CPP-API/">before</a>, I'll just paste the snippet here.
+Once done, let's go ahead and load this data. Since we have discussed this [before](https://krshrimali.github.io/posts/2019/07/custom-data-loading-using-pytorch-c-api/), I'll just paste the snippet here.
 
 ```cpp
 torch::Tensor read_data(std::string loc) {
@@ -163,7 +163,7 @@ The above snippet has the utility functions we need. Here is a quick summary of 
 3. **process_labels**: Similar to `process_images` function, this function returns a vector of Tensors (labels). This function calls `read_label` function which takes an `int` as a parameter (label: 0 or 1) and returns a Tensor.
 
 
-Let's now go ahead and see how we load the data. For this, we first need to define the `Dataset` class. This class should initialize two variables: one for images and one for labels. As discussed <a href="https://krshrimali.github.io/Custom-Data-Loading-Using-PyTorch-CPP-API/">before</a>, we'll also define `get()` and `size()` functions.
+Let's now go ahead and see how we load the data. For this, we first need to define the `Dataset` class. This class should initialize two variables: one for images and one for labels. As discussed [here](https://krshrimali.github.io/posts/2019/07/custom-data-loading-using-pytorch-c-api/), we'll also define `get()` and `size()` functions.
 
 
 ```cpp
@@ -306,6 +306,6 @@ auto net = std::make_shared<NetImpl>();
 
 ## Training the Network on Dogs vs Cats Dataset
 
-We had before discussed code for training <a href="https://krshrimali.github.io/Training-Network-Using-Custom-Dataset-PyTorch-CPP/">here</a>. I suggest the reader to go through that blog in order to train the dataset. I'll give more insights on training in the next blog!
+We had before discussed code for training [here](https://krshrimali.github.io/posts/2019/07/training-a-network-on-custom-dataset-using-pytorch-c-api/). I suggest the reader to go through that blog in order to train the dataset. I'll give more insights on training in the next blog!
 
 That's it for today. I'll be back with Part-2 of this "Dogs vs Cats Classification" with training, experimentation and results. We'll also discuss on using different networks, and in the Part-3, we'll discuss using **Transfer Learning** for this classification task.

@@ -28,6 +28,8 @@ Hi Everyone! So excited to be back with another blog in the series of PyTorch C+
 
 Today, we are going to see a practical example of applying a CNN to a Custom Dataset - Dogs vs Cats. This is going to be a short post of showing results and discussion about hyperparameters and loss functions for the task, as code snippets and explanation has been provided <a href="https://krshrimali.github.io/Training-Network-Using-Custom-Dataset-PyTorch-CPP/">here</a>, <a href="https://krshrimali.github.io/Custom-Data-Loading-Using-PyTorch-CPP-API/">here</a> and <a href="https://krshrimali.github.io/PyTorch-C++-API/">here</a>.
 
+![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/cover-images/Cover-Dogs-Cats.jpg)
+
 <!--more-->
 
 **Note**: This is Part-1 of the blog on Dogs vs Cats Classification using PyTorch C++ API.

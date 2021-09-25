@@ -26,9 +26,7 @@ aliases:
 
 I'm pleased to start a series of blogs on GANs and their implementation with PyTorch C++ API. We'll be starting with one of the initial GANs - DCGANs (Deep Convolutional Generative Adversarial Networks).
 
-<!--more-->
-
-<img src="/assets/Cover-DCGAN.jpg"/>
+![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/cover-images/Cover-DCGAN.jpg)
 
 The authors (Soumith Chintala, Radford and Luke Metz) in <a href="https://arxiv.org/pdf/1511.06434.pdf">this</a> Seminal Paper on DCGANs introduced DCGANs to the world like this:
 

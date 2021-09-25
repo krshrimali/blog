@@ -26,8 +26,6 @@ aliases:
 
 Hi everyone! If you've been following my blog, you would have noticed a couple of PyTorch Blogs ([PyTorch C++ API: Installation and MNIST Digit Classification using VGG-16](https://krshrimali.github.io/PyTorch-C++-API/), [PyTorch C++ API: Using Custom Data](https://krshrimali.github.io/Custom-Data-Loading-Using-PyTorch-CPP-API/)). I initially started in a motive to help people getting started with, as there are not a lot of tutorials available on Libtorch (PyTorch C++ API).
 
-<!--more-->
-
 **I'm happy to announce a Series of Blog Posts on PyTorch C++ API**. Check out the blogs in the series here:
 
 1. [PyTorch C++ API: Installation and MNIST Digit Classification using VGG-16](https://krshrimali.github.io/PyTorch-C++-API/)

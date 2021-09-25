@@ -24,9 +24,7 @@ aliases:
 
 In the last blog post, I realized there were a lot of methods inherited from the base struct `_Vector_base_` and `_Vector_impl_data`. Instead of directly going to the source code of these structs, I'll go through their methods and objects by explaining what happens when we initialize a vector.
 
-<!--more-->
-
-<img src="/assets/Vector-Part-2.png"/>
+![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/cover-images/Vector-Part-2.png)
 
 That is, we will start from calling a vector constructor and then see how memory is allocated. If you haven't looked at the previous blog post, please take a look <a href="https://krshrimali.github.io/How-Vectors-Work-in-C++-Part-1">here</a>. I want to be thorough with the blog post, so I'll divide this into multiple posts. By the end of this post, you'll go through the following structs:
 

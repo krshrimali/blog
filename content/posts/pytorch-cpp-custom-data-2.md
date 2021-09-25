@@ -26,6 +26,8 @@ aliases:
 
 ## Overview: How C++ API loads data?
 
+![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/cover-images/Cover-Custom-Data.png)
+
 In the last blog, we discussed application of a VGG-16 Network on MNIST Data. For those, who are reading this blog for the first time, here is how we had loaded MNIST data:
 
 ```cpp

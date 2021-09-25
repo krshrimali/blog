@@ -32,7 +32,7 @@ typedef std::unique_ptr<std::unordered_map<std::string, std::string>> UPtrMapSS;
 ```
 <!--more-->
 
-<img src="/assets/alias-declarations-typedefs.png"/>
+![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/cover-images/alias-declarations-typedefs.png)
 
 ---
 **NOTE**

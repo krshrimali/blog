@@ -26,9 +26,7 @@ aliases:
 
 It's been around 5 months since I released my last blog on <a href="https://krshrimali.github.io/DCGAN-using-PyTorch-CPP/">DCGAN Review and Implementation using PyTorch C++ API</a> and I've missed writing blogs badly! Straight the to the point, I'm back!
 
-<!--more-->
-
-<img src="/assets/Cover-DCGAN-2.jpg"/>
+![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/cover-images/Cover-DCGAN-2.jpg)
 
 But before we start, the PyTorch C++ Frontend has gone through several changes and thanks to the awesome contributors around the world, it resembles the Python API more than it ever did! Since a lot of things have changed, I have also updated my previous blogs (tested on 1.4 Stable build).
 

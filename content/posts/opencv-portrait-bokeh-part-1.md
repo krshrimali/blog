@@ -21,7 +21,7 @@
  - /blog/opencv-portrait-bokeh-part-1/
 ---
 
-<!-- <img src="/assets/opencv/thumbnails/Dec_7_2020.jpg"/> -->
+![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/cover-images/Dec_7_2020.jpg)
 
 # OpenCV: Using face detection for Portrait Bokeh (Background Blur) (Part - 1)
 

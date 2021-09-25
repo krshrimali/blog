@@ -29,9 +29,7 @@
 * **General rule:** declaring a name inside curly braces is limited to that scope.
 * **Exception:** C++-98 style Enums
 
-<!--more-->
-
-<img src="/assets/Unscoped-Scoped-Enums.png"/>
+![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/cover-images/Unscoped-Scoped-Enums.png)
 
 ---
 **NOTE**

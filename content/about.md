@@ -24,11 +24,11 @@ icon: icon-html
 
 Hello World! I'm Kushashwa Ravi Shrimali (friends call me Kush, world knows me as krshrimali), a Computer Science and Engineering Graduate from IIIT-NR. I work as a software developer (PyTorch team) at Quansight Labs. I love development, optimization and reading source codes! Have explored a lot of fields during my graduation, development is what I found the most intuitive for myself.
 
-Over the weekends - I contribute to opensource, go live on YouTube and also write blogs (where you are right now). Make sure to check out my <a href="https://youtube.com/c/kushashwaraviShrimali">YouTube channel</a> if you like it! But that's not it, I like singing, dancing on any random music I like and discussing science & politics.
+Over the weekends - I contribute to opensource, go live on YouTube and also write blogs (where you are right now). Make sure to check out my [YouTube channel](https://youtube.com/c/kushashwaraviShrimali) if you like it! But that's not it, I like singing, dancing on any random music I like and discussing science & politics.
 
 I love writing impactful codes! My work doesn't stop at getting the accuracy. I love optimizing the models to help deploy in real-time.
 
-Please navigate to <a href="https://krshrimali.github.io/pytorch/">PyTorch</a>, <a href="https://krshrimali.github.io/opencv/">OpenCV</a> or <a href="https://krshrimali.github.io/cpp/">C++</a> section of this blog to read my blogs.
+Please navigate to [categories](https://krshrimali.github.io/categories/), to start reading my blogs (category-wise).
 
 ## Work Experience
 
@@ -85,7 +85,7 @@ I upload videos on weekdays, after my work hours and go live on weekends to talk
 
 ## Non-Academic Interests and Achievements
 
-I involve myself in non-academic activities like Debating, blogging, playing Table Tennis and more. I was also a Scout in my high school. I love World History and love discussing on social and international topics. I've won several competitions in Debates (more about them in my <a href="https://krshrimali.github.io/resume.pdf">CV</a>).
+I involve myself in non-academic activities like Debating, blogging, playing Table Tennis and more. I was also a Scout in my high school. I love World History and love discussing on social and international topics. I've won several competitions in Debates (more about them in my [CV](https://krshrimali.github.io/resume.pdf)).
 
 ## Contact Me
 

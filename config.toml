@@ -101,9 +101,9 @@ mediaType = "application/toml"
 # Webmentions #
 ###############
 # Manually setup webmention.js from here: https://sebastiandedeyne.com/webmentions-on-a-static-site-with-github-actions/
-# [params.webmention]
-# webmention = "https://webmention.io/example.com/webmention"
-# pingback = "https://webmention.io/example.com/xmlrpc"
+[params.webmention]
+webmention = "https://webmention.io/krshrimali.github.io/webmention"
+pingback = "https://webmention.io/krshrimali.github.io/xmlrpc"
 
 #############
 # Analytics #

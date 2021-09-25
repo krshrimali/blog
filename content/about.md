@@ -6,22 +6,6 @@ aliases = ["about-us","contact"]
   name = "Kushashwa Ravi Shrimali"
 +++
 
----
-layout: post
-title: "Hello World. You're with Kushashwa Ravi Shrimali!"
-date: 2019-08-28
-desc: "Welcome to Kushashwa's personal blog."
-keywords: "Blog, PyTorch, C++, Xeus Cling, Jupyter, Notebook, Libtorch, OpenCV"
-categories: [Blog]
-tags: [Blog]
-published: false
-blog: Home
-excerpt_separator: <!--more-->
-icon: icon-html
----
-
-## About Me
-
 Hello World! I'm Kushashwa Ravi Shrimali (friends call me Kush, world knows me as krshrimali), a Computer Science and Engineering Graduate from IIIT-NR. I work as a software developer (PyTorch team) at Quansight Labs. I love development, optimization and reading source codes! Have explored a lot of fields during my graduation, development is what I found the most intuitive for myself.
 
 Over the weekends - I contribute to opensource, go live on YouTube and also write blogs (where you are right now). Make sure to check out my [YouTube channel](https://youtube.com/c/kushashwaraviShrimali) if you like it! But that's not it, I like singing, dancing on any random music I like and discussing science & politics.

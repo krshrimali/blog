@@ -124,8 +124,8 @@ pingback = "https://webmention.io/krshrimali.github.io/xmlrpc"
   # Use codefolding logic
   codefold = true
 
-# [params.liberapay]
-# accountID = "krshrimali"
+[params.liberapay]
+accountID = "krshrimali"
 
 ###################
 # Comment Systems #

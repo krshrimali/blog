@@ -28,7 +28,7 @@
 ---
 **NOTE**
 
-My notes on Chapter 3, Item 9 of Effective Modern C++ written by Scott Meyers.
+My notes on Chapter 3, Item 12 of Effective Modern C++ written by Scott Meyers.
 
 Some (or even all) of the text can be similar to what you see in the book, as these are notes: I've tried not to be unnecessarily creative with my words. :)
 

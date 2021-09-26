@@ -8,6 +8,8 @@ aliases = ["about-us","contact"]
 
 Hello World! I'm Kushashwa Ravi Shrimali (friends call me Kush, world knows me as krshrimali), a Computer Science and Engineering Graduate from IIIT-NR. I work as a software developer (PyTorch team) at Quansight Labs. I love development, optimization and reading source codes! Have explored a lot of fields during my graduation, development is what I found the most intuitive for myself.
 
+If you want to help support my journey, please care to check my patreon page [here](https://www.patreon.com/krshrimali). I'll really appreciate any support! :)
+
 Over the weekends - I contribute to opensource, go live on YouTube and also write blogs (where you are right now). Make sure to check out my [YouTube channel](https://youtube.com/c/kushashwaraviShrimali) if you like it! But that's not it, I like singing, dancing on any random music I like and discussing science & politics.
 
 I love writing impactful codes! My work doesn't stop at getting the accuracy. I love optimizing the models to help deploy in real-time.

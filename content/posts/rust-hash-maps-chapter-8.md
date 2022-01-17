@@ -225,7 +225,6 @@ That's it for Chapter 8, thank you for reading. :)
 ## Note
 
 ---
-**NOTE**
 
 These are just my notes, or things I write down while/after reading the chapters/blogs or going through resources. I like sharing them, for everyone's and also my memory. At no point I say or mean that these should be preferred or read "over" the original resource mentioned. But as always, I'm open for feedback and/or suggestions, so feel free to comment here on the blog (just be nice, is all I ask for).
 

@@ -6,11 +6,11 @@ aliases = ["about-us","contact"]
   name = "Kushashwa Ravi Shrimali"
 +++
 
-Hello World! I'm Kushashwa Ravi Shrimali (friends call me Kush, world knows me as krshrimali), a Computer Science and Engineering Graduate from IIIT-NR. I work as a software developer (PyTorch team) at Quansight Labs. I love development, optimization and reading source codes! Have explored a lot of fields during my graduation, development is what I found the most intuitive for myself.
+Hello World! I'm Kushashwa Ravi Shrimali (friends call me Kush, world knows me as krshrimali), a Computer Science and Engineering Graduate from IIIT-NR. I work as a Research Engineer at [Grid.AI](http://grid.ai/), mostly on [PyTorch Lightning Ecosystem](https://github.com/PyTorchLightning). Previously, I work as a Software Developer (PyTorch dev team) at Quansight Labs. I love development, optimization and reading source codes! Have explored a lot of fields during my graduation, development is what I found the most intuitive for myself.
 
-If you want to help support my journey, please care to check my patreon page [here](https://www.patreon.com/krshrimali). I'll really appreciate any support! :)
+I stream every day on my [Twitch Channel (BuffetCodes)](https://twitch.tv/buffetcodes). Please consider following and joining the streams, at 9 PM IST / 8:30 AM PT. The streams are recorded and uploaded on my [YouTube channel](https://youtube.com/c/kushashwaraviShrimali).
 
-Over the weekends - I contribute to opensource, go live on YouTube and also write blogs (where you are right now). Make sure to check out my [YouTube channel](https://youtube.com/c/kushashwaraviShrimali) if you like it! But that's not it, I like singing, dancing on any random music I like and discussing science & politics.
+Over the weekends - I contribute to opensource, and write blogs (where you are right now). But that's not it, I like singing (not that I sing well xD), dancing on any random music I like and discussing technology (mostly Linux, vim, and programming) & politics.
 
 I love writing impactful codes! My work doesn't stop at getting the accuracy. I love optimizing the models to help deploy in real-time.
 
@@ -18,8 +18,10 @@ Please navigate to [categories](https://krshrimali.github.io/categories/), to st
 
 ## Work Experience
 
-- **Quansight Labs (Software Developer)** (June 2021 to Present)
-    - Contributing to PyTorch, check my work here: https://github.com/pytorch/pytorch/pulls/krshrimali
+- **Grid.AI (Research Engineer) | PyTorch Lightning** (February 2022 to Present)
+    - One of the core maintainers of PyTorch Lightning. Contributing to PyTorch Lightning and Flash
+- **Quansight Labs (Software Developer)** (June 2021 to February 2022)
+    - Contributed to PyTorch, check my work here: https://github.com/pytorch/pytorch/pulls/krshrimali
 - **Sybill AI (Applied ML Engineer), Bangalore, India** (February 2021 to May 2021)
     - Designed multi‑modal models in ML pipeline.
     - Working on designing ML test framework and using MLFlow for ML experiments and hyper parameter tracking.

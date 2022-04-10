@@ -56,20 +56,12 @@ Please navigate to [categories](https://krshrimali.github.io/categories/), to st
 - **Student Activity Concil, IIIT Naya Raipur**
     - Coordinated clubs running under SAC: Artificial Intelligence and Machine Learning Club, The Society of Coders. Also became the Technical Coordinator of Annual Technical and Cultural Fest - TechNovate 2019.
 
-## YouTube Channel
+## Twitch and YouTube Channels
 
-This deserves another section since I've put a lot of hard work into this. :)
+I stream every day at 9 PM IST (8:30 AM PT), so if you are interested - please hop in and say hi!
 
-- https://youtube.com/c/kushashwaraviShrimali
-
-I upload videos on weekdays, after my work hours and go live on weekends to talk about AI, development and importance of optimization.
-
-## Skills
-
-* **Programming Language:** C++, CUDA, C, Shell, Python, Perl
-* **Tools:** LaTeX, Git, MATLAB, Jupyter, Android Studio
-* **Frameworks:** OpenCV, PyTorch, Tensorflow
-* **Libraries:** NumPy, Matplotlib, scikit-learn, OpenCV, PyTorch, Keras, Tensorflow, Spacy
+Twitch: https://twitch.tv/buffetcodes
+YouTube: https://youtube.com/c/kushashwaraviShrimali
 
 ## Non-Academic Interests and Achievements
 

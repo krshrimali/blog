@@ -60,8 +60,8 @@ Please navigate to [categories](https://krshrimali.github.io/categories/), to st
 
 I stream every day at 9 PM IST (8:30 AM PT), so if you are interested - please hop in and say hi!
 
-Twitch: https://twitch.tv/buffetcodes
-YouTube: https://youtube.com/c/kushashwaraviShrimali
+* Twitch: https://twitch.tv/buffetcodes
+* YouTube: https://youtube.com/c/kushashwaraviShrimali
 
 ## Non-Academic Interests and Achievements
 

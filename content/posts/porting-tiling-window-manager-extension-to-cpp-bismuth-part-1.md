@@ -8,6 +8,7 @@
  - cpp
  - projects
  - open-source
+ - kde
  tags:
  - development
  - coding

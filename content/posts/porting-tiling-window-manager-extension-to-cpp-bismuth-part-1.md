@@ -28,8 +28,6 @@
  comments: true
 ---
 
-# Porting a KDE Tiling Window Manager Extension from TypeScript to C++ [Bismuth]: Part-1 (Introduction)
-
 Hi everyone! I understand it's been a long time, and I'm so excited to be writing this blog today. In today's blog, I wanted to talk about my journey (so far) on contributing to [Bismuth (a KDE's Tiling Window Manager Extension)](https://github.com/Bismuth-Forge/bismuth/), mainly how and why I started, and where I am right now.
 
 ## The Story: Why KDE Plasma and Why Bismuth?

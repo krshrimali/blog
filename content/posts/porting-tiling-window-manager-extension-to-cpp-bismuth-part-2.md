@@ -152,7 +152,7 @@ This function only exists to give you _all the windows_ which are _close enough_
 
 Some will wonder why do we have two functions: `getClosestRelativeWindowCorner`, and `getClosestRelativeWindow`? And why this `-5, +5`? Unfortunately, it's possible that some windows aren't tiled properly, see [this](https://github.com/Bismuth-Forge/bismuth/issues/102) issue. I've attached the screenshot: (credits to the author)
 
-![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/bismuth-part-2-not-sized-properly.png)
+![](https://user-images.githubusercontent.com/13597663/136797590-9c525224-6421-4384-ad42-4de54a814cb2.png)
 
 Hence we can't be too strict here. I personally believe this number `+/- 5` should be tinkered better and not hard-coded, but that's for later.
 

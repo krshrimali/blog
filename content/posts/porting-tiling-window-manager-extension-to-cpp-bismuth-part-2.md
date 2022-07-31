@@ -57,7 +57,7 @@ Let's start with a quick recap though, in the previous blog, we discussed:
 
 I want to start off with a visual, took me some time to draw it, but in case it doesn't look good, I'm sorry! My drawing teacher in the high school tried his best, but... 
 
-<img src="/assets/blogs/bismuth-part-2-window-alignment.png"/>
+<img src="https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/bismuth-part-2-window-alignment.png"/>
 
 Above image is visual of a tiling window layout where there are in total 5 windows opened (just for imagination, no sane person would open these many windows on a 24 inch monitor... xD): `A, B, C, D, E`, where as mentioned in the figure above, `E` is the active window and we are trying to focus `UP`. A few notes to take from the figure:
 
@@ -152,7 +152,7 @@ This function only exists to give you _all the windows_ which are _close enough_
 
 Some will wonder why do we have two functions: `getClosestRelativeWindowCorner`, and `getClosestRelativeWindow`? And why this `-5, +5`? Unfortunately, it's possible that some windows aren't tiled properly, see [this](https://github.com/Bismuth-Forge/bismuth/issues/102) issue. I've attached the screenshot: (credits to the author)
 
-<img src="/assets/blogs/bismuth-part-2-not-sized-properly.png"/>
+<img src="https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/bismuth-part-2-not-sized-properly.png"/>
 
 Hence we can't be too strict here. I personally believe this number `+/- 5` should be tinkered better and not hard-coded, but that's for later.
 

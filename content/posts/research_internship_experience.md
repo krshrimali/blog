@@ -22,11 +22,9 @@ comments: true
 
 Hi everyone! Over the last few months, I've received a lot of queries regarding applying to research internships. And I wanted to answer them shortly, in this blog, with a disclaimer to begin with.
 
----
 **DISCLAIMER**
 
 I did only one research internship (NTU Singapore, ROSE Labs), and there are people who are more qualified than me to answer this, but I'll make my best attempt.
----
 
 Here is how I will suggest to apply:
 

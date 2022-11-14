@@ -1,24 +1,24 @@
 ---
-author:
-  name: "Kushashwa Ravi Shrimali"
-date: 2020-11-14
-linktitle: "Daily Update - 14th November 2022"
-title: "Daily Update: 14th November 2022 - Day 1"
-categories:
- - daily_updates
-tags:
+ author:
+   name: "Kushashwa Ravi Shrimali"
+ date: 2020-11-14
+ linktitle: "Daily Update - 14th November 2022"
+ title: "Daily Update: 14th November 2022 - Day 1"
+ categories:
+ - daily updates
+ tags:
  - blog
  - updates
-type:
-- post
-- posts
-weight: 10
-series:
-- updates
-aliases:
-- /blog/daily-update-14-nov-2022/
-toc: true
-comments: true
+ type:
+ - post
+ - posts
+ weight: 10
+ series:
+ - Weekly
+ aliases:
+ - /blog/daily-update-14-nov-2022/
+ toc: false
+ comments: true
 ---
 
 Hi everyone, I'm back to - writing daily update blogs. Just sharing what I did today, and documenting my progress. Now of course it won't contain everything I do, but yep - everything related to learning and things I'm passionate about.

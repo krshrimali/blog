@@ -9,7 +9,6 @@
 
 ## Leetcode problems
 
-* [LRU Cache](https://leetcode.com/problems/lru-cache/)
 * [K Closest Points to the origin](https://leetcode.com/problems/k-closest-points-to-origin/)
 * [Jump Game](https://leetcode.com/problems/jump-game/)
 * [Jump Game - II](https://leetcode.com/problems/jump-game-ii/)

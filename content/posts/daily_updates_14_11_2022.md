@@ -2,7 +2,7 @@
 author:
   name: "Kushashwa Ravi Shrimali"
 date: 2020-11-15
-linktitle: Daily Update: 14th November 2022
+linktitle: "Daily Update - 14th November 2022"
 title: "Daily Update: 14th November 2022 - Day 1"
 categories:
  - daily_updates

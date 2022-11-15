@@ -36,4 +36,6 @@ Hi everyone, Day 2 of this series of daily updates. Started my day earlier than 
 **Leetcode Problems**:
 
 * [Longest substring without repeating characters](https://leetcode.com/problems/longest-substring-without-repeating-characters)
-* 
+* [Clone graph](https://leetcode.com/problems/clone-graph)
+  - Note: this was done in C++, Leetcode didn't have Rust added as the supported language for this.
+* [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) - TODO

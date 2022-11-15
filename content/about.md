@@ -6,11 +6,11 @@ aliases = ["about-us","contact"]
   name = "Kushashwa Ravi Shrimali"
 +++
 
-Hello World! I'm Kushashwa Ravi Shrimali (friends call me Kush, world knows me as krshrimali), a Computer Science and Engineering Graduate from IIIT-NR. I work as a Research Engineer at [Grid.AI](http://grid.ai/), mostly on [PyTorch Lightning Ecosystem](https://github.com/PyTorchLightning). Previously, I work as a Software Developer (PyTorch dev team) at Quansight Labs. I love development, optimization and reading source codes! Have explored a lot of fields during my graduation, development is what I found the most intuitive for myself.
+Hello World! I'm Kushashwa Ravi Shrimali (friends call me Kush, world knows me as krshrimali), a Computer Science and Engineering Graduate from IIIT-NR. I work as a Research Engineer at [Lightning AI](http://lightning.ai/), mostly on [PyTorch Lightning Ecosystem](https://github.com/PyTorchLightning). Previously, I work as a Software Developer (PyTorch dev team) at Quansight Labs and as an Intern at NVIDIA's GPU Development Frameworks team. I love development, optimization and exploring the possibilities of computer science! Have explored a lot of fields during my graduation, development is what I found the most intuitive for myself.
 
 I stream every day on my [Twitch Channel (BuffetCodes)](https://twitch.tv/buffetcodes). Please consider following and joining the streams, at 9 PM IST / 8:30 AM PT. The streams are recorded and uploaded on my [YouTube channel](https://youtube.com/c/kushashwaraviShrimali).
 
-Over the weekends - I contribute to opensource, and write blogs (where you are right now). But that's not it, I like singing (not that I sing well xD), dancing on any random music I like and discussing technology (mostly Linux, vim, and programming) & politics.
+Over the weekends - I contribute to open source, and write blogs (where you are right now). But that's not it, I like singing (not that I sing well xD), dancing on any random music I like and discussing technology (mostly Linux, vim, and programming) & politics.
 
 I love writing impactful codes! My work doesn't stop at getting the accuracy. I love optimizing the models to help deploy in real-time.
 
@@ -18,13 +18,11 @@ Please navigate to [categories](https://krshrimali.github.io/categories/), to st
 
 ## Work Experience
 
-- **Grid.AI (Research Engineer) | PyTorch Lightning** (February 2022 to Present)
-    - One of the core maintainers of PyTorch Lightning. Contributing to PyTorch Lightning and Flash
+- **Lightning AI (Research Engineer)** (February 2022 to Present)
+    - Lead of Lightning Flash library.
+    - One of the core maintainers of PyTorch Lightning and Lightning framework.
 - **Quansight Labs (Software Developer)** (June 2021 to February 2022)
     - Contributed to PyTorch, check my work here: https://github.com/pytorch/pytorch/pulls/krshrimali
-- **Sybill AI (Applied ML Engineer), Bangalore, India** (February 2021 to May 2021)
-    - Designed multi‑modal models in ML pipeline.
-    - Working on designing ML test framework and using MLFlow for ML experiments and hyper parameter tracking.
 - **NVIDIA (Deep Learning Frameworks Team, PyTorch), Santa Clara, US**
     - On site internship at NVIDIA Head Quarters, Santa Clara. See the following PRs if you want to know what I worked on.
         * https://github.com/pytorch/pytorch/pull/33322
@@ -32,10 +30,6 @@ Please navigate to [categories](https://krshrimali.github.io/categories/), to st
         * https://github.com/pytorch/pytorch/pull/33063
     - Mentor: Michael Carilli (Senior Software Developer, NVIDIA)
     - Manager: Christian Sarofeen
-- **Dukaan (R&D Deep Learning Engineer), Bangalore, India** (September 2020 to October 2020)
-    - Worked as R&D DL Engineer.
-    - Contributed in training custom CV and NLP models for deployment for Dukaan App.
-    - Note: Had to leave and come back home for indefinite time because of COVID Emergency at home.
 - **Care AI (Software Developer Intern, AI), Florida, US** (April 2020 to August 2020)
     - Remotely working (due to COVID-19 pandemic). Major responsibilities include:
         * Optimizing workflow using TensorRT (mainly using C++ API).

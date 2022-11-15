@@ -36,4 +36,5 @@ Hi everyone, Day 2 of this series of daily updates. Started my day earlier than 
 **Leetcode Problems**:
 
 * [Longest substring without repeating characters](https://leetcode.com/problems/longest-substring-without-repeating-characters)
-* 
+* [Clone Graph](https://leetcode.com/problems/clone-graph/)
+* [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)

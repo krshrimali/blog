@@ -31,11 +31,31 @@ Hi everyone, Day 2 of this series of daily updates. Started my day earlier than 
   * Code coverage analysis: hmm, it used to stay at around 87 to 90% for the libraries I worked with. I agree, most of it should be tested, but as the library grows longer, you can't block PRs on coverage (specially by the community). But it's underrated, I've seen developers ignore it until they face the wrath of weird bugs. 100% testing coverage, will always be difficult, but if the goal is kept in that direction, it might reach to 95-100%.
   * Never heard of fuzz testing before...after reading about it, just another word of what we have done before. Never got a name to it though. ;)
   * Ship with Hardening Enabled: Again, no idea about this. I'll have to read about it. Marked as a TODO.
-* Missed watching Edward's stream on TorchDynamo, I woke up late. :/ Going to re-watch the stream now.
+* Missed watching Edward's stream on TorchDynamo, I woke up late. :/ Going to re-watch the stream now. Sharing the notes towards the end of this blog.
 
 **Leetcode Problems**:
 
 * [Longest substring without repeating characters](https://leetcode.com/problems/longest-substring-without-repeating-characters)
 * [Clone graph](https://leetcode.com/problems/clone-graph)
   - Note: this was done in C++, Leetcode didn't have Rust added as the supported language for this.
-* [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) - TODO
+* [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
+
+## Notes
+
+**Deepdive of Torch Dynamo**
+
+Problem: Python code - many tensor operations - somehow extract out the graph of ops in question - to be passed to compiler.
+Problems with eager mode: compile graphs together into single ops, need to leverage accelerator's potential.
+
+How does TorchDynamo solve the problem?
+
+- Frame evaluation API - was added to Python to support JIT
+- Python parsed into Byte code -> byte code runs in interpreter loop in CPython
+- Byte code: simplified 
+- Frame evaluation API, instead of passing bytecode to CPython - you can pass it to your call back and modify the bytecode if you wish. Or even make it to compiled object code
+- Generate bytecode -> do some analysis on it (symbolically evaluate the byte code) - this will give us all the tensor operations.
+
+- Question: how do you deal with CPython changing it's bytecode set?
+- Answer: We have to update TorchDynamo every time there is a new CPython's version.
+
+Note: TorchDynamo doesn't have support for generators.

@@ -43,4 +43,4 @@ For some context, I started doing these problems to brush up my problem solving 
 
 **Ending words**
 
-Still starting off with the momentum. Going to take some while, but I hope to continue doing it.
+Still starting off with the momentum. Going to take some time, but I hope to continue doing it.

@@ -8,7 +8,7 @@ aliases = ["about-us","contact"]
 
 Hello World! I'm Kushashwa Ravi Shrimali (friends call me Kush, world knows me as krshrimali), a Computer Science and Engineering Graduate from IIIT-NR. I work as a Research Engineer at [Lightning AI](http://lightning.ai/), mostly on [PyTorch Lightning Ecosystem](https://github.com/PyTorchLightning). Previously, I work as a Software Developer (PyTorch dev team) at Quansight Labs and as an Intern at NVIDIA's GPU Development Frameworks team. I love development, optimization and exploring the possibilities of computer science! Have explored a lot of fields during my graduation, development is what I found the most intuitive for myself.
 
-I stream every day on my [Twitch Channel (BuffetCodes)](https://twitch.tv/buffetcodes). Please consider following and joining the streams, at 9 PM IST / 8:30 AM PT. The streams are recorded and uploaded on my [YouTube channel](https://youtube.com/c/kushashwaraviShrimali).
+I try going live on my [YouTube channel](https://youtube.com/c/kushashwaraviShrimali) whenever I find the time. Most of my projects and work are demonstrated there, in case it interests you! :)
 
 Over the weekends - I contribute to open source, and write blogs (where you are right now). But that's not it, I like singing (not that I sing well xD), dancing on any random music I like and discussing technology (mostly Linux, vim, and programming) & politics.
 

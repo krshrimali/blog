@@ -1,3 +1,26 @@
+---
+ author:
+   name: "Kushashwa Ravi Shrimali"
+ date: 2022-11-15
+ linktitle: "Daily Update - 15th November 2022"
+ title: "Daily Update: 15th November 2022 - Day 2"
+ categories:
+ - daily updates
+ tags:
+ - blog
+ - updates
+ type:
+ - post
+ - posts
+ weight: 10
+ series:
+ - Weekly
+ aliases:
+ - /blog/daily-update-15-nov-2022/
+ toc: false
+ comments: true
+---
+
 Hi everyone, Day 2 of this series of daily updates. Started my day earlier than yesterday, at around 9 AM (work).
 
 **Reading**:

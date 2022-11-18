@@ -27,9 +27,10 @@ Hi everyone, Day 5 of this series of daily updates. Started my day, fairly early
 
 1. Completed Chapter 1 (Lexing) of the book "Write an Interpreter in Go". Very detailed, and I love how the author included REPL in the chapter 1. Even though it's not a lot of code, it just makes it so intuitive to run line by line and get the tokens.
 2. Started reading Chapter 2 (Parser). Fortunately, I do have some knowledge about grammars, BNF and EBNF forms, and using parser generators. But I agree with the author there, you'll learn a lot if you create the parser from scratch. So I'm looking forward to it.
+3. (TODO) Watch [Secure Login System in Python](https://www.youtube.com/watch?v=3NEzo3CfbPg). Just a random YT video that appeared in my feed, which attracted me enough to watch :) Also, the guy is quite good w.r.t his content.
 
 **Leetcode**:
 
-Revisited all the problems I've solved so far.
+(TODO) Revisit all the problems I've solved so far. Implement them again in C++ and Rust.
 
 Thank you! :)

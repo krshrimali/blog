@@ -16,7 +16,7 @@
  series:
  - Weekly
  aliases:
- - /blog/daily-update-18-to-21-nov-2022/
+ - /blog/daily-update-19-to-21-nov-2022/
  toc: false
  comments: true
 ---

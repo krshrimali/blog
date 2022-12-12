@@ -60,9 +60,9 @@ That's where I started, taking the first steps, just replicating the `styling` e
 1. Theme switching was enabled.
 2. Each user had a card (but not aligned 😢).
 
-![Stage - 1](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blog/rust_app_stage_first.png)
+![Stage - 1](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/rust_app_stage_first.png)
 
-![Stage - 1 (Light Theme)](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blog/rust_app_stage_first_light.png)
+![Stage - 1 (Light Theme)](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/rust_app_stage_first_light.png)
 
 The ideal stage would be to see the YouTube API collect details, create the JSON file, and show it to the user. I knew I was not even close to the final goal, but why give up?
 
@@ -93,11 +93,11 @@ fn profile_pic<'a>(width: u16) -> Container<'a, Message> {
 }
 ```
 
-![Stage - 2](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blog/rust_app_stage_second.png)
+![Stage - 2](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/rust_app_stage_second.png)
 
 As I knew things were starting to take place, the next important step was to fix the alignment, and enable JSON parsing. Let me show you the issue we had with alignment:
 
-![Stage - 2 (alignment issue)](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blog/rust_app_stage_second_alignment_issue.png)
+![Stage - 2 (alignment issue)](https://raw.githubusercontent.com/krshrimali/blogs/main/assets/blog/rust_app_stage_second_alignment_issue.png)
 
 The alignment issue was fixed with using `align_items` and also avoiding `width(Length::Fill)` with the user cards. We'll discuss these details in the next blog, for now, I just shared to give you a hint.
 
@@ -185,7 +185,7 @@ While I was very happy that:
 
 **BUT** there was a small but significantly major mistake I made. Let's keep it for later though, keep reading ❤️
 
-![Stage - 3](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blog/rust_app_stage_third.png)
+![Stage - 3](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/rust_app_stage_third.png)
 
 Starting from here, you'll understand how important development is. In this stage, the UI won't change _BUT_ we'll be significantly improving the performance.
 
@@ -320,6 +320,6 @@ I know this doesn't look the best yet, there are so many good apps out there bui
 
 Here is how the app looks like, right now (featuring my friend Mohit Wankhade 😃):
 
-![Stage - 4](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blog/rust_app_stage_fourth.png)
+![Stage - 4](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/rust_app_stage_fourth.png)
 
 We aren't done yet by the way, I have to cover some macros I built, but I'll keep it for my next blog. Until then, I hope you continue grinding whatever you love, and make the best out of the time you have. Take care, and thank you for being here. 💗

@@ -97,7 +97,7 @@ fn profile_pic<'a>(width: u16) -> Container<'a, Message> {
 
 As I knew things were starting to take place, the next important step was to fix the alignment, and enable JSON parsing. Let me show you the issue we had with alignment:
 
-![Stage - 2 (alignment issue)](https://raw.githubusercontent.com/krshrimali/blogs/main/assets/blog/rust_app_stage_second_alignment_issue.png)
+![Stage - 2 (alignment issue)](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/rust_app_stage_second_alignment_issue.png)
 
 The alignment issue was fixed with using `align_items` and also avoiding `width(Length::Fill)` with the user cards. We'll discuss these details in the next blog, for now, I just shared to give you a hint.
 

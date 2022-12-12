@@ -60,9 +60,9 @@ That's where I started, taking the first steps, just replicating the `styling` e
 1. Theme switching was enabled.
 2. Each user had a card (but not aligned 😢).
 
-![Stage - 1](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blog/rust_app_stage_first.jpg)
+![Stage - 1](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blog/rust_app_stage_first.png)
 
-![Stage - 1 (Light Theme)](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blog/rust_app_stage_first_light.jpg)
+![Stage - 1 (Light Theme)](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blog/rust_app_stage_first_light.png)
 
 The ideal stage would be to see the YouTube API collect details, create the JSON file, and show it to the user. I knew I was not even close to the final goal, but why give up?
 

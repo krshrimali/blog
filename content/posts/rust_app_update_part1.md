@@ -45,9 +45,7 @@ I chose a mix of both 1 and 2. Cried for a day or two, but then accepted and sta
 4. **Write an App in Rust**
    and more...
 
-The 4th point you're looking at, is exactly what we are going to cover today. But before that, let me say it loud:
-
-> Dear all, never take a decision when you are on your highs. You'll end up being in a mud later on, hold everything together when you reach a high. STAY! RIGHT! THERE!
+The 4th point you're looking at, is exactly what we are going to cover today.
 
 ## THE Update
 

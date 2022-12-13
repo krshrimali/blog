@@ -51,6 +51,8 @@ The 4th point you're looking at, is exactly what we are going to cover today.
 
 Here it comes! For those who (very kindly) follow [my YouTube channel](https://youtube.com/c/kushashwaraviShrimali), know already that I've been learning Rust for a while. And while I was at it, I found it a good time to start building something. Pop! OS, the best Linux distribution I've ever come across, announced their new Cosmic Desktop Environment a while back (it's a work in progress). I like reading source codes, and have been following what they were doing with Cosmic and remembered that they were using [Iced Library](https://github.com/iced-rs/iced) for the development (GUI). I thought to give it a try, and the best place to start with, was the [YouTube Monitoring App](https://github.com/krshrimali/youtuber-monitoring-app) which I was building earlier with Python and Electron JS. Porting the idea to Rust was comparatively easier than to think of another project.
 
+Before I proceed, feel free to check out the repository [here](https://github.com/krshrimali/YouTube-Monitoring-App-Rust-Iced). It would be already outdated for this blog, but nonetheless - I hope you like the work.
+
 So the journey took off, started with going through the examples, and the [`styling`](https://github.com/iced-rs/iced/tree/master/examples/styling) example. Seeing how theme is switched, was mesmerizing.
 
 That's where I started, taking the first steps, just replicating the `styling` example to see if I can reproduce and understand what they were doing. As the time passed by, things started to take a good look:

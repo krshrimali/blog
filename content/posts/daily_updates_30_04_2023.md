@@ -37,6 +37,7 @@ Lovely day, had my friend [imsrbh](https://github.com/imsrbh) come over and we w
    - We were sending the keys as `&[u8]` and had to convert these to strings back at consumer (need to proper error checking there)
    - Producer repo: https://github.com/krshrimali/keystroke-store-rs
    - Consumer repo: https://github.com/krshrimali/keystroke-consumer-rs
+   - Quick learning on why we didn't go for Redis (mostly because we wanted to learn Kafka in Rust lol, can try Redis one day but I like reliability of Kafka): https://stackoverflow.com/a/37993809
 
 A lot of TODOs from yesterday are left, I'll move them to tomorrow, yay! Procrastination, let's go 😆🎉
 

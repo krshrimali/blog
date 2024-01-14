@@ -24,7 +24,7 @@ Hi everyone! Happy to be back, in case y'all have been wondering - where have yo
 
 Disclaimer: this is more on a personal level rather than on an educational level, I'm sorry to disappoint if you were expecting a detailed tech blog today. I'll come up with something soon. :)
 
-Alright, so... this thought came into my mind, probably it's just me but how easily do we forget good things, people and moments? You'll see people talking about their down moments, but why have we stopped appreciating and recognising the ups we have had in the past? While reading this, let's all think about the _good_ moments you had int he past, and think about the people who contributed to your journey (irrespective of their presence in your life _right now_), maybe close your eyes - speak out loud - or write it down - do whatever that suits you, but let's do it together.
+Alright, so... this thought came into my mind, probably it's just me but how easily do we forget good things, people and moments? You'll see people talking about their down moments, but why have we stopped appreciating and recognising the ups we have had in the past? While reading this, let's all think about the _good_ moments you had in the past, and think about the people who contributed to your journey (irrespective of their presence in your life _right now_), maybe close your eyes - speak out loud - or write it down - do whatever that suits you, but let's do it together.
 
 Make sure to include very small wins as well when you think about the moments! :) A win is a win. I'll write things down as I think, please note that I chose to not name people/companies to keep their privacy and my peace 😉
 

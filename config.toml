@@ -4,7 +4,7 @@ title   = "Kushashwa Ravi Shrimali (Kush)"
 DefaultContentLanguage = "en"
 
 themesDir = "themes"
-theme = "hello-friend-ng-hz"
+theme = "hugo-theme-hello-friend-ng"
 
 PygmentsCodeFences = true
 PygmentsStyle = "monokai"
@@ -38,8 +38,8 @@ disableHugoGeneratorInject = false
 [permalinks]
   posts = "/posts/:year/:month/:title/"
 
-[author]
-  name = "Kushashwa Ravi Shrimali"
+# [author]
+#   name = "Kushashwa Ravi Shrimali"
 
 [blackfriday]
   hrefTargetBlank = true
@@ -96,6 +96,9 @@ mediaType = "application/toml"
 [params.search]
   enable = true
   backend = "fuse" # can be stork or fuse
+
+[params.author]
+  name = "Kushashwa Ravi Shrimali"
 
 ###############
 # Webmentions #
@@ -202,9 +205,10 @@ accountID = "krshrimali"
 
 [languages]
   [languages.en]
-    subtitle  = "Learning never stops!"
-    weight    = 1
-    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+    [languages.en.params]
+      subtitle  = "Learning never stops!"
+      weight    = 1
+      copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 
   # [languages.fr]
     # subtitle  = "Hello Friend NG HZ Theme"

@@ -2,7 +2,7 @@
  author:
    name: "Kushashwa Ravi Shrimali"
  date: 2024-02-27
- linktitle: "Building a ChatBot from your Documentation Website | DocsGPT | Part-2"
+ linktitle: "Data Scrapping for ChatBot Model in Rust | DocsGPT | Part-2"
  title: "Data Scrapping for ChatBot Model in Rust | DocsGPT | Part-2"
  categories:
  - projects

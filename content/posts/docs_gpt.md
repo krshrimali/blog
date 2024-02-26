@@ -64,7 +64,6 @@ As always, I just want to point out that language you use isn't the topmost crit
 
 ## Plan
 
-> [!NOTE]
 > I've been live streaming my work on this project on my YouTube channel here: https://youtube.com/c/kushashwaraviShrimali. Please feel free to check it out if you're interested.
 
 1. Pick up a sample documentation website that we can use for this project. I'm picking up [PyTorch docs website](https://pytorch.org/docs/stable/index.html), it's well maintained, and the format is tricky enough to automate things for other websites in the future.
@@ -98,8 +97,8 @@ I'm going to come back with another blog to discuss my solution, but for now, le
 
 Sorry for the shameless plug here, I mean not really shameless since it's still my blog haha, but... I don't want to miss out on telling you that I've been live streaming my work on this project on my YouTube channel here: https://youtube.com/c/kushashwaraviShrimali. By the time I'm writing this, there have been 2 videos out:
 
-> - [Let's finetune a model for a ChatBot](https://www.youtube.com/watch?v=-3Cy-IxvvdA)
-> - [Fetching dataset for finetuning a model for a ChatBot](https://www.youtube.com/watch?v=Dm7Dz_-yZss)
+- [Let's finetune a model for a ChatBot](https://www.youtube.com/watch?v=-3Cy-IxvvdA)
+- [Fetching dataset for finetuning a model for a ChatBot](https://www.youtube.com/watch?v=Dm7Dz_-yZss)
 
 There are more videos coming, and I hope that they help you out with honest development views. We all fail, none of this happens in 5 minutes, 10 minutes and so on. I wanted to be candid with whatever I develop, and I hope that if nothing - it at least helps y'all with some motivation to keep going on your projects.
 

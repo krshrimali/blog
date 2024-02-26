@@ -1,7 +1,7 @@
 ---
  author:
    name: "Kushashwa Ravi Shrimali"
- date: 2024-02-27
+ date: 2024-02-26
  linktitle: "Data Scrapping for ChatBot Model in Rust | DocsGPT | Part-2"
  title: "Data Scrapping for ChatBot Model in Rust | DocsGPT | Part-2"
  categories:

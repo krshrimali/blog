@@ -57,7 +57,7 @@ That's why I'm using Rust here. I know this question is going to come up quite a
 - It would be nice to see where does the data engineering ecosystem stand w.r.t Rust. We've all (probably?) used beautifulsoup in Python to scrap data from websites, and data cleaning/preprocessing libraries, but I'm excited to see where does Rust stand in this.
 - I've been using Rust for some time now, and am pretty comfortable in _exploring_ the ecosystem with this project.
 - Writing a ChatBot interface would be fun in Rust.
-- Finetuning a model in Rust... hmm, I'm honestly not sure what's the state of [https://github.com/LaurentMazare/tch-rs](Rust bindings for PyTorch C++ API) - so it's something I'm very much looking forward to. I'm honestly nervous about this part, but let's see.
+- Finetuning a model in Rust... hmm, I'm honestly not sure what's the state of [Rust bindings for PyTorch C++ API](https://github.com/LaurentMazare/tch-rs) - so it's something I'm very much looking forward to. I'm honestly nervous about this part, but let's see.
 - Using a single language for the whole end to end flow would make it easier for me to automate everything including testing and workflows.
 
 As always, I just want to point out that language you use isn't the topmost criteria of any project IMO. First should be, whether it got delivered to the users and if they are happy with it. So, yes, please feel free to port it to some other language of your choice and try out the ecosystem for yourself to learn and grow your confidence :)

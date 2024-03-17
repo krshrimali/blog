@@ -27,7 +27,7 @@ For context, I've been at around 120 wpm (avg) to 135 wpm (max) in a 30 seconds 
 
 I've moved to another city (temporarily, for personal reasons) and I'm away from my beautiful (and sacred? idk, I just worship it a lot) setup, which also means that I haven't had time yet to stream/upload videos/write blogs. More on this in another blog maybe, but today I was just attempting a typing speed test. Initially, I was around 120, but in the next one, I scored 135. Screenshot attached below:
 
-<img src="assets/blogs/what-typing-taught-me-blog-ss.png"/>
+<img src="/assets/blogs/what-typing-taught-me-blog-ss.png"/>
 
 I started thinking - what was different this time? Terrain? Keyboard? Hands? Person? Time? Nope! Luck? Maybe. But one thing stood out, I was reading the next word while I was typing the current one. I started off by reading 2 words, so I knew A and B, and when I would type B - I would already know it so I'll just end up reading C and so on. This gave me an idea, we perform better when we prepare ourselves for what's gonna happen in the next closest move, right? Yes, of course I "knew" what was the next word this time but that's an _effort_ I made for myself to read what's going to happen next and prepare my fingers accordingly. Focus on the present, yes, but are you preparing yourself for the near future? Did you ever imagine what it would look like?
 

@@ -5,7 +5,7 @@ date: 2024-03-17
 linktitle: What Typing Taught me?
 title: "What typing taught me in life?"
 categories:
- - cpp
+ - personal
 tags:
  - personal
  - motivation

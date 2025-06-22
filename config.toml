@@ -101,6 +101,20 @@ mediaType = "application/toml"
   enable = true
   backend = "fuse" # can be stork or fuse
 
+[params.fuseOpts]
+  isCaseSensitive = false
+  includeScore = false
+  includeMatches = false
+  minMatchCharLength = 1
+  shouldSort = true
+  findAllMatches = false
+  keys = ["title", "permalink", "summary", "content"]
+  location = 0
+  threshold = 0.4
+  distance = 100
+  ignoreLocation = true
+  limit = 10
+
 [params.author]
   name = "Kushashwa Ravi Shrimali"
 

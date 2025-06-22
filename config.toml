@@ -66,6 +66,7 @@ mediaType = "application/toml"
   ShowCodeCopyButtons = true
   ShowRssButtonInSectionTermList = true
   ShowToc = true
+  disableSpecial1stPost = true
 
   # Home page settings - commented out to show posts directly
   # [params.homeInfoParams]

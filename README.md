@@ -6,6 +6,7 @@
 ## Theme Information
 
 * The blog uses the [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme - a simple, fast, and developer-friendly theme.
+* The theme is included as a Git submodule. When cloning this repository, use `git clone --recurse-submodules` to ensure the theme is included.
 * Features include:
   * Light/dark mode toggle (automatically adapts to user's system preferences by default)
   * Responsive design optimized for all device sizes

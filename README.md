@@ -1,12 +1,27 @@
 ## Data for the blog (not rendered/built)
 
-* This is where I store all my data for the blog. For everyone's visiblity and for my ease.
-* This is deployed to [my blog](https://krshrimali.github.io) via https://github.com/krshrimali/krshrimali.github.io, manually! :D (one day - maybe GitHub Actions)
+* This is where I store all my data for the blog. For everyone's visibility and for my ease.
+* This is deployed to [my blog](https://krshrimali.github.io) via https://github.com/krshrimali/krshrimali.github.io automatically using GitHub Actions!
 
-## Instructions on compiling the blog
+## Theme Information
 
-* Compile blog using: `hugo`. The rendered files will be stored in `public/` sub-folder. Copy it to `krshrimali.github.io` repository and push, that's it.
-* A n00bish script for this: (very personalized)
+* The blog uses a simple, developer-friendly theme with both dark and light mode support.
+* The homepage immediately displays recent blog posts for better user experience.
+* You can toggle between dark and light modes using the theme toggle button in the header.
+
+## Automatic Deployment
+
+The blog is automatically deployed to [krshrimali.github.io](https://krshrimali.github.io) whenever changes are pushed to the main branch, using GitHub Actions.
+
+### Setting up the GitHub Actions workflow:
+
+1. Create a Personal Access Token (PAT) with `repo` scope at [GitHub Settings > Developer settings > Personal access tokens](https://github.com/settings/tokens)
+2. Add the token as a repository secret named `PERSONAL_ACCESS_TOKEN` in the repository settings at [Settings > Secrets and variables > Actions](https://github.com/krshrimali/blog/settings/secrets/actions)
+
+## Manual Compilation (if needed)
+
+* Compile blog using: `hugo`. The rendered files will be stored in `public/` sub-folder.
+* A script for manual deployment (if needed):
     ```bash
     hugo && cp -r public/* ../krshrimali.github.io/
     cd ../krshrimali.github.io && git add . && git commit -m "updates" && git push origin main

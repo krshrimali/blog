@@ -4,7 +4,7 @@ title   = "Kushashwa Ravi Shrimali (Kush)"
 DefaultContentLanguage = "en"
 
 themesDir = "themes"
-theme = "hugo-theme-hello-friend-ng"
+theme = "hello-friend-ng-hz"
 
 PygmentsCodeFences = true
 PygmentsStyle = "monokai"
@@ -111,7 +111,7 @@ pingback = "https://webmention.io/krshrimali.github.io/xmlrpc"
 #############
 # Analytics #
 #############
-   
+
   # Alternative to Google Analytics
   # goatCounter = ""
   # microsoftClarity = ""
@@ -239,4 +239,3 @@ accountID = "krshrimali"
         # endLevel = 3
         # ordered = false
         # startLevel = 2
-

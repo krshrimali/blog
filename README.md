@@ -12,6 +12,7 @@
   * Clean, readable typography
   * The homepage immediately displays recent blog posts for better user experience
   * Fast loading times and optimized performance
+  * Search functionality to find blog posts by content or title
 
 ## Continuous Integration and Deployment
 

@@ -67,10 +67,10 @@ mediaType = "application/toml"
   ShowRssButtonInSectionTermList = true
   ShowToc = true
 
-  # Home page settings
-  [params.homeInfoParams]
-    Title = "Kushashwa Ravi Shrimali (Kush)"
-    Content = "Find some of my profiles below"
+  # Home page settings - commented out to show posts directly
+  # [params.homeInfoParams]
+  #   Title = "Kushashwa Ravi Shrimali (Kush)"
+  #   Content = "Find some of my profiles below"
 
   # Social icons
   [[params.socialIcons]]
@@ -141,6 +141,11 @@ mediaType = "application/toml"
     identifier = "blog"
     name       = "Blog"
     url        = "/posts"
+  [[menu.main]]
+    identifier = "search"
+    name       = "Search"
+    url        = "/search/"
+    weight     = 10
   [[menu.other]]
     identifier = "tags"
     name       = "Tags"

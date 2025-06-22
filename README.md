@@ -21,6 +21,15 @@
 
 The blog uses GitHub Actions to ensure that the website builds without errors before pull requests are merged to the main branch. This helps catch any issues early in the development process.
 
+The PR validation workflow:
+1. Automatically runs on every pull request to the main branch
+2. Checks out the repository with all submodules (ensuring themes are properly included)
+3. Sets up Hugo with the latest version and extended support
+4. Attempts to build the site with `hugo --minify`
+5. Fails the check if the build process encounters any errors
+
+This ensures that all PRs can be safely merged without breaking the site build.
+
 ### Automatic Deployment
 
 The blog is automatically deployed to [krshrimali.github.io](https://krshrimali.github.io) whenever changes are pushed to the main branch, using GitHub Actions.

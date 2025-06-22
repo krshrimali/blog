@@ -1,0 +1,43 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Set this to the branch you want to deploy from
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source repository
+        uses: actions/checkout@v3
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Checkout destination repository
+        uses: actions/checkout@v3
+        with:
+          repository: krshrimali/krshrimali.github.io
+          path: krshrimali.github.io
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
+      - name: Copy built files to destination repository
+        run: |
+          rm -rf krshrimali.github.io/*
+          cp -r public/* krshrimali.github.io/
+          cd krshrimali.github.io
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add .
+          git commit -m "Deploy blog updates from source repository"
+          git push

@@ -5,15 +5,26 @@
 
 ## Theme Information
 
-* The blog uses a simple, developer-friendly theme with both dark and light mode support.
-* The homepage immediately displays recent blog posts for better user experience.
-* You can toggle between dark and light modes using the theme toggle button in the header.
+* The blog uses the [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme - a simple, fast, and developer-friendly theme.
+* Features include:
+  * Light/dark mode toggle (automatically adapts to user's system preferences by default)
+  * Responsive design optimized for all device sizes
+  * Clean, readable typography
+  * The homepage immediately displays recent blog posts for better user experience
+  * Fast loading times and optimized performance
+  * Search functionality to find blog posts by content or title
 
-## Automatic Deployment
+## Continuous Integration and Deployment
+
+### PR Validation
+
+The blog uses GitHub Actions to ensure that the website builds without errors before pull requests are merged to the main branch. This helps catch any issues early in the development process.
+
+### Automatic Deployment
 
 The blog is automatically deployed to [krshrimali.github.io](https://krshrimali.github.io) whenever changes are pushed to the main branch, using GitHub Actions.
 
-### Setting up the GitHub Actions workflow:
+### Setting up the GitHub Actions workflows:
 
 1. Create a Personal Access Token (PAT) with `repo` scope at [GitHub Settings > Developer settings > Personal access tokens](https://github.com/settings/tokens)
 2. Add the token as a repository secret named `PERSONAL_ACCESS_TOKEN` in the repository settings at [Settings > Secrets and variables > Actions](https://github.com/krshrimali/blog/settings/secrets/actions)

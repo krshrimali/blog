@@ -1,0 +1,2 @@
+{{ $options := (dict "targetPath" "main.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+{{ $style := resources.Get "scss/main.scss" | css.Sass $options | css.PostCSS (dict "config" "config/postcss.config.js") | resources.Minify | resources.Fingerprint }}

@@ -118,6 +118,9 @@ mediaType = "application/toml"
 [params.author]
   name = "Kushashwa Ravi Shrimali"
 
+# Alternative author format for compatibility with schema_json.html
+author = "Kushashwa Ravi Shrimali"
+
 # Webmentions configuration (if needed in the future)
 # [params.webmention]
 #   enabled = false

@@ -4,7 +4,7 @@ title   = "Kushashwa Ravi Shrimali (Kush)"
 DefaultContentLanguage = "en"
 
 themesDir = "themes"
-theme = "hello-friend-ng-hz"
+theme = "PaperMod"
 
 PygmentsCodeFences = true
 PygmentsStyle = "monokai"
@@ -13,7 +13,6 @@ rssLimit  = 10  # Maximum number of items in the RSS feed.
 copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
 
 googleAnalytics = "UA-146662543-1"
-# disqusShortname = "krshrimali"
 
 archetypeDir = "archetypes"
 contentDir   = "content"
@@ -58,40 +57,44 @@ mediaType = "application/toml"
   search   = "search"
 
 [params]
-  dateform        = "Jan 2, 2006"
-  dateformShort   = "Jan 2"
-  dateformNum     = "2006-01-02"
-  dateformNumTime = "2006-01-02 15:04 -0700"
-  isTheme = true # ONLY for the exampleSite!!
-  praiseNetlify = false
+  # Theme parameters
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowRssButtonInSectionTermList = true
+  ShowToc = true
 
-  # Metadata mostly used in document's head
+  # Home page settings
+  [params.homeInfoParams]
+    Title = "Kushashwa Ravi Shrimali (Kush)"
+    Content = "Find some of my profiles below"
+
+  # Social icons
+  [[params.socialIcons]]
+    name = "twitter"
+    url = "https://twitter.com/kushashwa"
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:kushashwaravishrimali@gmail.com"
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/kushashwa-ravi-shrimali-b6780152/"
+  [[params.socialIcons]]
+    name = "stackoverflow"
+    url = "https://stackoverflow.com/users/2218021/kushashwa-ravi-shrimali"
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/krshrimali"
+
+  # Metadata
   description = "Welcome to Kushashwa's blog"
-  keywords = ""
-  images = [""]
+  keywords = ["blog", "developer", "personal"]
 
-  homeSubtitle = "Find some of my profiles below"
-
-  # Prefix of link to the git commit detail page. GitInfo must be enabled.
-  # gitUrl = ""
-
-  # Set disableReadOtherPosts to true in order to hide the links to other posts.
-  disableReadOtherPosts = false
-
-  # Integrate Javascript files or stylesheets by adding the url to the external assets or by
-  # linking local files with their path relative to the static folder, e.g. "css/styles.css"
-  customCSS = []
-  customJS  = []
-
-  # Toggle this option need to rebuild SCSS, requires extended version of Hugo
-  justifyContent = false  # Set "text-align: justify" to .content.
-
-  # Directory name of your blog content (default is `content/posts`)
+  # Content directory
   contentTypeName = "posts"
-
-  # Default theme "light" or "dark"
-  defaultTheme = "light"
-  themeColor = "#252627"
 
 [params.search]
   enable = true
@@ -100,108 +103,22 @@ mediaType = "application/toml"
 [params.author]
   name = "Kushashwa Ravi Shrimali"
 
-###############
-# Webmentions #
-###############
-# Manually setup webmention.js from here: https://sebastiandedeyne.com/webmentions-on-a-static-site-with-github-actions/
-[params.webmention]
-webmention = "https://webmention.io/krshrimali.github.io/webmention"
-pingback = "https://webmention.io/krshrimali.github.io/xmlrpc"
+# Webmentions configuration (if needed in the future)
+# [params.webmention]
+#   enabled = false
 
-#############
-# Analytics #
-#############
+# Comments system
+[params.comments]
+  enabled = true
 
-  # Alternative to Google Analytics
-  # goatCounter = ""
-  # microsoftClarity = ""
-  # Another analytics alternative
-  # clicky = ""
+# Code highlighting
+[markup.highlight]
+  codeFences = true
+  guessSyntax = true
+  lineNos = false
+  style = "monokai"
 
-########
-# Code #
-########
-
-  # Syntax highlighting
-  prism = false # Use hugo logic by default
-  # Use codefolding logic
-  codefold = true
-
-[params.liberapay]
-accountID = "krshrimali"
-
-###################
-# Comment Systems #
-###################
-
-[params.remarkBox]
-    accountID = "bd2f6e6d-1c8d-11ec-8ccc-040140774501"
-
-  # Colors for favicons
-  [params.favicon.color]
-    mask = "#252627"
-    msapplication = "#252627"
-    theme = "#252627"
-
-  [params.logo]
-    logoText     = "$ cd /home/"
-    logoHomeLink = "/"
-    # Set true to remove the logo cursor entirely.
-    # logoCursorDisabled = false
-    # Set to a valid CSS color to change the cursor in the logo.
-    # logoCursorColor    = "#67a2c9"
-    # Set to a valid CSS time value to change the animation duration, "0s" to disable.
-    # logoCursorAnimate  = "2s"
-
-  # Social icons
-  [[params.social]]
-    name = "twitter"
-    url  = "https://twitter.com/kushashwa"
-
-  # [[params.social]]
-    # name = "mastodon"
-    # rel  = "me"
-    # url  = "https://mastodon.cloud/@someone"
-
-  [[params.social]]
-    name = "email"
-    url  = "mailto:kushashwaravishrimali@gmail.com"
-
-  [[params.social]]
-    name = "linkedin"
-    url  = "https://www.linkedin.com/in/kushashwa-ravi-shrimali-b6780152/"
-
-  [[params.social]]
-    name = "stackoverflow"
-    url  = "https://stackoverflow.com/users/2218021/kushashwa-ravi-shrimali"
-
-  # [[params.social]]
-    # name = "keybase"
-    # url  = "https://keybase.io/person"
-
-  [[params.social]]
-    name = "github"
-    url  = "https://github.com/krshrimali"
-
-  # [[params.social]]
-    # name = "goodreads"
-    # url  = "https://www.goodreads.com/user/show/userid"
-
-  # [[params.social]]
-    # name = "googlescholar"
-    # url  = "https://scholar.google.co.in/citations?user=USER_ID"
-
-  # [[params.social]]
-    # name = "orcid"
-    # url  = "https://orcid.org/orcid_id"
-
-  # [[params.social]]
-    # name = "publons"
-    # url  = "https://publons.com/researcher/ID"
-
-  # [[params.social]]
-    # name = "calendly"
-    # url  = "https://calendly.com/scheduler"
+# Old social icons have been replaced with params.socialIcons above
 
 [languages]
   [languages.en]
@@ -234,8 +151,14 @@ accountID = "krshrimali"
     url        = "/categories"
 
 # https://gohugo.io/getting-started/configuration-markup/#table-of-contents
-# [markup]
-    # [markup.tableOfContents]
-        # endLevel = 3
-        # ordered = false
-        # startLevel = 2
+[markup]
+    [markup.tableOfContents]
+        endLevel = 3
+        ordered = false
+        startLevel = 2
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = true
+
+# Ignore warnings about raw HTML in markdown
+ignoreLogs = ['warning-goldmark-raw-html']

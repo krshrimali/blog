@@ -58,6 +58,12 @@ Here's a demo of relevant commits:
 
 <img src="https://raw.githubusercontent.com/krshrimali/blog/refs/heads/main/assets/blogs/relevant-commits-neovim.png"/>
 
+## But I use Emacs/Cursor/JetBrains IDEs!!
+
+I understand, and I did attempt testing for emacs (tested briefly on doom emacs) here: https://github.com/krshrimali/context-pilot.el and for JetBrains IDEs: https://github.com/krshrimali/context-pilot-jetbrains. These both are WIP right now, and I'd probably ask Cursor agent to wrap these up. As long as people want it, I'll be happy to test them soon.
+
+What about Cursor though? - Well Cursor's marketplace has been tricky for me. Users who would want to trust me on installing it via a .vsix file, I'll pubblish it on [context-pilot-vscode](https://github.com/krshrimali/context-pilot-vscode) repository soon. Or y'all can build yourselves as well :)
+
 ----
 
 ## Details

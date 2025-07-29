@@ -52,7 +52,7 @@ How about relevant commits? Here you go:
 
 ## But I use NeoVim:
 
-I love my terminal, and I love neovim as well. I started with a plugin for neovim and later GPT to convert it to a VSCode extension. :) So I'll share some demos of neovim as well:
+I love my terminal, and I love neovim as well. I started with a plugin for neovim and later used ChatGPT(/other agents) to convert it to a VSCode extension. :) So I'll share some demos of neovim as well:
 
 Here's a demo of relevant commits:
 
@@ -99,7 +99,7 @@ Thank you <3
 
 ## Alternatives?
 
-I understand that GitLens (VSCode extension) has the feature of line and file history, and so doe JetBrains IDEs ("Local Git History") but given the option to pass things to LLM, I hope it turns out to be more useful than existing solutions.
+I understand that GitLens (VSCode extension) has the feature of line and file history, and so does JetBrains IDEs ("Local Git History") but given the option to pass things to LLM, I hope it turns out to be more useful than existing solutions.
 
 -----
 

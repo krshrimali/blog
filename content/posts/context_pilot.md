@@ -64,6 +64,8 @@ I understand, and I did attempt testing for emacs (tested briefly on doom emacs)
 
 What about Cursor though? - Well Cursor's marketplace has been tricky for me. Users who would want to trust me on installing it via a .vsix file, I'll pubblish it on [context-pilot-vscode](https://github.com/krshrimali/context-pilot-vscode) repository soon. Or y'all can build yourselves as well :)
 
+Please note that, the extensions used LLMs heavily as I don't know all languages. I give credits to the amazing work by Cursor team (specially the agents) for those.
+
 ----
 
 ## Details

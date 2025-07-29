@@ -50,6 +50,14 @@ How about relevant commits? Here you go:
 
 <img src="https://raw.githubusercontent.com/krshrimali/blog/refs/heads/main/assets/blogs/all-relevant-commits.png"/>
 
+## But I use NeoVim:
+
+I love my terminal, and I love neovim as well. I started with a plugin for neovim and later GPT to convert it to a VSCode extension. :) So I'll share some demos of neovim as well:
+
+Here's a demo of relevant commits:
+
+<img src="https://raw.githubusercontent.com/krshrimali/blog/refs/heads/main/assets/blogs/relevant-commits-neovim.png"/>
+
 ----
 
 ## Details
@@ -67,6 +75,16 @@ Some notes for those who want to get started:
 3. It's required for context-pilot to be installed, please see: https://github.com/krshrimali/context-pilot-rs for details.
 
 I know the point 3 (requirement to install the binary separately) kinda sucks, but I'm working on seeing if I can ship it with the plugins. Community members have helped ship it to AUR: https://aur.archlinux.org/packages/contextpilot-git, and there's a homebrew tap as well: https://github.com/krshrimali/homebrew-context-pilot.
+
+----
+
+## Getting Started:
+
+1. Start with installing the contextpilot binary and please make sure that it's in one of your "PATH" environments (example: `/usr/local/bin`, `/usr/bin/`, `~/.local/bin`).
+2. Install your editor's extension ([neovim](https://github.com/krshrimali/context-pilot.nvim]), [vscode](https://marketplace.visualstudio.com/items?itemName=tgkrs.contextpilot)).
+3. Play around, if any issues - please log at: https://github.com/krshrimali/context-pilot-rs.
+
+Thank you <3
 
 -----
 

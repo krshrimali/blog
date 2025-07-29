@@ -82,6 +82,7 @@ I know the point 3 (requirement to install the binary separately) kinda sucks, b
 
 1. Start with installing the contextpilot binary and please make sure that it's in one of your "PATH" environments (example: `/usr/local/bin`, `/usr/bin/`, `~/.local/bin`).
 2. Install your editor's extension ([neovim](https://github.com/krshrimali/context-pilot.nvim]), [vscode](https://marketplace.visualstudio.com/items?itemName=tgkrs.contextpilot)).
+    - For NeoVim users, please make sure to call `:ContextPilotStartIndexing` to make your calls faster. For VSCode, it automatically does it for you.
 3. Play around, if any issues - please log at: https://github.com/krshrimali/context-pilot-rs.
 
 Thank you <3

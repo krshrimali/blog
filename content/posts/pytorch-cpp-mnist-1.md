@@ -43,7 +43,7 @@ We'll use the `absolute` path of extracted directory (`libtorch`) later on.
 
 The VGG-16 Network is shown in the Figure below.
 
-![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/VGG-16-Architecture-resized.png)
+![](/assets/blogs/VGG-16-Architecture-resized.png)
 
 We'll start of by first including `libtorch` header file.
 

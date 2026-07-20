@@ -23,7 +23,7 @@
  comments: true
 ---
 
-![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/cover-images/Dec_10_2020.jpg)
+![](/assets/cover-images/Dec_10_2020.jpg)
 
 Hi everyone! In the previous blog we implemented Portrait Bokeh using Face Detection in OpenCV. While the results were good for a start, we definitely want to be closer to the output we expect. The end goal is to blur everything except the face. The main problem we noticed was:
 
@@ -246,7 +246,7 @@ for face in faces:
 
 Let's try to visualize `imgTransp` here and see how this looks like:
 
-<img src="/assets/opencv/imgTransp_output.png"/>
+<img src="/assets/blogs/imgTransp_output.png"/>
 
 This looks good so far! We have cropped the circle (face), and all we need to do now is - overlay this image on a blurred image. Let's head straight to Step 4.
 
@@ -299,6 +299,6 @@ for face in faces:
 
 Here is how the output looks like. While I understand that there is still some background, but we can definitely be better than this - and this will be our topic for the next blog!
 
-<img src="/assets/opencv/imgPortraitBokehCroppingCircle.png"/>
+<img src="/assets/blogs/imgPortraitBokehCroppingCircle.png"/>
 
 This should be it for this blog, and I hope you learnt something new today. If you liked the content, please leave a comment below. I would love to read your feedbacks, suggestions and if this helped you out in any way. I also go live on weekends, and upload videos on weekdays on my [YouTube Channel](https://youtube.com/c/kushashwaraviShrimali), so make sure to subscribe there and join me in if you find it interesting! Thank you for reading this blog.

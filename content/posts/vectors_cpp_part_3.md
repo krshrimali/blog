@@ -26,7 +26,7 @@ comments: true
 
 In this blog, we'll continue diving deep into the source code of Vector Containers in GCC compiler. Today, we will be discussing some of the most commonly used methods of vectors, and how they are implemented.
 
-![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/cover-images/Vector-Part-3.png)
+![](/assets/cover-images/Vector-Part-3.png)
 
 Before we start, if you haven't looked at the previous blogs in the C++ series, please take a look [here](https://krshrimali.github.io/categories/cpp/). If you are already familiar with memory allocation in vector containers and vector's base structs, then you can skip reading the previous blogs and continue here. If not, I suggest you reading them.
 

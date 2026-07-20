@@ -30,7 +30,7 @@ Hi Everyone! So excited to be back with another blog in the series of PyTorch C+
 
 Today, we are going to see a practical example of applying a CNN to a Custom Dataset - Dogs vs Cats. This is going to be a short post of showing results and discussion about hyperparameters and loss functions for the task, as code snippets and explanation has been provided [here](https://krshrimali.github.io/Training-Network-Using-Custom-Dataset-PyTorch-CPP/), [here](https://krshrimali.github.io/Custom-Data-Loading-Using-PyTorch-CPP-API/) and [here](https://krshrimali.github.io/PyTorch-C++-API/).
 
-![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/cover-images/Cover-Dogs-Cats.jpg)
+![](/assets/cover-images/Cover-Dogs-Cats.jpg)
 
 <!--more-->
 
@@ -44,9 +44,7 @@ The training set contains 25k images combined of dogs and cats. The data can be 
 
 Let's have a look at sample of the data:
 
-![Figure 1: Sample of Dog Images in the Dataset](https://raw.githubusercontent.com/krshrimali/krshrimali.github.io/master/assets/dogs-dataset.jpg)
-
-![Figure 2: Sample of Cat Images in the Dataset](https://raw.githubusercontent.com/krshrimali/krshrimali.github.io/master/assets/cats-dataset.jpg)
+*(The original sample images of the dogs/cats dataset that were hosted here have been lost over the years and could not be recovered — but you can see plenty of samples on the [Kaggle dataset page](https://www.kaggle.com/c/dogs-vs-cats/data) itself.)*
 
 As we can see, the dataset contains images of cats and dogs with multiple instances in the same sample as well.
 

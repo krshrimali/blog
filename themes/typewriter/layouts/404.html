@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+{{ partial "head.html" . }}
+</head>
+<body>
+{{ partial "header.html" . }}
+<main>
+  <div class="wrap error-page">
+    <p class="error-page__code">404</p>
+    <p>This page was typed on a sheet that got lost. <a href="{{ "/" | absURL }}">Back to the front page</a>.</p>
+  </div>
+</main>
+{{ partial "footer.html" . }}
+</body>
+</html>

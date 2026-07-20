@@ -5,15 +5,15 @@
 
 ## Theme Information
 
-* The blog uses the [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme - a simple, fast, and developer-friendly theme.
-* The theme is included as a Git submodule. When cloning this repository, use `git clone --recurse-submodules` to ensure the theme is included.
+* The blog uses a small custom theme called **Typewriter** (`themes/typewriter`), built specifically for this blog — no external theme dependency or submodule required.
+* Look and feel: plain, old-school, monospaced (Courier Prime for body text, Special Elite for headings), self-hosted webfonts, minimal chrome.
 * Features include:
-  * Light/dark mode toggle (automatically adapts to user's system preferences by default)
-  * Responsive design optimized for all device sizes
-  * Clean, readable typography
-  * The homepage immediately displays recent blog posts for better user experience
-  * Fast loading times and optimized performance
-  * Search functionality to find blog posts by content or title
+  * Light/dark toggle (button in the header, persisted in `localStorage`, defaults to the reader's system preference)
+  * Responsive/mobile-friendly single-column layout
+  * Self-hosted images (`static/assets/blogs`, `static/assets/cover-images`) — no dependency on external image hosts
+  * Simple, dependency-free client-side search (`/search/`) over a generated `index.json`, no third-party JS libraries
+  * Table of contents, tags/categories pages, RSS feed, previous/next post navigation
+* Theme source: `themes/typewriter/layouts` (templates) and `themes/typewriter/static` (CSS/JS/fonts).
 
 ## Continuous Integration and Deployment
 
@@ -23,7 +23,7 @@ The blog uses GitHub Actions to ensure that the website builds without errors be
 
 The PR validation workflow:
 1. Automatically runs on every pull request to the main branch
-2. Checks out the repository with all submodules (ensuring themes are properly included)
+2. Checks out the repository (the theme lives directly in `themes/typewriter`, no submodules needed)
 3. Sets up Hugo with the latest version and extended support
 4. Attempts to build the site with `hugo --minify`
 5. Fails the check if the build process encounters any errors

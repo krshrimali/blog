@@ -28,7 +28,7 @@ comments: true
 
 I'm pleased to start a series of blogs on GANs and their implementation with PyTorch C++ API. We'll be starting with one of the initial GANs - DCGANs (Deep Convolutional Generative Adversarial Networks).
 
-![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/cover-images/Cover-DCGAN.jpg)
+![](/assets/cover-images/Cover-DCGAN.jpg)
 
 The authors (Soumith Chintala, Radford and Luke Metz) in [this](https://arxiv.org/pdf/1511.06434.pdf) Seminal Paper on DCGANs introduced DCGANs to the world like this:
 
@@ -53,7 +53,7 @@ Any Generative Adversarial Network has 2 major components: a Generator and a Dis
 
 Both Generator and Discriminator tasks can be represented beautifully with the following equation:
 
-<img src="/assets/GANs-Equation.png"/>
+<img src="/assets/blogs/GANs-Equation.png"/>
 
 The above equation, shows how the Generator and Discriminator plays min-max game. 
 
@@ -82,11 +82,11 @@ Changes in the **Discriminator**:
 3. Remove FC layers for deeper architectures.
 4. Use LeakyReLU activation function for all the layers in the Discriminator.
 
-<img src="/assets/DCGAN-Generator.png"/><center>Generator of the DCGAN used for LSUN scene modeling. Source: https://arxiv.org/pdf/1511.06434.pdf</center>
+<img src="/assets/blogs/DCGAN-Generator.png"/><center>Generator of the DCGAN used for LSUN scene modeling. Source: https://arxiv.org/pdf/1511.06434.pdf</center>
 
 As you would note in the above architecture, there is absence of spatial pooling layers and fully connected layers. 
 
-<img src="/assets/DCGAN-Discriminator.png"/><center>Discriminator of the DCGAN used for LSUN scene modeling. Source: https://github.com/ChengBinJin/DCGAN-TensorFlow</center>
+<img src="/assets/blogs/DCGAN-Discriminator.png"/><center>Discriminator of the DCGAN used for LSUN scene modeling. Source: https://github.com/ChengBinJin/DCGAN-TensorFlow</center>
 
 Notably again, there are no pooling and fully connected layers (except the last layer).
 
@@ -255,7 +255,7 @@ torch::optim::Adam dis_optimizer(dis_model->parameters(), torch::optim::AdamOpti
 
 Time to write our training code. We are using `CelebA` dataset which looks like this:
 
-<img src="/assets/celebA-sample.png"/>
+<img src="/assets/blogs/celebA-sample.png"/>
 <center>Source: http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html</center>
 
 The dataset is huge, and contains 10,177 number of identities and around ~200k number of face images. It also contains annotations, but since GANs are a way of unsupervised learning, so they don't actually consider annotations. Before we move on, we'll see a quick step by step review on training the Discriminator and Generator simultaneously:

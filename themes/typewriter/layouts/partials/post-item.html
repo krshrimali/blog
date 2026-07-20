@@ -1,0 +1,11 @@
+{{- $p := . -}}
+<li class="post-item">
+  <span class="post-item__date">{{ $p.Date.Format "Jan 2, 2006" }}</span>
+  <h2 class="post-item__title"><a href="{{ $p.Permalink }}">{{ $p.Title }}</a></h2>
+  {{ with $p.Summary }}<p class="post-item__summary">{{ . | plainify | truncate 220 }}</p>{{ end }}
+  {{ if $p.Params.categories }}
+  <p class="post-item__meta">
+    {{ range $i, $c := $p.Params.categories }}{{ if $i }} · {{ end }}<a href="{{ "/categories/" | relLangURL }}{{ $c | urlize }}/">{{ $c }}</a>{{ end }}
+  </p>
+  {{ end }}
+</li>

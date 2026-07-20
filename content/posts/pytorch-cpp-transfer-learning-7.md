@@ -32,7 +32,7 @@ Before we go ahead and discuss the **Why** question of Transfer Learning, let's 
 
 > In practice, very few people train an entire Convolutional Network from scratch (with random initialization), because it is relatively rare to have a dataset of sufficient size. Instead, it is common to pretrain a ConvNet on a very large dataset (e.g. ImageNet, which contains 1.2 million images with 1000 categories), and then use the ConvNet either as an initialization or a fixed feature extractor for the task of interest.
 
-![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/cover-images/Cover-Transfer-Learning.jpg)
+![](/assets/cover-images/Cover-Transfer-Learning.jpg)
 
 There are 3 scenarios possible:
 
@@ -51,7 +51,7 @@ At every stage, we will compare the Python and C++ codes to do the same thing, t
 
 Starting with loading the dataset, as discussed in the blogs before, I'll just post a flow chart of procedure.
 
-![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/Steps-Loading-Data-PyTorch.png)
+![](/assets/blogs/Steps-Loading-Data-PyTorch.png)
 
 Once done, we can initialize the `CustomDataset` class:
 
@@ -171,7 +171,7 @@ cost = torch.nn.CrossEntropyLoss()
 
 Let's first have a look at ResNet18 Network Architecture
 
-![https://www.researchgate.net/figure/ResNet-18-Architecture_tbl1_322476121](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/ResNet18-Architecture.png)
+![https://www.researchgate.net/figure/ResNet-18-Architecture_tbl1_322476121](/assets/blogs/ResNet18-Architecture.png)
 
 The final step is to train the Fully Connected layer that we inserted at the end of the network (`linear_layer`). This one should be pretty straight forward, let's see how to do it.
 
@@ -273,24 +273,24 @@ The code to test should also not change much except the need of optimizer.
 ## Results
 
 
-![Results using PyTorch C++ API](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/Training-Results.png)
-![Results using PyTorch in Python](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/Training-Results-Python.png)
+![Results using PyTorch C++ API](/assets/blogs/Training-Results.png)
+![Results using PyTorch in Python](/assets/blogs/Training-Results-Python.png)
 
 On a set of 400 images for training data, the maximum training Accuracy I could achieve was 91.25% in just less than 15 epochs using PyTorch C++ API and 89.0% using Python. (Note that this doesn't conclude superiority in terms of accuracy between any of the two backends - C++ or Python)
 
 Let's have a look at correct and wrong predictions.
 
 **Correct Predictions - Dogs**
-![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/correct-predictions-dogs-transfer-learning.png)
+![](/assets/blogs/correct-predictions-dogs-transfer-learning.png)
 
 **Wrong Predictions - Dogs**
-![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/wrong-predictions-dogs-transfer-learning.png)
+![](/assets/blogs/wrong-predictions-dogs-transfer-learning.png)
 
 **Correct Predictions - Cats**
-![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/correct-predictions-cats-transfer-learning.png)
+![](/assets/blogs/correct-predictions-cats-transfer-learning.png)
 
 **Wrong Predictions - Cats**
-![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/wrong-predictions-cats-transfer-learning.png)
+![](/assets/blogs/wrong-predictions-cats-transfer-learning.png)
 
 ## Acknowledgements
 

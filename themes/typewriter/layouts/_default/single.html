@@ -1,0 +1,61 @@
+{{ define "main" }}
+{{ if .Params.mainlist }}
+
+  {{ partial "list-body.html" . }}
+
+{{ else }}
+
+<article class="post-content-wrap">
+  <header class="post-header">
+    <h1 class="post-header__title">{{ .Title }}</h1>
+    <p class="post-header__meta">
+      {{ if not .Date.IsZero }}<span>{{ .Date.Format "January 2, 2006" }}</span>{{ end }}
+      {{ with .Params.author }}<span>by {{ if reflect.IsMap . }}{{ .name }}{{ else }}{{ . }}{{ end }}</span>{{ end }}
+      {{ if site.Params.ShowReadingTime }}<span>{{ .ReadingTime }} min read</span>{{ end }}
+    </p>
+    {{ if .Params.categories }}
+    <p class="post-header__meta">
+      {{ range $i, $c := .Params.categories }}{{ if $i }} · {{ end }}<a href="{{ "/categories/" | relLangURL }}{{ $c | urlize }}/">{{ $c }}</a>{{ end }}
+    </p>
+    {{ end }}
+  </header>
+
+  {{ $showToc := true }}
+  {{ if isset .Params "toc" }}{{ $showToc = .Params.toc }}{{ end }}
+  {{ if and $showToc (strings.Contains (.TableOfContents | string) "<li") }}
+  <details class="toc" open>
+    <summary>Contents</summary>
+    {{ .TableOfContents }}
+  </details>
+  {{ end }}
+
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+
+  {{ with .Params.tags }}
+  <div class="post-tags">
+    {{ range . }}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/">#{{ . }}</a>{{ end }}
+  </div>
+  {{ end }}
+</article>
+
+{{ if site.Params.ShowPostNavLinks }}
+<nav class="post-nav">
+  {{ with .PrevInSection }}
+  <div class="post-nav__prev">
+    <span class="post-nav__label">&larr; previous</span>
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+  </div>
+  {{ end }}
+  {{ with .NextInSection }}
+  <div class="post-nav__next">
+    <span class="post-nav__label">next &rarr;</span>
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+  </div>
+  {{ end }}
+</nav>
+{{ end }}
+
+{{ end }}
+{{ end }}

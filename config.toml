@@ -4,15 +4,13 @@ title   = "Kushashwa Ravi Shrimali (Kush)"
 DefaultContentLanguage = "en"
 
 themesDir = "themes"
-theme = "PaperMod"
+theme = "typewriter"
 
 PygmentsCodeFences = true
 PygmentsStyle = "monokai"
 
 rssLimit  = 10  # Maximum number of items in the RSS feed.
 copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
-
-googleAnalytics = "UA-146662543-1"
 
 archetypeDir = "archetypes"
 contentDir   = "content"
@@ -43,35 +41,19 @@ disableHugoGeneratorInject = false
 [blackfriday]
   hrefTargetBlank = true
 
-[outputFormats]
-[outputFormats.TOML]
-mediaType = "application/toml"
-
 [outputs]
-  home = ["HTML", "RSS", "TOML", "JSON"]
+  home = ["HTML", "RSS", "JSON"]
 
 [taxonomies]
   tag      = "tags"
   category = "categories"
   author   = "author"
-  search   = "search"
 
 [params]
   # Theme parameters
-  defaultTheme = "auto"
   ShowReadingTime = true
-  ShowShareButtons = true
   ShowPostNavLinks = true
-  ShowBreadCrumbs = true
-  ShowCodeCopyButtons = true
-  ShowRssButtonInSectionTermList = true
   ShowToc = true
-  disableSpecial1stPost = true
-
-  # Home page settings - commented out to show posts directly
-  # [params.homeInfoParams]
-  #   Title = "Kushashwa Ravi Shrimali (Kush)"
-  #   Content = "Find some of my profiles below"
 
   # Social icons
   [[params.socialIcons]]
@@ -97,37 +79,11 @@ mediaType = "application/toml"
   # Content directory
   contentTypeName = "posts"
 
-[params.search]
-  enable = true
-  backend = "fuse" # can be stork or fuse
-
-[params.fuseOpts]
-  isCaseSensitive = false
-  includeScore = false
-  includeMatches = false
-  minMatchCharLength = 1
-  shouldSort = true
-  findAllMatches = false
-  keys = ["title", "permalink", "summary", "content"]
-  location = 0
-  threshold = 0.4
-  distance = 100
-  ignoreLocation = true
-  limit = 10
-
 [params.author]
   name = "Kushashwa Ravi Shrimali"
 
 # Alternative author format for compatibility with schema_json.html
 author = "Kushashwa Ravi Shrimali"
-
-# Webmentions configuration (if needed in the future)
-# [params.webmention]
-#   enabled = false
-
-# Comments system
-[params.comments]
-  enabled = true
 
 # Code highlighting
 [markup.highlight]

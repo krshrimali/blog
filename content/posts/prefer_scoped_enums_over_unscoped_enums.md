@@ -31,7 +31,7 @@
 * **General rule:** declaring a name inside curly braces is limited to that scope.
 * **Exception:** C++-98 style Enums
 
-![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/cover-images/Unscoped-Scoped-Enums.png)
+![](/assets/cover-images/Unscoped-Scoped-Enums.png)
 
 ---
 **NOTE**

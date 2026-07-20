@@ -1,0 +1,11 @@
+{{- /* Inline, blocking, and tiny: sets the theme before first paint so there's no flash. */ -}}
+<script>
+(function () {
+  try {
+    var stored = localStorage.getItem("theme");
+    if (stored === "light" || stored === "dark") {
+      document.documentElement.setAttribute("data-theme", stored);
+    }
+  } catch (e) {}
+})();
+</script>

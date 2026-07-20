@@ -1,0 +1,15 @@
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__row">
+      <p>
+        {{ with site.Language.Params.copyright }}{{ . | safeHTML }}{{ else }}&copy; {{ now.Format "2006" }} {{ site.Params.author.name | default site.Title }}{{ end }}
+      </p>
+      {{ if site.Params.socialIcons }}
+      <p class="footer-links">
+        {{ range site.Params.socialIcons }}<a href="{{ .url }}" target="_blank" rel="me noopener">{{ .name }}</a>{{ end }}
+      </p>
+      {{ end }}
+    </div>
+  </div>
+</footer>
+<script src="{{ "js/theme.js" | absURL }}"></script>

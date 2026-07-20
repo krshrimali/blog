@@ -23,7 +23,7 @@
  comments: true
 ---
 
-![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/cover-images/Dec_7_2020.jpg)
+![](/assets/cover-images/Dec_7_2020.jpg)
 
 # OpenCV: Using face detection for Portrait Bokeh (Background Blur) (Part - 1)
 

@@ -28,7 +28,7 @@ comments: true
 
 It's been around 5 months since I released my last blog on [DCGAN Review and Implementation using PyTorch C++ API](https://krshrimali.github.io/posts/2019/09/deep-convolutional-generative-adversarial-networks-review-and-implementation-using-pytorch-c-api/) and I've missed writing blogs badly! Straight the to the point, I'm back!
 
-![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/cover-images/Cover-DCGAN-2.jpg)
+![](/assets/cover-images/Cover-DCGAN-2.jpg)
 
 But before we start, the PyTorch C++ Frontend has gone through several changes and thanks to the awesome contributors around the world, it resembles the Python API more than it ever did! Since a lot of things have changed, I have also updated my previous blogs (tested on 1.4 Stable build).
 
@@ -67,11 +67,11 @@ torch::save(samples, torch::str("dcgan-sample-", ++checkpoint_counter, ".pt"));
 
 Once we have the saved output, we can load the file and produce output (find the `display_samples.py` file in the [GitHub repo for this blog](https://krshrimali.github.io/posts/2019/09/deep-convolutional-generative-adversarial-networks-review-and-implementation-using-pytorch-c-api/)). Here is how the output looks like, after 10 epochs of training:
 
-<img src="/assets/dcgan-output.png"/>
+<img src="/assets/blogs/dcgan-output.png"/>
 
 And how about an animation?
 
-<img src="/assets/animation.gif"/>
+<img src="/assets/blogs/animation.gif"/>
 
 Isn't this amazing?
 

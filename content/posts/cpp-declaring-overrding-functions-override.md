@@ -34,7 +34,7 @@ Some (or even all) of the text can be similar to what you see in the book, as th
 
 ---
 
-![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/cover-images/declaring-overriding-functions-override.png)
+![](/assets/cover-images/declaring-overriding-functions-override.png)
 
 Overriding != Overloading
 

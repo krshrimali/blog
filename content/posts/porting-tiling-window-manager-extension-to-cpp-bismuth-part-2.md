@@ -57,7 +57,7 @@ Let's start with a quick recap though, in the previous blog, we discussed:
 
 I want to start off with a visual, took me some time to draw it, but in case it doesn't look good, I'm sorry! My drawing teacher in the high school tried his best, but... 
 
-![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/bismuth-part-2-window-alignment.png)
+![](/assets/blogs/bismuth-part-2-window-alignment.png)
 
 Above image is visual of a tiling window layout where there are in total 5 windows opened (just for imagination, no sane person would open these many windows on a 24 inch monitor... xD): `A, B, C, D, E`, where as mentioned in the figure above, `E` is the active window and we are trying to focus `UP`. A few notes to take from the figure:
 

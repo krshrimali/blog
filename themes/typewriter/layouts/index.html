@@ -1,0 +1,13 @@
+{{ define "main" }}
+{{ $section := site.GetPage "section" "posts" }}
+{{ $posts := sort ($section.RegularPages) "Date" "desc" }}
+{{ $paginator := .Paginate $posts }}
+
+<ul class="post-list">
+  {{ range $paginator.Pages }}
+    {{ partial "post-item.html" . }}
+  {{ end }}
+</ul>
+
+{{ partial "pagination.html" (dict "paginator" $paginator) }}
+{{ end }}

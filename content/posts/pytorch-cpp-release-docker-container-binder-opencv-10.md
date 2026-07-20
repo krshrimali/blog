@@ -28,7 +28,7 @@ comments: true
 
 Today, I am elated to share Docker image for `OpenCV`, `Libtorch` and `Xeus-Cling`. We'll discuss how to use the `dockerfile` and `binder`.
 
-![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/cover-images/Cover-Docker-Binder.jpg)
+![](/assets/cover-images/Cover-Docker-Binder.jpg)
 
 Before I move on, the credits for creating and maintaining Docker image goes to [Vishwesh Ravi Shrimali](https://github.com/vishwesh5). He has been working on some cool stuff, please do get in touch with him if you're interested to know.
 
@@ -57,7 +57,7 @@ Once done, you'll see your terminal showing another username: `jovyan`. You've e
 
 Now since you have entered the docker container successfully, it should look something similar to this:
 
-<img src="/assets/Docker-Image-1.png"/>
+<img src="/assets/blogs/Docker-Image-1.png"/>
 
 Time to test `Libtorch`. Let's go ahead and test a simple VGG-Net on MNIST dataset using Libtorch.
 
@@ -70,7 +70,7 @@ Time to test `Libtorch`. Let's go ahead and test a simple VGG-Net on MNIST datas
 5. Build the code using `make` command: `make`.
 6. Execute the code, and that's it. Have fun learning.
 
-![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/blogs/Docker-Image-2.png)
+![](/assets/blogs/Docker-Image-2.png)
 
 ## Testing Docker Image with Xeus-Cling
 

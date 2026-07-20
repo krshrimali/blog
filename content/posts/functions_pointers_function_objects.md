@@ -30,7 +30,7 @@ Please note that, function objects are commonly referred as _functors_ but we ha
 
 <!--more-->
 
-![](https://raw.githubusercontent.com/krshrimali/blog/main/assets/cover-images/fptr-fobj-cover.png)
+![](/assets/cover-images/fptr-fobj-cover.png)
 
 ## Function Pointers
 

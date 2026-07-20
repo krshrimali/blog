@@ -1,0 +1,28 @@
+{{- $page := . -}}
+<h1 class="page-heading">{{ $page.Title }}</h1>
+{{ with $page.Content }}<div class="post-content">{{ . }}</div>{{ end }}
+
+{{ if eq $page.Kind "taxonomy" }}
+  <ul class="term-list">
+    {{ range $page.Data.Terms.Alphabetical }}
+      <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> <span class="count">({{ .Count }})</span></li>
+    {{ end }}
+  </ul>
+
+{{ else if $page.Params.mainlist }}
+  <ul class="term-list">
+    {{ range site.Taxonomies.categories.Alphabetical }}
+      <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> <span class="count">({{ .Count }})</span></li>
+    {{ end }}
+  </ul>
+
+{{ else }}
+  {{ $pages := sort $page.Pages "Date" "desc" }}
+  {{ $paginator := $page.Paginate $pages }}
+  <ul class="post-list">
+    {{ range $paginator.Pages }}
+      {{ partial "post-item.html" . }}
+    {{ end }}
+  </ul>
+  {{ partial "pagination.html" (dict "paginator" $paginator) }}
+{{ end }}

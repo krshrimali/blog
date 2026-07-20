@@ -44,11 +44,11 @@ Before I even begin, I'll go ahead and share some demos for y'all, hope this exc
 
 Here's a demo of "Can you summarize the changes done over last 1 year in a tabular format?" - please note that, this is a prompt on "a selection" and not the whole buffer.
 
-<img src="https://raw.githubusercontent.com/krshrimali/blog/refs/heads/main/assets/blogs/chat-demo.png"/>
+<img src="/assets/blogs/chat-demo.png"/>
 
 How about relevant commits? Here you go:
 
-<img src="https://raw.githubusercontent.com/krshrimali/blog/refs/heads/main/assets/blogs/all-relevant-commits.png"/>
+<img src="/assets/blogs/all-relevant-commits.png"/>
 
 ## But I use NeoVim:
 
@@ -56,7 +56,7 @@ I love my terminal, and I love neovim as well. I started with a plugin for neovi
 
 Here's a demo of relevant commits:
 
-<img src="https://raw.githubusercontent.com/krshrimali/blog/refs/heads/main/assets/blogs/relevant-commits-neovim.png"/>
+<img src="/assets/blogs/relevant-commits-neovim.png"/>
 
 ## But I use Emacs/Cursor/JetBrains IDEs!!
 

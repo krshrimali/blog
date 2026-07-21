@@ -6,7 +6,7 @@ aliases = ["about-us","contact"]
   name = "Kushashwa Ravi Shrimali"
 +++
 
-Hello World! I'm Kushashwa Ravi Shrimali (friends call me Kush, world knows me as krshrimali), a Computer Science and Engineering Graduate from IIIT-NR. I currently work as a Lead Tech on the GenAI team at D. E. Shaw & Co. Previously, I was a Research Engineer at [Lightning AI](http://lightning.ai/) working on the [PyTorch Lightning Ecosystem](https://github.com/PyTorchLightning), a Software Developer (PyTorch dev team) at Quansight Labs, and an Intern at NVIDIA's GPU Development Frameworks team. I love development, optimization and exploring the possibilities of computer science! Have explored a lot of fields during my graduation, development is what I found the most intuitive for myself.
+Hello World! I'm Kushashwa Ravi Shrimali (friends call me Kush, and krshrimali on github), a Computer Science and Engineering Graduate from IIIT-NR. I currently work as a Lead Tech on the GenAI team at D. E. Shaw & Co. Previously, I was a Research Engineer at [Lightning AI](http://lightning.ai/) working on the [PyTorch Lightning Ecosystem](https://github.com/PyTorchLightning), a Software Developer (PyTorch dev team) at Quansight Labs, and an Intern at NVIDIA's GPU Development Frameworks team. I love development, optimization and exploring the possibilities of computer science! Have explored a lot of fields during my graduation, development is what I found the most intuitive for myself.
 
 I try going live on my [YouTube channel](https://youtube.com/c/kushashwaraviShrimali) whenever I find the time. Most of my projects and work are demonstrated there, in case it interests you! :)
 
@@ -53,8 +53,6 @@ Please navigate to [categories](https://krshrimali.github.io/categories/), to st
     - Coordinated clubs running under SAC: Artificial Intelligence and Machine Learning Club, The Society of Coders. Also became the Technical Coordinator of Annual Technical and Cultural Fest - TechNovate 2019.
 
 ## Twitch and YouTube Channels
-
-I stream every day at 9 PM IST (8:30 AM PT), so if you are interested - please hop in and say hi!
 
 * Twitch: https://twitch.tv/buffetcodes
 * YouTube: https://youtube.com/c/kushashwaraviShrimali

@@ -1,0 +1,21 @@
+{{ define "main" }}
+<h1 class="page-heading">{{ .Title }}</h1>
+{{ with .Content }}<div class="post-content">{{ . }}</div>{{ end }}
+
+{{ $videos := hugo.Data.youtube.videos }}
+{{ if $videos }}
+<div class="video-grid">
+  {{ range $videos }}
+  <a class="video-card" href="{{ .url }}" target="_blank" rel="noopener">
+    <span class="video-card__thumb">
+      <img src="{{ .thumbnail }}" alt="" loading="lazy">
+      {{ with .duration }}<span class="video-card__duration">{{ . }}</span>{{ end }}
+    </span>
+    <span class="video-card__title">{{ .title }}</span>
+  </a>
+  {{ end }}
+</div>
+{{ else }}
+<p class="search-empty">No videos loaded yet — check back soon.</p>
+{{ end }}
+{{ end }}

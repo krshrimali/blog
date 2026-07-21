@@ -19,10 +19,10 @@
 {{ else }}
   {{ $pages := sort $page.Pages "Date" "desc" }}
   {{ $paginator := $page.Paginate $pages }}
-  <ul class="post-list">
+  <table class="posts">
     {{ range $paginator.Pages }}
       {{ partial "post-item.html" . }}
     {{ end }}
-  </ul>
+  </table>
   {{ partial "pagination.html" (dict "paginator" $paginator) }}
 {{ end }}

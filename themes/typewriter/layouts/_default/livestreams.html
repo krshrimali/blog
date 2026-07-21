@@ -1,0 +1,21 @@
+{{ define "main" }}
+<h1 class="page-heading">{{ .Title }}</h1>
+{{ with .Content }}<div class="post-content">{{ . }}</div>{{ end }}
+
+{{ $streams := hugo.Data.youtube.livestreams }}
+{{ if $streams }}
+<div class="video-grid">
+  {{ range $streams }}
+  <a class="video-card" href="{{ .url }}" target="_blank" rel="noopener">
+    <span class="video-card__thumb">
+      <img src="{{ .thumbnail }}" alt="" loading="lazy">
+      {{ with .duration }}<span class="video-card__duration">{{ . }}</span>{{ end }}
+    </span>
+    <span class="video-card__title">{{ .title }}</span>
+  </a>
+  {{ end }}
+</div>
+{{ else }}
+<p class="search-empty">No live streams loaded yet — check back soon.</p>
+{{ end }}
+{{ end }}

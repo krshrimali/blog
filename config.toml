@@ -7,7 +7,7 @@ themesDir = "themes"
 theme = "typewriter"
 
 PygmentsCodeFences = true
-PygmentsStyle = "monokai"
+PygmentsStyle = "friendly"
 
 rssLimit  = 10  # Maximum number of items in the RSS feed.
 copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
@@ -55,6 +55,17 @@ disableHugoGeneratorInject = false
   ShowPostNavLinks = true
   ShowToc = true
 
+  # Metadata
+  description = "Welcome to Kushashwa's blog"
+  keywords = ["blog", "developer", "personal"]
+
+  # Content directory
+  contentTypeName = "posts"
+
+  # Community links (shown in the site footer)
+  discordURL   = "https://discord.gg/AMByfmS4NC"
+  youtubeSubscribeURL = "https://www.youtube.com/@buffetCodes?sub_confirmation=1"
+
   # Social icons
   [[params.socialIcons]]
     name = "twitter"
@@ -72,13 +83,6 @@ disableHugoGeneratorInject = false
     name = "github"
     url = "https://github.com/krshrimali"
 
-  # Metadata
-  description = "Welcome to Kushashwa's blog"
-  keywords = ["blog", "developer", "personal"]
-
-  # Content directory
-  contentTypeName = "posts"
-
 [params.author]
   name = "Kushashwa Ravi Shrimali"
 
@@ -90,7 +94,7 @@ author = "Kushashwa Ravi Shrimali"
   codeFences = true
   guessSyntax = true
   lineNos = false
-  style = "monokai"
+  style = "friendly"
 
 # Old social icons have been replaced with params.socialIcons above
 
@@ -111,10 +115,22 @@ author = "Kushashwa Ravi Shrimali"
     identifier = "about"
     name       = "About"
     url        = "/about"
+    weight     = 1
   [[menu.main]]
     identifier = "blog"
     name       = "Blog"
     url        = "/posts"
+    weight     = 2
+  [[menu.main]]
+    identifier = "videos"
+    name       = "Videos"
+    url        = "/videos/"
+    weight     = 3
+  [[menu.main]]
+    identifier = "livestreams"
+    name       = "Live Streams"
+    url        = "/live-streams/"
+    weight     = 4
   [[menu.main]]
     identifier = "search"
     name       = "Search"

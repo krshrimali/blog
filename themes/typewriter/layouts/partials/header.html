@@ -1,19 +1,13 @@
-<header class="site-header">
-  <div class="wrap">
-    <div class="site-header__row">
-      <div>
-        <p class="site-title"><a href="{{ "/" | absURL }}">{{ site.Title }}</a></p>
-        {{ with site.Params.description }}<p class="site-subtitle">{{ . }}</p>{{ end }}
-      </div>
-      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light and dark theme">☾ DARK</button>
-    </div>
-    <nav class="site-nav">
-      {{ range site.Menus.main }}
-        <a href="{{ .URL | absURL }}"{{ if $.IsMenuCurrent "main" . }} class="active"{{ end }}>{{ .Name }}</a>
-      {{ end }}
-      {{ range site.Menus.other }}
-        <a href="{{ .URL | absURL }}"{{ if $.IsMenuCurrent "other" . }} class="active"{{ end }}>{{ .Name }}</a>
-      {{ end }}
-    </nav>
-  </div>
-</header>
+<div class="sidebar">
+  <header><a href="{{ "/" | absURL }}">{{ site.Title }}</a></header>
+  {{ with site.Params.description }}<p class="site-subtitle">{{ . }}</p>{{ end }}
+  <nav class="menu">
+    {{ range site.Menus.main }}
+      <div class="menu-item{{ if $.IsMenuCurrent "main" . }} active{{ end }}"><a href="{{ .URL | absURL }}">{{ .Name }}</a></div>
+    {{ end }}
+    {{ range site.Menus.other }}
+      <div class="menu-item{{ if $.IsMenuCurrent "other" . }} active{{ end }}"><a href="{{ .URL | absURL }}">{{ .Name }}</a></div>
+    {{ end }}
+  </nav>
+  <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light and dark theme">☾ DARK</button>
+</div>

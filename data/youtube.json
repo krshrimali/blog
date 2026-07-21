@@ -1,0 +1,356 @@
+{
+  "videos": [
+    {
+      "id": "MtPDgXYKhCg",
+      "title": "Working my way through OpenCV's source code [Replay]",
+      "url": "https://www.youtube.com/watch?v=MtPDgXYKhCg",
+      "thumbnail": "https://i.ytimg.com/vi/MtPDgXYKhCg/hqdefault.jpg",
+      "duration": "35:24"
+    },
+    {
+      "id": "nWIyyWWK4uw",
+      "title": "Dealing with virtual methods in C++ and OpenCV",
+      "url": "https://www.youtube.com/watch?v=nWIyyWWK4uw",
+      "thumbnail": "https://i.ytimg.com/vi/nWIyyWWK4uw/hqdefault.jpg",
+      "duration": "57:52"
+    },
+    {
+      "id": "agGiwWXyVsY",
+      "title": "I Added a New Function to OpenCV’s C++ API",
+      "url": "https://www.youtube.com/watch?v=agGiwWXyVsY",
+      "thumbnail": "https://i.ytimg.com/vi/agGiwWXyVsY/hqdefault.jpg",
+      "duration": "11:20"
+    },
+    {
+      "id": "ZD6JMQGx5SM",
+      "title": "OpenCV Series: Adding my own tracking in C++ (Part-1)",
+      "url": "https://www.youtube.com/watch?v=ZD6JMQGx5SM",
+      "thumbnail": "https://i.ytimg.com/vi/ZD6JMQGx5SM/hqdefault.jpg",
+      "duration": "14:49"
+    },
+    {
+      "id": "ds2ZTfg8VJE",
+      "title": "Debug OpenCV’s C++ Source Code with GDB",
+      "url": "https://www.youtube.com/watch?v=ds2ZTfg8VJE",
+      "thumbnail": "https://i.ytimg.com/vi/ds2ZTfg8VJE/hqdefault.jpg",
+      "duration": "42:43"
+    },
+    {
+      "id": "tYJwLTbp9PE",
+      "title": "OpenCV Contribution Series: Building from Source (Live Replay)",
+      "url": "https://www.youtube.com/watch?v=tYJwLTbp9PE",
+      "thumbnail": "https://i.ytimg.com/vi/tYJwLTbp9PE/hqdefault.jpg",
+      "duration": "41:04"
+    },
+    {
+      "id": "enDKKlqglKs",
+      "title": "Building a rust project again",
+      "url": "https://www.youtube.com/watch?v=enDKKlqglKs",
+      "thumbnail": "https://i.ytimg.com/vi/enDKKlqglKs/hqdefault.jpg",
+      "duration": "58:28"
+    },
+    {
+      "id": "kS5l51xbTxg",
+      "title": "Catching up after long | Random development",
+      "url": "https://www.youtube.com/watch?v=kS5l51xbTxg",
+      "thumbnail": "https://i.ytimg.com/vi/kS5l51xbTxg/hqdefault.jpg",
+      "duration": "34:05"
+    },
+    {
+      "id": "S2gF63fMZ8g",
+      "title": "How does hyprland handle transparency? [Stream replay] [20260426]",
+      "url": "https://www.youtube.com/watch?v=S2gF63fMZ8g",
+      "thumbnail": "https://i.ytimg.com/vi/S2gF63fMZ8g/hqdefault.jpg",
+      "duration": "56:33"
+    },
+    {
+      "id": "oaxU8rcRF8M",
+      "title": "Live Stream re-run: Figuring out GitHub CLI codebase for a new project",
+      "url": "https://www.youtube.com/watch?v=oaxU8rcRF8M",
+      "thumbnail": "https://i.ytimg.com/vi/oaxU8rcRF8M/hqdefault.jpg",
+      "duration": "16:18"
+    },
+    {
+      "id": "BSiSMlEQWsI",
+      "title": "Contributing to Helix Editor - Adding a new feature",
+      "url": "https://www.youtube.com/watch?v=BSiSMlEQWsI",
+      "thumbnail": "https://i.ytimg.com/vi/BSiSMlEQWsI/hqdefault.jpg",
+      "duration": "8:37"
+    },
+    {
+      "id": "laC_4wy3_xw",
+      "title": "I modified Helix to bring it closer to neovim",
+      "url": "https://www.youtube.com/watch?v=laC_4wy3_xw",
+      "thumbnail": "https://i.ytimg.com/vi/laC_4wy3_xw/hqdefault.jpg",
+      "duration": "4:35"
+    },
+    {
+      "id": "x_9t2Vc3dsE",
+      "title": "Image Processing - Back to OpenCV?",
+      "url": "https://www.youtube.com/watch?v=x_9t2Vc3dsE",
+      "thumbnail": "https://i.ytimg.com/vi/x_9t2Vc3dsE/hqdefault.jpg",
+      "duration": "43:08"
+    },
+    {
+      "id": "it9x3PIN8MA",
+      "title": "10 minutes of bhakti and coding",
+      "url": "https://www.youtube.com/watch?v=it9x3PIN8MA",
+      "thumbnail": "https://i.ytimg.com/vi/it9x3PIN8MA/hqdefault.jpg",
+      "duration": "11:50"
+    },
+    {
+      "id": "LDn2jV4Bw1A",
+      "title": "Code Along: NeoVim Plugin",
+      "url": "https://www.youtube.com/watch?v=LDn2jV4Bw1A",
+      "thumbnail": "https://i.ytimg.com/vi/LDn2jV4Bw1A/hqdefault.jpg",
+      "duration": "34:00"
+    },
+    {
+      "id": "A05zWnoBRmI",
+      "title": "THE SUCKLESS TERMINAL",
+      "url": "https://www.youtube.com/watch?v=A05zWnoBRmI",
+      "thumbnail": "https://i.ytimg.com/vi/A05zWnoBRmI/hqdefault.jpg",
+      "duration": "9:20"
+    },
+    {
+      "id": "D95_av91h90",
+      "title": "Search like neovim in VSCode",
+      "url": "https://www.youtube.com/watch?v=D95_av91h90",
+      "thumbnail": "https://i.ytimg.com/vi/D95_av91h90/hqdefault.jpg",
+      "duration": "5:26"
+    },
+    {
+      "id": "x1iHQ24y4FE",
+      "title": "Untitled",
+      "url": "https://www.youtube.com/watch?v=x1iHQ24y4FE",
+      "thumbnail": "https://i.ytimg.com/vi/x1iHQ24y4FE/hqdefault.jpg",
+      "duration": null
+    },
+    {
+      "id": "imMVzZ2NwWM",
+      "title": "Shipping a project isn't easy - and here's why",
+      "url": "https://www.youtube.com/watch?v=imMVzZ2NwWM",
+      "thumbnail": "https://i.ytimg.com/vi/imMVzZ2NwWM/hqdefault.jpg",
+      "duration": "6:10"
+    },
+    {
+      "id": "_DKAUBUAFLU",
+      "title": "This is the reason why I admire KDE",
+      "url": "https://www.youtube.com/watch?v=_DKAUBUAFLU",
+      "thumbnail": "https://i.ytimg.com/vi/_DKAUBUAFLU/hqdefault.jpg",
+      "duration": "6:38"
+    },
+    {
+      "id": "sETsJcaH6JA",
+      "title": "Git History in VSCode?",
+      "url": "https://www.youtube.com/watch?v=sETsJcaH6JA",
+      "thumbnail": "https://i.ytimg.com/vi/sETsJcaH6JA/hqdefault.jpg",
+      "duration": "5:37"
+    },
+    {
+      "id": "niCsomXkqHA",
+      "title": "I implemented auto indexing for my VSCode Extension",
+      "url": "https://www.youtube.com/watch?v=niCsomXkqHA",
+      "thumbnail": "https://i.ytimg.com/vi/niCsomXkqHA/hqdefault.jpg",
+      "duration": "5:35"
+    },
+    {
+      "id": "agb-A-x3KXg",
+      "title": "Building a Rust Project: Discussing Bug and Solution #1/N",
+      "url": "https://www.youtube.com/watch?v=agb-A-x3KXg",
+      "thumbnail": "https://i.ytimg.com/vi/agb-A-x3KXg/hqdefault.jpg",
+      "duration": "8:51"
+    },
+    {
+      "id": "AoYJbBIhK0g",
+      "title": "Releasing the biggest project of my life - Context Pilot!",
+      "url": "https://www.youtube.com/watch?v=AoYJbBIhK0g",
+      "thumbnail": "https://i.ytimg.com/vi/AoYJbBIhK0g/hqdefault.jpg",
+      "duration": "44:13"
+    },
+    {
+      "id": "boPwiLeWht4",
+      "title": "Rust Project Optimization: Fixing the schema",
+      "url": "https://www.youtube.com/watch?v=boPwiLeWht4",
+      "thumbnail": "https://i.ytimg.com/vi/boPwiLeWht4/hqdefault.jpg",
+      "duration": "1:04:55"
+    },
+    {
+      "id": "8OM8N-1JT3M",
+      "title": "Rust Optimization: Optimizing Processes and Git Commands",
+      "url": "https://www.youtube.com/watch?v=8OM8N-1JT3M",
+      "thumbnail": "https://i.ytimg.com/vi/8OM8N-1JT3M/hqdefault.jpg",
+      "duration": "41:30"
+    },
+    {
+      "id": "qwu5EsVkGJ8",
+      "title": "Optimizing database in Rust for my project | Happy Hanuman Jayanti",
+      "url": "https://www.youtube.com/watch?v=qwu5EsVkGJ8",
+      "thumbnail": "https://i.ytimg.com/vi/qwu5EsVkGJ8/hqdefault.jpg",
+      "duration": "1:19:18"
+    },
+    {
+      "id": "PdbXWYExClQ",
+      "title": "Rust Project - Wrapping it up after 2 long years",
+      "url": "https://www.youtube.com/watch?v=PdbXWYExClQ",
+      "thumbnail": "https://i.ytimg.com/vi/PdbXWYExClQ/hqdefault.jpg",
+      "duration": "53:14"
+    },
+    {
+      "id": "C3NL6P1rV84",
+      "title": "Trying to wrap up my Rust Project (been a year)",
+      "url": "https://www.youtube.com/watch?v=C3NL6P1rV84",
+      "thumbnail": "https://i.ytimg.com/vi/C3NL6P1rV84/hqdefault.jpg",
+      "duration": "46:46"
+    },
+    {
+      "id": "ShX_jarXbJw",
+      "title": "Rust Project - Live",
+      "url": "https://www.youtube.com/watch?v=ShX_jarXbJw",
+      "thumbnail": "https://i.ytimg.com/vi/ShX_jarXbJw/hqdefault.jpg",
+      "duration": "1:22:49"
+    }
+  ],
+  "livestreams": [
+    {
+      "id": "nWIyyWWK4uw",
+      "title": "Dealing with virtual methods in C++ and OpenCV",
+      "url": "https://www.youtube.com/watch?v=nWIyyWWK4uw",
+      "thumbnail": "https://i.ytimg.com/vi/nWIyyWWK4uw/hqdefault.jpg",
+      "duration": "57:52"
+    },
+    {
+      "id": "enDKKlqglKs",
+      "title": "Building a rust project again",
+      "url": "https://www.youtube.com/watch?v=enDKKlqglKs",
+      "thumbnail": "https://i.ytimg.com/vi/enDKKlqglKs/hqdefault.jpg",
+      "duration": "58:28"
+    },
+    {
+      "id": "kS5l51xbTxg",
+      "title": "Catching up after long | Random development",
+      "url": "https://www.youtube.com/watch?v=kS5l51xbTxg",
+      "thumbnail": "https://i.ytimg.com/vi/kS5l51xbTxg/hqdefault.jpg",
+      "duration": "34:05"
+    },
+    {
+      "id": "S2gF63fMZ8g",
+      "title": "How does hyprland handle transparency? [Stream replay] [20260426]",
+      "url": "https://www.youtube.com/watch?v=S2gF63fMZ8g",
+      "thumbnail": "https://i.ytimg.com/vi/S2gF63fMZ8g/hqdefault.jpg",
+      "duration": "56:33"
+    },
+    {
+      "id": "x_9t2Vc3dsE",
+      "title": "Image Processing - Back to OpenCV?",
+      "url": "https://www.youtube.com/watch?v=x_9t2Vc3dsE",
+      "thumbnail": "https://i.ytimg.com/vi/x_9t2Vc3dsE/hqdefault.jpg",
+      "duration": "43:08"
+    },
+    {
+      "id": "AoYJbBIhK0g",
+      "title": "Releasing the biggest project of my life - Context Pilot!",
+      "url": "https://www.youtube.com/watch?v=AoYJbBIhK0g",
+      "thumbnail": "https://i.ytimg.com/vi/AoYJbBIhK0g/hqdefault.jpg",
+      "duration": "44:13"
+    },
+    {
+      "id": "DKB4WIZnbFQ",
+      "title": "Using threads in Rust Project",
+      "url": "https://www.youtube.com/watch?v=DKB4WIZnbFQ",
+      "thumbnail": "https://i.ytimg.com/vi/DKB4WIZnbFQ/hqdefault.jpg",
+      "duration": "1:24:30"
+    },
+    {
+      "id": "8OM8N-1JT3M",
+      "title": "Rust Optimization: Optimizing Processes and Git Commands",
+      "url": "https://www.youtube.com/watch?v=8OM8N-1JT3M",
+      "thumbnail": "https://i.ytimg.com/vi/8OM8N-1JT3M/hqdefault.jpg",
+      "duration": "41:30"
+    },
+    {
+      "id": "boPwiLeWht4",
+      "title": "Rust Project Optimization: Fixing the schema",
+      "url": "https://www.youtube.com/watch?v=boPwiLeWht4",
+      "thumbnail": "https://i.ytimg.com/vi/boPwiLeWht4/hqdefault.jpg",
+      "duration": "1:04:55"
+    },
+    {
+      "id": "qwu5EsVkGJ8",
+      "title": "Optimizing database in Rust for my project | Happy Hanuman Jayanti",
+      "url": "https://www.youtube.com/watch?v=qwu5EsVkGJ8",
+      "thumbnail": "https://i.ytimg.com/vi/qwu5EsVkGJ8/hqdefault.jpg",
+      "duration": "1:19:18"
+    },
+    {
+      "id": "PdbXWYExClQ",
+      "title": "Rust Project - Wrapping it up after 2 long years",
+      "url": "https://www.youtube.com/watch?v=PdbXWYExClQ",
+      "thumbnail": "https://i.ytimg.com/vi/PdbXWYExClQ/hqdefault.jpg",
+      "duration": "53:14"
+    },
+    {
+      "id": "4-mQ4JsjU90",
+      "title": "Rust Project - Live",
+      "url": "https://www.youtube.com/watch?v=4-mQ4JsjU90",
+      "thumbnail": "https://i.ytimg.com/vi/4-mQ4JsjU90/hqdefault.jpg",
+      "duration": "21:32"
+    },
+    {
+      "id": "C3NL6P1rV84",
+      "title": "Trying to wrap up my Rust Project (been a year)",
+      "url": "https://www.youtube.com/watch?v=C3NL6P1rV84",
+      "thumbnail": "https://i.ytimg.com/vi/C3NL6P1rV84/hqdefault.jpg",
+      "duration": "46:46"
+    },
+    {
+      "id": "6psZeC4ioMg",
+      "title": "Back after long | Some PyTorch in C++ and Talking",
+      "url": "https://www.youtube.com/watch?v=6psZeC4ioMg",
+      "thumbnail": "https://i.ytimg.com/vi/6psZeC4ioMg/hqdefault.jpg",
+      "duration": "1:16:33"
+    },
+    {
+      "id": "ShX_jarXbJw",
+      "title": "Rust Project - Live",
+      "url": "https://www.youtube.com/watch?v=ShX_jarXbJw",
+      "thumbnail": "https://i.ytimg.com/vi/ShX_jarXbJw/hqdefault.jpg",
+      "duration": "1:22:49"
+    },
+    {
+      "id": "MAZVeMniAXo",
+      "title": "Context Pilot in Rust | FInishing up left out parts",
+      "url": "https://www.youtube.com/watch?v=MAZVeMniAXo",
+      "thumbnail": "https://i.ytimg.com/vi/MAZVeMniAXo/hqdefault.jpg",
+      "duration": "52:10"
+    },
+    {
+      "id": "uli7ipMckRM",
+      "title": "Understanding JIT in PyPy",
+      "url": "https://www.youtube.com/watch?v=uli7ipMckRM",
+      "thumbnail": "https://i.ytimg.com/vi/uli7ipMckRM/hqdefault.jpg",
+      "duration": "15:00"
+    },
+    {
+      "id": "VFNLf474cAo",
+      "title": "NeoVim cleanup",
+      "url": "https://www.youtube.com/watch?v=VFNLf474cAo",
+      "thumbnail": "https://i.ytimg.com/vi/VFNLf474cAo/hqdefault.jpg",
+      "duration": "40:48"
+    },
+    {
+      "id": "uH6rCrTJsbc",
+      "title": "Discussing Cache Management",
+      "url": "https://www.youtube.com/watch?v=uH6rCrTJsbc",
+      "thumbnail": "https://i.ytimg.com/vi/uH6rCrTJsbc/hqdefault.jpg",
+      "duration": "45:21"
+    },
+    {
+      "id": "AIQattfIRmI",
+      "title": "Development work, some random coding and more",
+      "url": "https://www.youtube.com/watch?v=AIQattfIRmI",
+      "thumbnail": "https://i.ytimg.com/vi/AIQattfIRmI/hqdefault.jpg",
+      "duration": "1:09:12"
+    }
+  ]
+}

@@ -1,15 +1,18 @@
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="site-footer__row">
-      <p>
-        {{ with site.Language.Params.copyright }}{{ . | safeHTML }}{{ else }}&copy; {{ now.Format "2006" }} {{ site.Params.author.name | default site.Title }}{{ end }}
-      </p>
-      {{ if site.Params.socialIcons }}
-      <p class="footer-links">
-        {{ range site.Params.socialIcons }}<a href="{{ .url }}" target="_blank" rel="me noopener">{{ .name }}</a>{{ end }}
-      </p>
-      {{ end }}
-    </div>
-  </div>
+  <p>
+    {{ with site.Language.Params.copyright }}{{ . | safeHTML }}{{ else }}&copy; {{ now.Format "2006" }} {{ site.Params.author.name | default site.Title }}{{ end }}
+  </p>
+  {{ if site.Params.socialIcons }}
+  <p class="footer-links">
+    {{ range site.Params.socialIcons }}<a href="{{ .url }}" target="_blank" rel="me noopener">{{ .name }}</a>{{ end }}
+  </p>
+  {{ end }}
+  {{ if or site.Params.discordURL site.Params.youtubeSubscribeURL }}
+  <p class="site-cta">
+    {{ with site.Params.discordURL }}Join the community on <a href="{{ . }}" target="_blank" rel="noopener">Discord</a>{{ end }}
+    {{ if and site.Params.discordURL site.Params.youtubeSubscribeURL }} · {{ end }}
+    {{ with site.Params.youtubeSubscribeURL }}Subscribe to <a href="{{ . }}" target="_blank" rel="noopener">the YouTube channel</a>{{ end }}
+  </p>
+  {{ end }}
 </footer>
 <script src="{{ "js/theme.js" | absURL }}"></script>

@@ -6,7 +6,7 @@ aliases = ["about-us","contact"]
   name = "Kushashwa Ravi Shrimali"
 +++
 
-Hello World! I'm Kushashwa Ravi Shrimali (friends call me Kush, world knows me as krshrimali), a Computer Science and Engineering Graduate from IIIT-NR. I work as a Research Engineer at [Lightning AI](http://lightning.ai/), mostly on [PyTorch Lightning Ecosystem](https://github.com/PyTorchLightning). Previously, I work as a Software Developer (PyTorch dev team) at Quansight Labs and as an Intern at NVIDIA's GPU Development Frameworks team. I love development, optimization and exploring the possibilities of computer science! Have explored a lot of fields during my graduation, development is what I found the most intuitive for myself.
+Hello World! I'm Kushashwa Ravi Shrimali (friends call me Kush, world knows me as krshrimali), a Computer Science and Engineering Graduate from IIIT-NR. I currently work as a Lead Tech on the GenAI team at D. E. Shaw & Co. Previously, I was a Research Engineer at [Lightning AI](http://lightning.ai/) working on the [PyTorch Lightning Ecosystem](https://github.com/PyTorchLightning), a Software Developer (PyTorch dev team) at Quansight Labs, and an Intern at NVIDIA's GPU Development Frameworks team. I love development, optimization and exploring the possibilities of computer science! Have explored a lot of fields during my graduation, development is what I found the most intuitive for myself.
 
 I try going live on my [YouTube channel](https://youtube.com/c/kushashwaraviShrimali) whenever I find the time. Most of my projects and work are demonstrated there, in case it interests you! :)
 
@@ -18,7 +18,9 @@ Please navigate to [categories](https://krshrimali.github.io/categories/), to st
 
 ## Work Experience
 
-- **Lightning AI (Research Engineer)** (February 2022 to Present)
+- **D. E. Shaw & Co. (Lead Tech, GenAI Team)** (March 2024 to Present)
+    - Joined the Python Infra team in March 2024; moved to the GenAI team in July 2025.
+- **Lightning AI (Research Engineer)** (February 2022 to March 2024)
     - Lead of Lightning Flash library.
     - One of the core maintainers of PyTorch Lightning and Lightning framework.
 - **Quansight Labs (Software Developer)** (June 2021 to February 2022)

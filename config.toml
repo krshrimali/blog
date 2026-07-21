@@ -95,6 +95,7 @@ author = "Kushashwa Ravi Shrimali"
   guessSyntax = true
   lineNos = false
   style = "friendly"
+  noClasses = false
 
 # Old social icons have been replaced with params.socialIcons above
 

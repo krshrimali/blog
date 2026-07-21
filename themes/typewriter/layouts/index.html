@@ -1,4 +1,12 @@
 {{ define "main" }}
+{{ with .Content }}<div class="post-content">{{ . }}</div>{{ end }}
+
+{{ $videos := hugo.Data.youtube.videos }}
+{{ if gt (len $videos) 0 }}
+  {{ $latest := index $videos 0 }}
+  <p class="recent-video">Recent YouTube video: <a href="{{ $latest.url }}" target="_blank" rel="noopener">{{ $latest.title }}</a></p>
+{{ end }}
+
 {{ $section := site.GetPage "section" "posts" }}
 {{ $posts := sort ($section.RegularPages) "Date" "desc" }}
 {{ $paginator := .Paginate $posts }}

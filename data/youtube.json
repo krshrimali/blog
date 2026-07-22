@@ -120,13 +120,6 @@
       "duration": "5:26"
     },
     {
-      "id": "x1iHQ24y4FE",
-      "title": "Untitled",
-      "url": "https://www.youtube.com/watch?v=x1iHQ24y4FE",
-      "thumbnail": "https://i.ytimg.com/vi/x1iHQ24y4FE/hqdefault.jpg",
-      "duration": null
-    },
-    {
       "id": "imMVzZ2NwWM",
       "title": "Shipping a project isn't easy - and here's why",
       "url": "https://www.youtube.com/watch?v=imMVzZ2NwWM",
@@ -209,6 +202,13 @@
       "url": "https://www.youtube.com/watch?v=ShX_jarXbJw",
       "thumbnail": "https://i.ytimg.com/vi/ShX_jarXbJw/hqdefault.jpg",
       "duration": "1:22:49"
+    },
+    {
+      "id": "MAZVeMniAXo",
+      "title": "Context Pilot in Rust | FInishing up left out parts",
+      "url": "https://www.youtube.com/watch?v=MAZVeMniAXo",
+      "thumbnail": "https://i.ytimg.com/vi/MAZVeMniAXo/hqdefault.jpg",
+      "duration": "52:10"
     }
   ],
   "livestreams": [

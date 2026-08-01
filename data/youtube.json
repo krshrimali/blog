@@ -2,10 +2,10 @@
   "videos": [
     {
       "id": "RuIFzi24ZlM",
-      "title": "Untitled",
+      "title": "I Added Python Callbacks to OpenCV's VideoCapture (C++ Calling Back into Python)",
       "url": "https://www.youtube.com/watch?v=RuIFzi24ZlM",
       "thumbnail": "https://i.ytimg.com/vi/RuIFzi24ZlM/hqdefault.jpg",
-      "duration": null
+      "duration": "17:14"
     },
     {
       "id": "PMC3iyPaNdU",

@@ -22,13 +22,6 @@
       "duration": "15:51"
     },
     {
-      "id": "_Sb_amm3faU",
-      "title": "Untitled",
-      "url": "https://www.youtube.com/watch?v=_Sb_amm3faU",
-      "thumbnail": "https://i.ytimg.com/vi/_Sb_amm3faU/hqdefault.jpg",
-      "duration": null
-    },
-    {
       "id": "MtPDgXYKhCg",
       "title": "Working my way through OpenCV's source code [Replay]",
       "url": "https://www.youtube.com/watch?v=MtPDgXYKhCg",
@@ -209,6 +202,13 @@
       "url": "https://www.youtube.com/watch?v=qwu5EsVkGJ8",
       "thumbnail": "https://i.ytimg.com/vi/qwu5EsVkGJ8/hqdefault.jpg",
       "duration": "1:19:18"
+    },
+    {
+      "id": "PdbXWYExClQ",
+      "title": "Rust Project - Wrapping it up after 2 long years",
+      "url": "https://www.youtube.com/watch?v=PdbXWYExClQ",
+      "thumbnail": "https://i.ytimg.com/vi/PdbXWYExClQ/hqdefault.jpg",
+      "duration": "53:14"
     }
   ],
   "livestreams": [

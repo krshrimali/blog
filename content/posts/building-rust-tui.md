@@ -1,9 +1,9 @@
 ---
  author:
    name: "Kushashwa Ravi Shrimali"
- date: 2026-09-10
- linktitle: "prtui: How It Works"
- title: "How prtui Works: One Struct for PRs, Branches, and Claude Sessions"
+ date: 2026-09-12
+ linktitle: "building a TUI in Rust"
+ title: "Building a TUI for reviewing claude sessions and github PRs, in Rust"
  categories:
  - project
  tags:
@@ -16,7 +16,7 @@
  - posts
  weight: 10
  series:
- toc: false
+ toc: true
  comments: true
 ---
 
@@ -69,7 +69,6 @@ impl Source {
 Everything above this layer, like ratatui rendering, the comment store, the outdated thread detection, the split-diff view - has no idea whether they are looking at a GitHub API or a JSONL file on the disk.
 
 Coding style note: The `Caps` struct (`can_submit`, `has_threads`, `is_claude_session`, ...) is what a session opts out of - there's no PR to publish to, so `caps.can_submit` is `false` and the publish key just says so instead of guessing from `kind == 'claude'` string matching style.
-
 
 ## how are claude sessions handled?
 
@@ -202,79 +201,31 @@ user.push_str(&format!("git diff --no-ext-diff --unified=3 {}...HEAD", source.ba
 
 That trick quietly breaks for a Claude session, though - `base_sha` and `head_sha` are both just "the repo's current HEAD" there (there's no comparison range, only a transcript), so the generated command is `git diff HEAD...HEAD`: always empty. The fix is the obvious one once you notice it: check `caps.is_claude_session` and paste the diff directly instead of the command, since a session's diff already lives in memory and isn't the multi-thousand-line patch this trick exists to avoid pasting.
 
-## local time, no timezone crate
-
-Every timestamp in prtui — git's `%aI`, GitHub's `updatedAt`, a Claude Code transcript's
-`timestamp` — is RFC 3339, and none of them are in your timezone. Pulling in `chrono` for
-that felt like the wrong trade for a project whose whole pitch is "single static binary,
-builds offline, no runtime dependencies." So `localtime` does it with a system call and
-arithmetic instead: read the local UTC offset once via `date +%z` (the same "shell out to
-a real tool" the project already does for `git` and `gh`), cache it in a `OnceLock`, and
-apply Howard Hinnant's civil-calendar math to go from epoch seconds to a wall-clock date:
-
-```rust
-pub fn local_offset_seconds() -> i64 {
-    static OFFSET: OnceLock<i64> = OnceLock::new();
-    *OFFSET.get_or_init(|| {
-        Command::new("date").arg("+%z").output().ok()
-            .and_then(|o| String::from_utf8(o.stdout).ok())
-            .and_then(|s| parse_offset(s.trim()))
-            .unwrap_or(0)
-    })
-}
-```
-
-Parsing an RFC 3339 string is fixed-width slicing (`s.get(0..4)` for the year, and so on)
-plus an offset suffix that's either `Z` or `+HH:MM`; going the other way is the inverse
-civil-date formula. The one wrinkle: comments made *inside* prtui aren't RFC 3339 at all —
-they're stamped `{epoch_nanos}-{seq}` so lexical order matches creation order even for two
-comments made in the same instant. `describe()` and `relative()` both try RFC 3339 first
-and fall back to reading the leading digits as nanoseconds, so a comment you just typed
-shows "just now," not its own internal timestamp format staring back at you.
-
 ## how it's tested
 
-Every screen renders through ratatui's `TestBackend` — a terminal buffer with no terminal
-attached — so the whole test suite runs headless: real key events through `App::on_key`,
-assertions on the resulting buffer's text and styles. The same backend powers `shot`, a
-small binary that walks every screen of a synthetic fixture repo (and, now, a real Claude
-Code session transcript) and exports each one as an SVG via a hand-rolled
-`buffer_to_svg` — which is how the screenshots in the philosophy post exist at all: they're
-real renders of real application state, not mockups.
+This is where it helped me a lot, thanks to ratatui's `TestBackend` - a terminal buffer with no terminal attached, so the whole test suite runs headless:
 
-That tool is also where the two most interesting bugs in this codebase turned up, both the
-kind you only find by actually looking at output instead of trusting that a test passed.
-The `originalFile`-is-often-null bug above was found by running the cumulative-diff
-reconstruction against a real, live session transcript and noticing the result was
-suspiciously empty. The second was structural: the demo script pressed `j` a fixed number
-of times to land the cursor on a commentable line before opening the compose modal, which
-worked — until an earlier step in the same script started adding rows to the diff (a
-follow-up reply, a new comment, a reaction chip), shifting where "the addable line" actually
-was. `c` silently no-op'd, and the "comment text" typed right after it — *"should this also
-handle the 401 refresh path?"* — got sent as global keystrokes instead of modal input. The
-letter `t` in "this," "the," and "path" each cycle prtui's color theme, so five of eight
-README screenshots came back light instead of dark, and nothing in the code raised an
-error about it — it just quietly did the wrong thing. The fix is as much a lesson as the
-patch: don't count keystrokes to reach a state, assert you reached it —
+- real key events through: `App::on_key`
+- assertions on the resulting buffer's text and styles
+- uses a small binary that walks every screen of a synthetic fixture repo (and a real cc session transcript) and exports each one as an SVG via `buffer_to_svg` via RataTui's `shot`.
+    - btw, this is how the screenshots were taken and put into README, everything automated :) -> none of them are mockups.
 
-```rust
-app.on_key(key('c'));
-assert!(app.modal.is_some(), "compose must actually open before typing into it");
-```
+This is also how I enabled my agentic calls to find bugs, asking it to use those screenshots and find real UI/UX bugs + trying out all valid operations via the UI.
 
-— so the next time something shifts underneath a script like this, it fails loudly instead
-of drawing a screenshot of the wrong thing.
+And yep! I can't miss adding that none of these are large ideas on their own:
 
----
+- Reusing a struct
+- Undoing a patch instead of replaying it
+- Shelling out to `date`
+- Asserting instead of assuming
 
-None of these are large ideas on their own — reuse a struct, undo a patch instead of
-replaying it, shell out to `date`, assert instead of assume. What they add up to is a tool
-where reviewing a Claude Code session costs nothing extra over reviewing a PR, because as
-far as most of the code is concerned, it *is* one.
+Whta they all add up to is a tool where reviewing a CC session costs "nothing extra" over reviewing a PR.
 
 **Code:** [github.com/krshrimali/research-reviews/tree/main/rtui](https://github.com/krshrimali/research-reviews/tree/main/rtui)
 
-**Install:**
+## how to install?
+
+It's pretty simple, instructions below:
 
 ```bash
 git clone https://github.com/krshrimali/research-reviews.git
@@ -282,3 +233,7 @@ cd research-reviews/rtui
 cargo build --release
 ./target/release/prtui            # opens the picker: PRs, branches, Claude sessions
 ```
+
+Hope y'all liked this blog! :)
+
+Thanks for reading!

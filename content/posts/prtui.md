@@ -22,6 +22,8 @@
 
 # Reviews deserve better tooling
 
+_Minor note before you start: I also wrote a technical blog post if it interests you: https://krshrimali.github.io/posts/2026/09/building-a-tui-for-reviewing-claude-sessions-and-github-prs-in-rust/. Happy reading! :)_
+
 I don't think I need to emphasize much on how reviews have become a major bottleneck. But let's not forget how important they are as well.
 
 I don't mean to talk much on what would happen 5 years down the line, because honestly - I don't know. Personally, I just know that it's worth spending time building tools that lead us to a direction where it becomes easier.

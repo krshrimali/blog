@@ -213,6 +213,13 @@
   ],
   "livestreams": [
     {
+      "id": "wKrGcdpHLRw",
+      "title": "Talking about my new editor and AI",
+      "url": "https://www.youtube.com/watch?v=wKrGcdpHLRw",
+      "thumbnail": "https://i.ytimg.com/vi/wKrGcdpHLRw/hqdefault.jpg",
+      "duration": "1:09:14"
+    },
+    {
       "id": "nWIyyWWK4uw",
       "title": "Dealing with virtual methods in C++ and OpenCV",
       "url": "https://www.youtube.com/watch?v=nWIyyWWK4uw",
@@ -344,13 +351,6 @@
       "url": "https://www.youtube.com/watch?v=uH6rCrTJsbc",
       "thumbnail": "https://i.ytimg.com/vi/uH6rCrTJsbc/hqdefault.jpg",
       "duration": "45:21"
-    },
-    {
-      "id": "AIQattfIRmI",
-      "title": "Development work, some random coding and more",
-      "url": "https://www.youtube.com/watch?v=AIQattfIRmI",
-      "thumbnail": "https://i.ytimg.com/vi/AIQattfIRmI/hqdefault.jpg",
-      "duration": "1:09:12"
     }
   ]
 }

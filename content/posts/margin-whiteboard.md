@@ -20,7 +20,7 @@ comments: true
 draft: false
 ---
 
-I think best with a pen. When I'm designing something, I draw boxes, scribble arrows, circle the parts I'm unsure about and write "??" next to them. Then I want to ask someone, "does this make sense?" (by the way -> does this remind you of Iron Man?)
+I think best with a pen. When I'm designing something, I draw boxes, scribble arrows, circle the parts I'm unsure about and write "??" next to them. Then I want to ask someone, "does this make sense?" (By the way, does this remind you of Iron Man?)
 
 Doing that with an AI today means describing my drawing in a chat box, which feels wrong. The drawing *is* the question. So I wanted the opposite: keep writing on the board, press a button, and have the reply show up *on the board*, next to the thing it's about. The way a friend would lean over and write in the margin.
 
@@ -131,11 +131,12 @@ All of this is stored on the board itself. Each card keeps its ask id, session i
 The first version replied with a violet card of text, about 120 words in short bullets. The answer streams into a placeholder card that's put in place before the first token arrives, so the board doesn't jump around.
 
 ![Mid-answer: the dashed placeholder card filling in, with the status line under the button showing "New ink · Writing…" and a timer](/assets/blogs/margin/streaming.png)
- That was useful, but it felt like a chat window glued onto a canvas.
+
+That was useful, but it felt like a chat window glued onto a canvas.
 
 When a person reviews your diagram, they don't write a paragraph. They grab a pen, circle the problem, put a ✗ next to the wrong step and draw the arrow you forgot. So Claude got a pen too.
 
-That's what the MARKS image is for. The app groups my elements into regions: an arrowhead joins its arrow, nearby small strokes merge into one word, and nested shapes become one region. Regions are numbered in reading order. Claude's own cards are labelled C1, C2…. The labels are drawn on a copy of the snapshot, never on the board, and listed in the prompt too. Here's the one for the board above, with four of its regions:
+That's what the MARKS image is for. The app groups my elements into regions: an arrowhead joins its arrow, nearby small strokes merge into one word, and nested shapes become one region. Regions are numbered in reading order. Claude's own cards are labelled C1, C2 and so on. The labels are drawn on a copy of the snapshot, never on the board, and listed in the prompt too. Here's the one for the board above, with four of its regions:
 
 ![The MARKS image Claude got for the sketch above: every region boxed and labelled R1 to R13](/assets/blogs/margin/marks.png)
 

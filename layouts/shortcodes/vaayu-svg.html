@@ -1,0 +1,2 @@
+{{- /* Inlines an SVG from static/assets/blogs/vaayu/ so it can use the theme's CSS variables (light/dark). */ -}}
+{{- readFile (printf "static/assets/blogs/vaayu/%s" (.Get 0)) | safeHTML -}}

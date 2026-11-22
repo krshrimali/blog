@@ -17,7 +17,7 @@ weight: 10
 series:
 toc: true
 comments: true
-draft: true
+draft: false
 ---
 
 I think best with a pen. When I'm designing something, I draw boxes, scribble arrows, circle the parts I'm unsure about and write "??" next to them. Then I want to ask someone, "does this make sense?" (by the way -> does this remind you of Iron Man?)

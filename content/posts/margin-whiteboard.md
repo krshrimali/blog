@@ -187,3 +187,5 @@ Going from "chat with a model" to "draw with a model" was less about the model a
 - **How it answers:** ink and placement, so the reply lives with the content it's about.
 
 If you think with a pen too, I'd love to hear how you'd want a model to talk back to you on a page. Happy drawing! :)
+
+FWIW - The project will be open sourced soon! :)

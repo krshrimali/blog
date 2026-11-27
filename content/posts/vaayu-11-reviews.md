@@ -1,7 +1,7 @@
 ---
 author:
   name: "Kushashwa Ravi Shrimali"
-date: 2027-02-09
+date: 2026-11-27
 linktitle: "Vaayu part 11: private code reviews that survive edits"
 title: "Vaayu part 11: private code reviews that survive edits"
 categories:
@@ -19,7 +19,6 @@ weight: 10
 series:
 toc: true
 comments: true
-draft: true
 ---
 
 _Part 11 of the [Vaayu series](/posts/2026/11/why-i-wrote-my-own-editor/), and the first of three posts about the workflows I actually built Vaayu for. This one is about reviewing code: why it needed to move into the editor, and how a comment stays attached to the right code while that code keeps changing under it._
@@ -60,7 +59,7 @@ Saved comments show in the gutter:
 | `◌` | the code it was about has changed: check it |
 | `○` | resolved |
 
-and as text after the line (`:set reviewtext=all|cursor|off`). `]r`/`[r` jump between open comments **across files**. `,rv` shows the thread, `,rr` replies, `,rx` resolves. `,rl` lists the whole review in a Results list ([part 7](/posts/2027/01/vaayu-part-7-splits-floating-terminals-and-one-results-list/)), and the detail pane shows the thread, the code as it was when you commented, and the code there now, if it's different.
+and as text after the line (`:set reviewtext=all|cursor|off`). `]r`/`[r` jump between open comments **across files**. `,rv` shows the thread, `,rr` replies, `,rx` resolves. `,rl` lists the whole review in a Results list ([part 7](/posts/2026/11/vaayu-part-7-splits-floating-terminals-and-one-results-list/)), and the detail pane shows the thread, the code as it was when you commented, and the code there now, if it's different.
 
 A folder can hold any number of named reviews (`:reviews`), each with an optional base revision, so `:reviewfiles` can list the files changed since `main` with a comment count next to each.
 
@@ -99,7 +98,7 @@ The **anchor** is the commented code itself, plus two lines of **context** on ea
 
 ### layer 1: live edits
 
-While a file is open, comments follow edits as you type, using the line-shift log from [part 1](/posts/2026/12/vaayu-part-1-text-is-a-tree/). Insert ten lines above, and the comment moves down ten lines immediately, before you save. Undo moves it back.
+While a file is open, comments follow edits as you type, using the line-shift log from [part 1](/posts/2026/11/vaayu-part-1-text-is-a-tree/). Insert ten lines above, and the comment moves down ten lines immediately, before you save. Undo moves it back.
 
 ### layer 2: re-finding after the file changes
 
@@ -261,4 +260,4 @@ Helix and Zed have nothing comparable. VS Code has comment APIs that extensions 
 - I started with one global `comments.json` per project. Moving to one file per named review, with an operation log, was a full rewrite. (Old comments are imported once into a review called "Imported comments".) If I'd thought about two sessions writing at once from the start, I'd have begun with operations.
 
 
-Next, [part 12](/posts/2027/02/vaayu-part-12-code-tours/): the other direction. Instead of me explaining what's wrong with code, code explaining itself to me.
+Next, [part 12](/posts/2026/11/vaayu-part-12-code-tours/): the other direction. Instead of me explaining what's wrong with code, code explaining itself to me.

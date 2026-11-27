@@ -1,7 +1,7 @@
 ---
 author:
   name: "Kushashwa Ravi Shrimali"
-date: 2027-02-23
+date: 2026-11-27
 linktitle: "Vaayu part 13: an AI agent beside the code"
 title: "Vaayu part 13: an AI agent beside the code"
 categories:
@@ -19,10 +19,9 @@ weight: 10
 series:
 toc: true
 comments: true
-draft: true
 ---
 
-_Part 13 of the [Vaayu series](/posts/2026/11/why-i-wrote-my-own-editor/), the last of three posts on the workflows I built Vaayu for. [Reviews](/posts/2027/02/vaayu-part-11-private-code-reviews-that-survive-edits/) and [tours](/posts/2027/02/vaayu-part-12-code-tours/) both hand work to an agent. This post is about how the agent lives in the editor, and why it's a terminal and not an API._
+_Part 13 of the [Vaayu series](/posts/2026/11/why-i-wrote-my-own-editor/), the last of three posts on the workflows I built Vaayu for. [Reviews](/posts/2026/11/vaayu-part-11-private-code-reviews-that-survive-edits/) and [tours](/posts/2026/11/vaayu-part-12-code-tours/) both hand work to an agent. This post is about how the agent lives in the editor, and why it's a terminal and not an API._
 
 ## why this matters
 
@@ -40,7 +39,7 @@ The second half of the idea: the agent should be the **real agent**. Claude Code
 
 ## the design: a PTY, not an API
 
-`:ai` (or `,ca`) opens your agent's CLI in a right-hand sidebar. Under the hood it's the same PTY machinery as `:terminal` ([part 7](/posts/2027/01/vaayu-part-7-splits-floating-terminals-and-one-results-list/)): a pseudo-terminal, a reader thread, a `vt100` screen.
+`:ai` (or `,ca`) opens your agent's CLI in a right-hand sidebar. Under the hood it's the same PTY machinery as `:terminal` ([part 7](/posts/2026/11/vaayu-part-7-splits-floating-terminals-and-one-results-list/)): a pseudo-terminal, a reader thread, a `vt100` screen.
 
 ![Selecting emit_scroll with V, ,ca opens the template picker, Explain is chosen, Claude Code starts in the right-hand sidebar and the prompt lands in its input as pasted text, waiting for Enter](/assets/blogs/vaayu/ai.gif)
 
@@ -61,7 +60,7 @@ What this buys:
 - **No API keys in the editor.** Vaayu never talks to a model. The CLI is already logged in.
 - **Any agent.** If it runs in a terminal, it works. Switching between Claude and Codex is one config line.
 
-What it costs: the editor can't _read_ the agent's answer as structured data. It can only type into it. For the review loop in [part 11](/posts/2027/02/vaayu-part-11-private-code-reviews-that-survive-edits/), where the editor needs structured replies, a separate non-interactive `review_command` is used instead.
+What it costs: the editor can't _read_ the agent's answer as structured data. It can only type into it. For the review loop in [part 11](/posts/2026/11/vaayu-part-11-private-code-reviews-that-survive-edits/), where the editor needs structured replies, a separate non-interactive `review_command` is used instead.
 
 ## building the context
 
@@ -201,9 +200,9 @@ The sidebar is the shared channel for everything AI in Vaayu:
 | --- | --- |
 | `:ai`, `,ca` | your instruction + code + cursor + diagnostics |
 | `,cx` | a context picker: file, selection, clipboard, enclosing symbol, diagnostics |
-| `:toursave` | a tour request + the authoring schema ([part 12](/posts/2027/02/vaayu-part-12-code-tours/)) |
+| `:toursave` | a tour request + the authoring schema ([part 12](/posts/2026/11/vaayu-part-12-code-tours/)) |
 | `:tourexplain` | the current tour step's code and annotations |
-| review runs | a JSON packet, via the separate non-interactive `review_command` ([part 11](/posts/2027/02/vaayu-part-11-private-code-reviews-that-survive-edits/)) |
+| review runs | a JSON packet, via the separate non-interactive `review_command` ([part 11](/posts/2026/11/vaayu-part-11-private-code-reviews-that-survive-edits/)) |
 
 The sidebar is also a full terminal pane: you can scroll its history, search it with `/`, yank from it with `v`/`y`, or capture the whole conversation into a buffer with `:termcapture`.
 
@@ -222,4 +221,4 @@ The sidebar is also a full terminal pane: you can scroll its history, search it 
 - I'd have made the sidebar a full terminal pane from the start. For two months it only showed what fit on the screen; scrolling back through an agent's answer, searching it and yanking from it arrived on November 20. An agent's output is something you read, so it should have been as readable as a buffer on day one.
 - I'd have made the `:ai` target configurable on day one. For its first three weeks, `:ai` and tours always sent to the `claude` session, even though other agent CLIs could already be configured. Making the target a setting on October 8 was a small change; it should never have needed one.
 
-Next, the last post, [part 14](/posts/2027/03/vaayu-part-14-10-weeks-87k-lines-292-commits/): how all of this got built in ten weeks, with an agent in the sidebar the whole time.
+Next, the last post, [part 14](/posts/2026/11/vaayu-part-14-10-weeks-87k-lines-292-commits/): how all of this got built in ten weeks, with an agent in the sidebar the whole time.

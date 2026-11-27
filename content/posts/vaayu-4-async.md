@@ -1,7 +1,7 @@
 ---
 author:
   name: "Kushashwa Ravi Shrimali"
-date: 2026-12-22
+date: 2026-11-27
 linktitle: "Vaayu part 4: never block a keystroke"
 title: "Vaayu part 4: never block a keystroke"
 categories:
@@ -18,10 +18,9 @@ weight: 10
 series:
 toc: true
 comments: true
-draft: true
 ---
 
-_Part 4 of the [Vaayu series](/posts/2026/11/why-i-wrote-my-own-editor/). [Part 3](/posts/2026/12/vaayu-part-3-drawing-a-terminal-frame-in-under-a-millisecond/) got a frame out in under a millisecond. But some work just doesn't fit in a millisecond: searching a project, scanning a few hundred thousand files, asking git or a language server. This post is about where that work goes._
+_Part 4 of the [Vaayu series](/posts/2026/11/why-i-wrote-my-own-editor/). [Part 3](/posts/2026/11/vaayu-part-3-drawing-a-terminal-frame-in-under-a-millisecond/) got a frame out in under a millisecond. But some work just doesn't fit in a millisecond: searching a project, scanning a few hundred thousand files, asking git or a language server. This post is about where that work goes._
 
 There's one rule in Vaayu that everything else follows:
 
@@ -107,13 +106,13 @@ Once I had it, it showed up in every subsystem:
 | Mermaid diagrams | one lazy worker with a 3 s deadline | the source or the theme changed |
 | Project find & replace | debounced per-line search | the line changed since it was found |
 
-The revision from [part 1](/posts/2026/12/vaayu-part-1-text-is-a-tree/) (`edit_seq`) is just a generation number that the buffer bumps for you.
+The revision from [part 1](/posts/2026/11/vaayu-part-1-text-is-a-tree/) (`edit_seq`) is just a generation number that the buffer bumps for you.
 
 ## no async runtime
 
 A question I get: why threads and channels, and not `tokio`?
 
-Mostly because the work isn't the kind async is good at. Async shines when you have thousands of things waiting on I/O at once. An editor has a handful of background jobs at a time, and most of them are a child process (`rg`, `git`, a language server) or CPU work (fuzzy scoring, layout, diagram rendering). A thread per job is simple, the code reads top to bottom, and there's no runtime to start, which helps the 7 ms startup. Even the web server in [part 9](/posts/2027/01/vaayu-part-9-the-same-editor-in-a-browser-tab/) is plain threads.
+Mostly because the work isn't the kind async is good at. Async shines when you have thousands of things waiting on I/O at once. An editor has a handful of background jobs at a time, and most of them are a child process (`rg`, `git`, a language server) or CPU work (fuzzy scoring, layout, diagram rendering). A thread per job is simple, the code reads top to bottom, and there's no runtime to start, which helps the 7 ms startup. Even the web server in [part 9](/posts/2026/11/vaayu-part-9-the-same-editor-in-a-browser-tab/) is plain threads.
 
 ## the file picker: don't sort what you won't show
 
@@ -182,11 +181,11 @@ A job only shows up if it's still running after 250 ms. A finished job stays for
 
 **Helix**'s picker uses [`nucleo`](https://github.com/helix-editor/nucleo), which is an excellent, parallel fuzzy matcher. Faster than my scorer, honestly. Where Vaayu differs is architecture: a prewarmed inventory and first output that doesn't wait for the matcher. In the benchmark, Vaayu's picker opens in 0.56 ms vs Helix's 3.60 ms, and live grep opens in 1.08 ms vs 3.64 ms.
 
-Be careful with those numbers, though. They measure the time to the editor's _first response_ to your key, not the time to finish searching the project. Because grep runs in the background, Vaayu can respond before the results are in. That's the whole design, but it's a different thing from "searches faster". [Part 6](/posts/2027/01/vaayu-part-6-benchmarking-editors-honestly/) goes into exactly this.
+Be careful with those numbers, though. They measure the time to the editor's _first response_ to your key, not the time to finish searching the project. Because grep runs in the background, Vaayu can respond before the results are in. That's the whole design, but it's a different thing from "searches faster". [Part 6](/posts/2026/11/vaayu-part-6-benchmarking-editors-honestly/) goes into exactly this.
 
 ## what I'd do differently
 
 - I'd build the generation pattern as a small reusable type from the start. Each subsystem grew its own copy (an `AtomicU64` here, an `edit_seq` check there) and they all work, but a shared `Job<T>` would have made them easier to audit.
 
 
-Next, [part 5](/posts/2026/12/vaayu-part-5-incremental-tree-sitter-and-an-lsp-client-from-scratch/): how Vaayu understands the code it's showing, and the 8 ms bug that was hiding in it.
+Next, [part 5](/posts/2026/11/vaayu-part-5-incremental-tree-sitter-and-an-lsp-client-from-scratch/): how Vaayu understands the code it's showing, and the 8 ms bug that was hiding in it.

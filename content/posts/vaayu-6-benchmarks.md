@@ -1,7 +1,7 @@
 ---
 author:
   name: "Kushashwa Ravi Shrimali"
-date: 2027-01-05
+date: 2026-11-27
 linktitle: "Vaayu part 6: benchmarking editors honestly"
 title: "Vaayu part 6: benchmarking editors honestly"
 categories:
@@ -19,7 +19,6 @@ weight: 10
 series:
 toc: true
 comments: true
-draft: true
 ---
 
 _Part 6 of the [Vaayu series](/posts/2026/11/why-i-wrote-my-own-editor/). I've been quoting milliseconds for five posts. This one is about where they come from, every mistake I made getting them, and the full scorecard against Neovim and Helix, including where Vaayu loses._
@@ -66,7 +65,7 @@ It records two things per key:
 - **first output**: when the editor started answering.
 - **quiet**: when the output stopped for 12 ms. A rough proxy for "done drawing", which includes the 12 ms wait itself.
 
-And the bytes written, which turned out to be one of the most useful numbers of all ([part 3](/posts/2026/12/vaayu-part-3-drawing-a-terminal-frame-in-under-a-millisecond/)).
+And the bytes written, which turned out to be one of the most useful numbers of all ([part 3](/posts/2026/11/vaayu-part-3-drawing-a-terminal-frame-in-under-a-millisecond/)).
 
 ## the setup
 
@@ -100,7 +99,7 @@ The fix: send two separately timed `Esc`s for Vaayu (leave the query, then close
 
 ### 4. first output is not "done"
 
-Vaayu's live grep "opens" in about 1 ms. That's true, and it's also not what most people would assume it means. Grep runs in the background ([part 4](/posts/2026/12/vaayu-part-4-never-block-a-keystroke/)), so the editor _responds_ immediately and the results arrive later. The harness has separate "settle" windows to catch late output, and it reports them separately. "Responds in 1 ms" and "searches the project in 1 ms" are different claims. I only make the first one.
+Vaayu's live grep "opens" in about 1 ms. That's true, and it's also not what most people would assume it means. Grep runs in the background ([part 4](/posts/2026/11/vaayu-part-4-never-block-a-keystroke/)), so the editor _responds_ immediately and the results arrive later. The harness has separate "settle" windows to catch late output, and it reports them separately. "Responds in 1 ms" and "searches the project in 1 ms" are different claims. I only make the first one.
 
 ### 5. one machine, one day
 
@@ -148,7 +147,7 @@ _The same numbers on one log scale. The spread inside each row matters more than
 ### where Vaayu wins, and what that means
 
 - **Startup vs Helix (7 ms vs 398 ms).** Large and consistent across runs. I haven't profiled Helix's startup, so I won't guess why.
-- **Typing on a big file vs Helix (0.8 ms vs 177 ms).** Also large and consistent, on this file, with this configuration. Helix and Vaayu use the same rope library ([part 1](/posts/2026/12/vaayu-part-1-text-is-a-tree/)), so it isn't the data structure. Vaayu's incremental highlight spans ([part 5](/posts/2026/12/vaayu-part-5-incremental-tree-sitter-and-an-lsp-client-from-scratch/)) are a plausible contributor. The benchmark doesn't isolate the cause, so that's all I can say.
+- **Typing on a big file vs Helix (0.8 ms vs 177 ms).** Also large and consistent, on this file, with this configuration. Helix and Vaayu use the same rope library ([part 1](/posts/2026/11/vaayu-part-1-text-is-a-tree/)), so it isn't the data structure. Vaayu's incremental highlight spans ([part 5](/posts/2026/11/vaayu-part-5-incremental-tree-sitter-and-an-lsp-client-from-scratch/)) are a plausible contributor. The benchmark doesn't isolate the cause, so that's all I can say.
 - **Search submit vs both.** Vaayu answers first, but this is first output, not "found every match".
 - **Picker and grep vs Helix.** A prewarmed inventory and background grep mean the first response doesn't wait. Helix's matcher (`nucleo`) is excellent; this is about architecture, not scoring speed.
 
@@ -167,7 +166,7 @@ _The same numbers on one log scale. The spread inside each row matters more than
 
 ## the browser editor
 
-For completeness: when Vaayu runs in a browser tab ([part 9](/posts/2027/01/vaayu-part-9-the-same-editor-in-a-browser-tab/)), a keypress reaches the page's grid in ~2 ms and is painted in ~12 ms at the median in headless Chromium. The 12 ms is almost entirely waiting for the next animation frame, i.e. the display's refresh, not the editor.
+For completeness: when Vaayu runs in a browser tab ([part 9](/posts/2026/11/vaayu-part-9-the-same-editor-in-a-browser-tab/)), a keypress reaches the page's grid in ~2 ms and is painted in ~12 ms at the median in headless Chromium. The 12 ms is almost entirely waiting for the next animation frame, i.e. the display's refresh, not the editor.
 
 ## if you benchmark your own editor
 
@@ -181,4 +180,4 @@ For completeness: when Vaayu runs in a browser tab ([part 9](/posts/2027/01/vaay
 
 And report your losses. A benchmark that only shows wins is an ad.
 
-Next, [part 7](/posts/2027/01/vaayu-part-7-splits-floating-terminals-and-one-results-list/): the UI, from split windows to terminals inside the editor.
+Next, [part 7](/posts/2026/11/vaayu-part-7-splits-floating-terminals-and-one-results-list/): the UI, from split windows to terminals inside the editor.

@@ -1,7 +1,7 @@
 ---
 author:
   name: "Kushashwa Ravi Shrimali"
-date: 2027-03-02
+date: 2026-11-27
 linktitle: "Vaayu part 14: 10 weeks, 87k lines, 292 commits"
 title: "Vaayu part 14: 10 weeks, 87k lines, 292 commits"
 categories:
@@ -19,7 +19,6 @@ weight: 10
 series:
 toc: true
 comments: true
-draft: true
 ---
 
 _The last part of the [Vaayu series](/posts/2026/11/why-i-wrote-my-own-editor/). Thirteen posts on what Vaayu does and how. This one is about how it got built: the timeline, working with Claude as a pair programmer for most of it, how testing kept that honest, and what's still missing._
@@ -50,7 +49,7 @@ It also said, honestly, what it didn't have:
 
 > LSP, tree-sitter, fuzzy picker, git integration, and the SSH-latency prediction layer from the design doc are not implemented -- see README.md Status section.
 
-By the end of that day, it had a fuzzy picker, tree-sitter for ten languages, completion, a git gutter, an LSP client and a Markdown preview. And then an audit found 45 real issues, including two crashes and a control-sequence injection, and the rest of the day went into fixing them ([part 1](/posts/2026/12/vaayu-part-1-text-is-a-tree/) and [part 3](/posts/2026/12/vaayu-part-3-drawing-a-terminal-frame-in-under-a-millisecond/) tell some of those stories).
+By the end of that day, it had a fuzzy picker, tree-sitter for ten languages, completion, a git gutter, an LSP client and a Markdown preview. And then an audit found 45 real issues, including two crashes and a control-sequence injection, and the rest of the day went into fixing them ([part 1](/posts/2026/11/vaayu-part-1-text-is-a-tree/) and [part 3](/posts/2026/11/vaayu-part-3-drawing-a-terminal-frame-in-under-a-millisecond/) tell some of those stories).
 
 That rhythm (build fast, then audit hard) is the real story of this project.
 
@@ -71,10 +70,10 @@ What worked, judging from the history:
 
 What went wrong, also from the history:
 
-- **The design doc said "damage-tracked rendering", and it wasn't built.** The first renderer cleared and repainted the screen on every key. Nobody noticed until I measured ([part 3](/posts/2026/12/vaayu-part-3-drawing-a-terminal-frame-in-under-a-millisecond/)). A model will happily describe the architecture you asked for while building something simpler. So will a person, to be fair. Measure.
-- **Confident numbers from the wrong build.** The first benchmark compared a debug build to Neovim and concluded Vaayu was several times slower ([part 6](/posts/2027/01/vaayu-part-6-benchmarking-editors-honestly/)).
-- **Fixes that create bugs.** The span-rebuild throttle fixed typing latency and broke "colours catch up after you stop typing" ([part 5](/posts/2026/12/vaayu-part-5-incremental-tree-sitter-and-an-lsp-client-from-scratch/)). Another fix (bump `edit_seq` on every key) made an O(file) walk run on every keystroke.
-- **Features that are fine alone and broken together.** The tour UX audit found ten problems that every individual test had missed ([part 12](/posts/2027/02/vaayu-part-12-code-tours/)).
+- **The design doc said "damage-tracked rendering", and it wasn't built.** The first renderer cleared and repainted the screen on every key. Nobody noticed until I measured ([part 3](/posts/2026/11/vaayu-part-3-drawing-a-terminal-frame-in-under-a-millisecond/)). A model will happily describe the architecture you asked for while building something simpler. So will a person, to be fair. Measure.
+- **Confident numbers from the wrong build.** The first benchmark compared a debug build to Neovim and concluded Vaayu was several times slower ([part 6](/posts/2026/11/vaayu-part-6-benchmarking-editors-honestly/)).
+- **Fixes that create bugs.** The span-rebuild throttle fixed typing latency and broke "colours catch up after you stop typing" ([part 5](/posts/2026/11/vaayu-part-5-incremental-tree-sitter-and-an-lsp-client-from-scratch/)). Another fix (bump `edit_seq` on every key) made an O(file) walk run on every keystroke.
+- **Features that are fine alone and broken together.** The tour UX audit found ten problems that every individual test had missed ([part 12](/posts/2026/11/vaayu-part-12-code-tours/)).
 
 None of these are AI-specific. They're what happens when a lot of code is written fast. What _is_ different is the speed: you hit all of them in days instead of months, so the safety nets have to be there from the start.
 
@@ -82,7 +81,7 @@ None of these are AI-specific. They're what happens when a lot of code is writte
 
 ### 1. tests in Vim notation
 
-Unit tests feed keys the way you'd type them and check text and cursor ([part 2](/posts/2026/12/vaayu-part-2-teaching-rust-to-speak-vim/)). They're cheap enough that every bug fix gets one. `regression.rs` is 13,000 lines because every audit finding became a test.
+Unit tests feed keys the way you'd type them and check text and cursor ([part 2](/posts/2026/11/vaayu-part-2-teaching-rust-to-speak-vim/)). They're cheap enough that every bug fix gets one. `regression.rs` is 13,000 lines because every audit finding became a test.
 
 ### 2. reference data from real Vim
 

@@ -1,7 +1,7 @@
 ---
 author:
   name: "Kushashwa Ravi Shrimali"
-date: 2027-01-19
+date: 2026-11-27
 linktitle: "Vaayu part 8: pictures in a terminal"
 title: "Vaayu part 8: pictures in a terminal"
 categories:
@@ -19,7 +19,6 @@ weight: 10
 series:
 toc: true
 comments: true
-draft: true
 ---
 
 _Part 8 of the [Vaayu series](/posts/2026/11/why-i-wrote-my-own-editor/). A terminal is a grid of characters. This post is about putting real images and Mermaid diagrams in that grid, in a way that still respects splits, scrolling and popups._
@@ -30,11 +29,11 @@ I wanted `,mp` to show the rendered document **in the editor**, with the diagram
 
 ![examples/mermaid.md in ,mp: a heading, a paragraph, a flowchart from Client through an API gateway and an auth check to a database, and the start of a sequence diagram, all drawn as images](/assets/blogs/vaayu/mermaid-preview.png)
 
-_`examples/mermaid.md` in the preview. This capture is from `vaayu --web` ([part 9](/posts/2027/01/vaayu-part-9-the-same-editor-in-a-browser-tab/)), which receives exactly the same Kitty graphics bytes as a terminal and draws the placeholders the same way._
+_`examples/mermaid.md` in the preview. This capture is from `vaayu --web` ([part 9](/posts/2026/11/vaayu-part-9-the-same-editor-in-a-browser-tab/)), which receives exactly the same Kitty graphics bytes as a terminal and draws the placeholders the same way._
 
 ## step 1: Markdown is the easy part
 
-The preview parses Markdown with [`pulldown-cmark`](https://github.com/pulldown-cmark/pulldown-cmark) and lays it out for the pane's width: headings, bold and italic, nested lists, tables, links, block quotes, and code fences highlighted with the same tree-sitter grammars as the editor ([part 5](/posts/2026/12/vaayu-part-5-incremental-tree-sitter-and-an-lsp-client-from-scratch/)).
+The preview parses Markdown with [`pulldown-cmark`](https://github.com/pulldown-cmark/pulldown-cmark) and lays it out for the pane's width: headings, bold and italic, nested lists, tables, links, block quotes, and code fences highlighted with the same tree-sitter grammars as the editor ([part 5](/posts/2026/11/vaayu-part-5-incremental-tree-sitter-and-an-lsp-client-from-scratch/)).
 
 Layouts are cached per buffer, width and zoom, so scrolling doesn't re-lay out the document, and editing one paragraph doesn't re-render the diagrams in the others.
 
@@ -44,7 +43,7 @@ Mermaid is a JavaScript library. The normal way to render it is a headless brows
 
 Instead, Vaayu uses [Merman](https://crates.io/crates/merman), a native Rust implementation of Mermaid's parser and layout, pinned to an exact version (`=0.8.0`). It parses the diagram, lays it out, and produces an SVG, which [`resvg`](https://github.com/linebender/resvg) rasterizes into a PNG.
 
-That's real CPU work, so it follows [part 4](/posts/2026/12/vaayu-part-4-never-block-a-keystroke/)'s rules:
+That's real CPU work, so it follows [part 4](/posts/2026/11/vaayu-part-4-never-block-a-keystroke/)'s rules:
 
 - one lazy worker thread, started the first time you preview a diagram,
 - a **150 ms debounce**, so typing inside a diagram doesn't render it on every key,
@@ -86,7 +85,7 @@ The terminal sees those characters and draws the matching slice of the image in 
 
 Why does this matter so much? Because **the image is now text**. It goes through the exact same pipeline as every other character in Vaayu:
 
-- it's part of a row, so the row diff ([part 3](/posts/2026/12/vaayu-part-3-drawing-a-terminal-frame-in-under-a-millisecond/)) only rewrites it when it changes,
+- it's part of a row, so the row diff ([part 3](/posts/2026/11/vaayu-part-3-drawing-a-terminal-frame-in-under-a-millisecond/)) only rewrites it when it changes,
 - a pane only draws the columns that fit, so the image is clipped at the split border for free (see the `skip(left)` and `take(end)` above),
 - a popup or the floating terminal draws over those cells like over any text, so it covers the image,
 - scrolling moves the rows, and the image moves with them.
@@ -105,7 +104,7 @@ At startup, Vaayu sends a tiny probe image (`a=q`) and waits for the terminal's 
 
 The same machinery handles `![alt](path)` in your documents. A second lazy worker loads local files (relative to the document) or HTTP(S) URLs with a 5-second timeout, decodes PNG/JPEG/GIF/WebP/BMP/ICO or rasterizes SVG, and hands back a PNG. There are budgets everywhere: 16 MiB per input or output image, 128 MiB of decode allocation, at most 2400×3300 pixels out, 64 cached images or 32 MiB. GIFs show their first frame. SVGs can't load external resources.
 
-This turned out to be useful in places I didn't plan for. Code tour lessons ([part 12](/posts/2027/02/vaayu-part-12-code-tours/)) are Markdown, so they can show diagrams and screenshots too, using the same cache.
+This turned out to be useful in places I didn't plan for. Code tour lessons ([part 12](/posts/2026/11/vaayu-part-12-code-tours/)) are Markdown, so they can show diagrams and screenshots too, using the same cache.
 
 ## vs Neovim and Helix
 
@@ -118,4 +117,4 @@ This turned out to be useful in places I didn't plan for. Code tour lessons ([pa
 
 - I'd have checked which terminals implement Unicode placeholders before building on them. Kitty does; WezTerm, which I'd have bet on, doesn't yet (wezterm#986). So a second renderer, diagrams as Unicode text, had to exist anyway, and it's what you get in WezTerm and inside tmux. Planning for it from the start would have been cheaper than adding it after.
 
-Next, [part 9](/posts/2027/01/vaayu-part-9-the-same-editor-in-a-browser-tab/): what if the "terminal" is a browser tab?
+Next, [part 9](/posts/2026/11/vaayu-part-9-the-same-editor-in-a-browser-tab/): what if the "terminal" is a browser tab?

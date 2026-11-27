@@ -1,7 +1,7 @@
 ---
 author:
   name: "Kushashwa Ravi Shrimali"
-date: 2027-01-12
+date: 2026-11-27
 linktitle: "Vaayu part 7: splits, floating terminals and one results list"
 title: "Vaayu part 7: splits, floating terminals and one results list"
 categories:
@@ -18,7 +18,6 @@ weight: 10
 series:
 toc: true
 comments: true
-draft: true
 ---
 
 _Part 7 of the [Vaayu series](/posts/2026/11/why-i-wrote-my-own-editor/). The core is done: text, keys, frames, background work, code. From here on the series is about everything around the text, starting with how the screen is divided up._
@@ -58,7 +57,7 @@ Each pane has its own cursor, viewport, preview position and zoom, so the same b
 
 The file tree and the outline are pinned sidebars: a split with a fixed-size side, so resizing the window doesn't squash them. Tabs each keep their own tree. `:mksession` saves the layout (file names, positions, folds), not unsaved text or running processes.
 
-All of the geometry goes through the same `PaneDims` that the renderer uses ([part 3](/posts/2026/12/vaayu-part-3-drawing-a-terminal-frame-in-under-a-millisecond/)), so what's visible and what's painted can't disagree.
+All of the geometry goes through the same `PaneDims` that the renderer uses ([part 3](/posts/2026/11/vaayu-part-3-drawing-a-terminal-frame-in-under-a-millisecond/)), so what's visible and what's painted can't disagree.
 
 ## one Results list
 
@@ -148,7 +147,7 @@ And since `Esc` and `Ctrl-W` mean something to the editor, `Ctrl-\` sends the ne
 
 That "hide but keep alive" is the whole feature, and it's why I had a custom `terminal.lua` in my Neovim config. lazygit uses the same float. So do tool installers. The float compositor draws on top of the pane rows, and because everything goes through the same row diff, closing a float repaints exactly the rows it covered.
 
-AI agents ([part 13](/posts/2027/02/vaayu-part-13-an-ai-agent-beside-the-code/)) use the same PTY machinery in a right-hand sidebar, with their own detach/reattach behaviour.
+AI agents ([part 13](/posts/2026/11/vaayu-part-13-an-ai-agent-beside-the-code/)) use the same PTY machinery in a right-hand sidebar, with their own detach/reattach behaviour.
 
 ## vs Neovim and Helix
 
@@ -161,4 +160,4 @@ Which raises the fair question: why not just use tmux? I do use tmux. But a term
 
 - Results was shared from the first day, and that paid off everywhere. But the fuzzy picker is still a separate list type, and it shows: when I made list navigation behave like Vim, the same fix had to be written twice, 90 lines in `picker.rs` and 20 in `results.rs`. I'd make the picker a Results list with a query bar on top.
 
-Next, [part 8](/posts/2027/01/vaayu-part-8-pictures-in-a-terminal/): putting real images in a terminal without breaking any of the above.
+Next, [part 8](/posts/2026/11/vaayu-part-8-pictures-in-a-terminal/): putting real images in a terminal without breaking any of the above.

@@ -88,7 +88,7 @@ The rope insert is one line. The other four lines are what make the rest of the 
 
 A rope is not magic, though. Anything that needs the whole document (saving, handing the text to a language server, a full re-parse) still visits every byte. It just stops _editing_ from being the expensive part.
 
-> **A note on comparisons.** Helix also uses ropey. So when Vaayu inserts a character in 0.79 ms on a 50,000-line file and Helix takes 177 ms ([part 6](/posts/2027/01/vaayu-part-6-benchmarking-editors-honestly/)), the rope is _not_ the reason. Both editors have the same data structure. The difference is in what happens after the insert. I'll get to that in parts 3 and 5. VS Code uses a piece table, which is another good answer to the same problem.
+> **A note on comparisons.** Helix also uses ropey. So when Vaayu inserts a character in 0.79 ms on a 50,000-line file and Helix takes 177 ms ([part 6](/posts/2026/11/vaayu-part-6-benchmarking-editors-honestly/)), the rope is _not_ the reason. Both editors have the same data structure. The difference is in what happens after the insert. I'll get to that in parts 3 and 5. VS Code uses a piece table, which is another good answer to the same problem.
 
 ## edit_seq: the cheapest cache key there is
 
@@ -105,7 +105,7 @@ Now every cache in the editor can be keyed by `(buffer.id, buffer.edit_seq)`. Se
 let cur = (self.buf().id, self.buf().edit_seq);
 ```
 
-If a background job comes back with results for revision 41 and the buffer is at 43, the results get thrown away. This "revision + discard stale" pattern is so central that [part 4](/posts/2026/12/vaayu-part-4-never-block-a-keystroke/) is about it.
+If a background job comes back with results for revision 41 and the buffer is at 43, the results get thrown away. This "revision + discard stale" pattern is so central that [part 4](/posts/2026/11/vaayu-part-4-never-block-a-keystroke/) is about it.
 
 ## line shifts: where did my line go?
 
@@ -120,7 +120,7 @@ The buffer can't fix them itself, because it doesn't own them. So it writes them
 pending_line_shifts: Vec<(usize, i64)>,
 ```
 
-The editor drains that list after each command and shifts everything that points into the buffer. That's how a review comment stays on its line while you type above it, before you even save ([part 11](/posts/2027/02/vaayu-part-11-private-code-reviews-that-survive-edits/) is about what happens when it _can't_ follow).
+The editor drains that list after each command and shifts everything that points into the buffer. That's how a review comment stays on its line while you type above it, before you even save ([part 11](/posts/2026/11/vaayu-part-11-private-code-reviews-that-survive-edits/) is about what happens when it _can't_ follow).
 
 ## is it modified? compare content, not counters
 
@@ -215,4 +215,4 @@ The last safety net: when you stop typing, dirty buffers are snapshotted to `.va
 
 
 
-Next up, [part 2](/posts/2026/12/vaayu-part-2-teaching-rust-to-speak-vim/): turning keystrokes like `d2aw` into edits on this buffer.
+Next up, [part 2](/posts/2026/11/vaayu-part-2-teaching-rust-to-speak-vim/): turning keystrokes like `d2aw` into edits on this buffer.

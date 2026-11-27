@@ -1,7 +1,7 @@
 ---
 author:
   name: "Kushashwa Ravi Shrimali"
-date: 2026-12-15
+date: 2026-11-27
 linktitle: "Vaayu part 3: drawing a terminal frame in under a millisecond"
 title: "Vaayu part 3: drawing a terminal frame in under a millisecond"
 categories:
@@ -19,10 +19,9 @@ weight: 10
 series:
 toc: true
 comments: true
-draft: true
 ---
 
-_Part 3 of the [Vaayu series](/posts/2026/11/why-i-wrote-my-own-editor/). We have text ([part 1](/posts/2026/12/vaayu-part-1-text-is-a-tree/)) and a way to change it ([part 2](/posts/2026/12/vaayu-part-2-teaching-rust-to-speak-vim/)). Now it has to get onto the screen, roughly 60 times faster than you can blink._
+_Part 3 of the [Vaayu series](/posts/2026/11/why-i-wrote-my-own-editor/). We have text ([part 1](/posts/2026/11/vaayu-part-1-text-is-a-tree/)) and a way to change it ([part 2](/posts/2026/11/vaayu-part-2-teaching-rust-to-speak-vim/)). Now it has to get onto the screen, roughly 60 times faster than you can blink._
 
 This post starts with an embarrassing story, because it's the most useful thing I learned building Vaayu.
 
@@ -158,7 +157,7 @@ The second fix from that first profiling session. To colour a row, the renderer 
 
 Because spans are sorted by start, the fix is a binary search to the first span that could touch the line, bounded by the longest span in the file. A lookup is now O(log n + k), where k is the number of spans actually on the line.
 
-It barely moved the numbers. The real cost was somewhere else, and finding it needed instrumentation _inside_ the row loop. That story (an 8 ms re-walk of the whole syntax tree on every keystroke) is in [part 5](/posts/2026/12/vaayu-part-5-incremental-tree-sitter-and-an-lsp-client-from-scratch/).
+It barely moved the numbers. The real cost was somewhere else, and finding it needed instrumentation _inside_ the row loop. That story (an 8 ms re-walk of the whole syntax tree on every keystroke) is in [part 5](/posts/2026/11/vaayu-part-5-incremental-tree-sitter-and-an-lsp-client-from-scratch/).
 
 ## one geometry, used twice
 
@@ -172,7 +171,7 @@ Also from the first-day audit: file contents containing a raw `ESC` (or any othe
 
 ## how fast is it now?
 
-On a 50,000-line file in a 100×40 PTY, median time from key to the editor's first output byte ([part 6](/posts/2027/01/vaayu-part-6-benchmarking-editors-honestly/) has the method and every caveat):
+On a 50,000-line file in a 100×40 PTY, median time from key to the editor's first output byte ([part 6](/posts/2026/11/vaayu-part-6-benchmarking-editors-honestly/) has the method and every caveat):
 
 | Operation | Vaayu | Neovim (`-u NONE`) | Helix |
 | --- | ---: | ---: | ---: |
@@ -207,4 +206,4 @@ And this is one line of scrolling (`Ctrl-E`), 190 bytes: set a scroll region, de
 \x1b[38;1H\x1b[K ...  1020         a == b <- Vaayu draws 1
 ```
 
-Next, [part 4](/posts/2026/12/vaayu-part-4-never-block-a-keystroke/): what to do with work that can't fit in a frame.
+Next, [part 4](/posts/2026/11/vaayu-part-4-never-block-a-keystroke/): what to do with work that can't fit in a frame.

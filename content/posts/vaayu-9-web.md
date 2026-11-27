@@ -1,7 +1,7 @@
 ---
 author:
   name: "Kushashwa Ravi Shrimali"
-date: 2027-01-26
+date: 2026-11-27
 linktitle: "Vaayu part 9: the same editor in a browser tab"
 title: "Vaayu part 9: the same editor in a browser tab"
 categories:
@@ -19,7 +19,6 @@ weight: 10
 series:
 toc: true
 comments: true
-draft: true
 ---
 
 _Part 9 of the [Vaayu series](/posts/2026/11/why-i-wrote-my-own-editor/). `vaayu --web` (or `:web` from inside the editor) opens Vaayu in a Chrome or Firefox tab. This post is about how that works without writing a second editor, and about the security you need once a port on localhost can run commands._
@@ -34,7 +33,7 @@ _The same binary, in a Chromium tab: source with a review comment, a Mermaid pre
 
 ## one trait
 
-In [part 3](/posts/2026/12/vaayu-part-3-drawing-a-terminal-frame-in-under-a-millisecond/), the renderer produced bytes: escape sequences and text, row by row. The main loop doesn't care where those bytes go. All it knows about its display is this trait, from [`src/frontend.rs`](https://github.com/krshrimali/vaayu/blob/master/src/frontend.rs):
+In [part 3](/posts/2026/11/vaayu-part-3-drawing-a-terminal-frame-in-under-a-millisecond/), the renderer produced bytes: escape sequences and text, row by row. The main loop doesn't care where those bytes go. All it knows about its display is this trait, from [`src/frontend.rs`](https://github.com/krshrimali/vaayu/blob/master/src/frontend.rs):
 
 ```rust
 //! What the main loop needs from the thing displaying the editor. Everything
@@ -93,7 +92,7 @@ It understands only the small subset of VT escape sequences that Vaayu's rendere
 Two details that took real work:
 
 - **Character widths.** If the server thinks `界` is two cells and the browser's font thinks it's 1.8, everything after it drifts. So the server sends its `unicode-width` table when the tab attaches, and the page uses that. A cell is exactly a cell on both sides.
-- **Images.** The page recognizes the same Kitty placeholder characters from [part 8](/posts/2027/01/vaayu-part-8-pictures-in-a-terminal/), and draws each one as a `drawImage` crop of the uploaded PNG. Because placeholders go through normal row composition, clipping and popups work in the browser exactly as in a terminal.
+- **Images.** The page recognizes the same Kitty placeholder characters from [part 8](/posts/2026/11/vaayu-part-8-pictures-in-a-terminal/), and draws each one as a `drawImage` crop of the uploaded PNG. Because placeholders go through normal row composition, clipping and popups work in the browser exactly as in a terminal.
 
 ## threads, not async
 
@@ -188,4 +187,4 @@ What you get: every current and future feature, in the browser, for free, at the
 
 - Not much, and that's the point of this post. The browser editor arrived seven weeks in, and on the Rust side the core change was a 61-line `Frontend` trait and 69 changed lines in `main.rs`. That was only possible because every frame already went through one writer. If features had been allowed to write to the terminal directly "just this once", this would have been a rewrite. The thing I'd do differently is say that rule out loud on day one, instead of getting lucky.
 
-Next, [part 10](/posts/2027/02/vaayu-part-10-git-github-tests-and-tasks/): git, GitHub, tests and tasks, inside the editor.
+Next, [part 10](/posts/2026/11/vaayu-part-10-git-github-tests-and-tasks/): git, GitHub, tests and tasks, inside the editor.

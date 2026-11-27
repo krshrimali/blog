@@ -1,7 +1,7 @@
 ---
 author:
   name: "Kushashwa Ravi Shrimali"
-date: 2026-12-29
+date: 2026-11-27
 linktitle: "Vaayu part 5: incremental tree-sitter and an LSP client from scratch"
 title: "Vaayu part 5: incremental tree-sitter and an LSP client from scratch"
 categories:
@@ -19,7 +19,6 @@ weight: 10
 series:
 toc: true
 comments: true
-draft: true
 ---
 
 _Part 5 of the [Vaayu series](/posts/2026/11/why-i-wrote-my-own-editor/). So far the editor knows text. This post is about how it knows **code**: syntax highlighting with tree-sitter, and talking to language servers. It's also where the biggest performance bug in Vaayu was hiding._
@@ -44,11 +43,11 @@ let new_tree = self.parser.parse(new_text.as_bytes(), self.tree.as_ref());
 
 On a typical edit this takes microseconds. So I assumed highlighting was cheap.
 
-After the rendering fixes in [part 3](/posts/2026/12/vaayu-part-3-drawing-a-terminal-frame-in-under-a-millisecond/), Vaayu matched bare Neovim on cursor motion, but **typing in Insert mode was still about 8× slower** (2.5 ms vs 0.3 ms per character). The binary search for spans hadn't helped. So I added timers inside the row loop and inside the syntax update, and the answer was obvious once I could see it:
+After the rendering fixes in [part 3](/posts/2026/11/vaayu-part-3-drawing-a-terminal-frame-in-under-a-millisecond/), Vaayu matched bare Neovim on cursor motion, but **typing in Insert mode was still about 8× slower** (2.5 ms vs 0.3 ms per character). The binary search for spans hadn't helped. So I added timers inside the row loop and inside the syntax update, and the answer was obvious once I could see it:
 
 The parse was incremental. **Rebuilding the highlight spans was not.** After every parse, the code walked the entire tree from the root to produce a fresh list of `(start, end, class)` spans. About 8 ms per keystroke on a modest file.
 
-Worse, a correctness fix from the same day (every keystroke bumps `edit_seq`, see [part 1](/posts/2026/12/vaayu-part-1-text-is-a-tree/)) meant that every keystroke now triggered that full re-walk. One fix made the other bug much more visible.
+Worse, a correctness fix from the same day (every keystroke bumps `edit_seq`, see [part 1](/posts/2026/11/vaayu-part-1-text-is-a-tree/)) meant that every keystroke now triggered that full re-walk. One fix made the other bug much more visible.
 
 ### fix 1: throttle (and the bug the throttle caused)
 
@@ -107,7 +106,7 @@ Above 5 MB (`large_file_kb = 5120`), Vaayu skips tree-sitter, spell checking, TO
 
 ### grammars are compiled in
 
-Vaayu links its grammars into the binary as Rust crates: Rust, Python, JavaScript/JSX, TypeScript/TSX, Go, C, Bash, JSON, TOML, YAML, Lua, Vim, CSS, HTML and Solidity. (Markdown previews use `pulldown-cmark` instead, see [part 8](/posts/2027/01/vaayu-part-8-pictures-in-a-terminal/).) Nothing to download, nothing to `:TSInstall`. The cost is a bigger binary and no way to add a language without rebuilding.
+Vaayu links its grammars into the binary as Rust crates: Rust, Python, JavaScript/JSX, TypeScript/TSX, Go, C, Bash, JSON, TOML, YAML, Lua, Vim, CSS, HTML and Solidity. (Markdown previews use `pulldown-cmark` instead, see [part 8](/posts/2026/11/vaayu-part-8-pictures-in-a-terminal/).) Nothing to download, nothing to `:TSInstall`. The cost is a bigger binary and no way to add a language without rebuilding.
 
 ## an LSP client from scratch
 
@@ -141,7 +140,7 @@ pub fn read_message<R: BufRead>(r: &mut R) -> io::Result<Option<Value>> {
 
 Note the 32 MiB cap. A buggy server that sends a garbage length shouldn't be able to make the editor allocate gigabytes.
 
-Each server runs as a child process with a reader thread that turns messages into events for the main loop ([part 4](/posts/2026/12/vaayu-part-4-never-block-a-keystroke/)'s pattern again). The interesting parts are everything around the framing.
+Each server runs as a child process with a reader thread that turns messages into events for the main loop ([part 4](/posts/2026/11/vaayu-part-4-never-block-a-keystroke/)'s pattern again). The interesting parts are everything around the framing.
 
 ### UTF-16, the tax everyone pays
 
@@ -173,7 +172,7 @@ Requests have deadlines. `initialize` gets a more generous one, because rust-ana
 
 ### one root, many servers
 
-Clients are per project root, and a buffer can have more than one server (say, `pyright` for types and `ruff` for linting). Diagnostics from all of them merge into one list, which feeds the gutter, the Results list ([part 7](/posts/2027/01/vaayu-part-7-splits-floating-terminals-and-one-results-list/)), and the context sent to the AI sidebar ([part 13](/posts/2027/02/vaayu-part-13-an-ai-agent-beside-the-code/)).
+Clients are per project root, and a buffer can have more than one server (say, `pyright` for types and `ruff` for linting). Diagnostics from all of them merge into one list, which feeds the gutter, the Results list ([part 7](/posts/2026/11/vaayu-part-7-splits-floating-terminals-and-one-results-list/)), and the context sent to the AI sidebar ([part 13](/posts/2026/11/vaayu-part-13-an-ai-agent-beside-the-code/)).
 
 Semantic tokens (the server's own colouring, e.g. "this identifier is a mutable variable") are an optional overlay on top of tree-sitter, requested once per `(buffer, edit_seq)`.
 
@@ -194,4 +193,4 @@ Measured on warm formatting with clangd (five fresh runs each), all three editor
 - I'd have profiled typing, not just moving, from the start. Cursor movement was fine; it was the edit path that hid an O(file) walk.
 
 
-Next, [part 6](/posts/2027/01/vaayu-part-6-benchmarking-editors-honestly/): how all these numbers were measured, and how easy it is to measure them wrong.
+Next, [part 6](/posts/2026/11/vaayu-part-6-benchmarking-editors-honestly/): how all these numbers were measured, and how easy it is to measure them wrong.

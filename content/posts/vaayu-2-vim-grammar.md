@@ -1,7 +1,7 @@
 ---
 author:
   name: "Kushashwa Ravi Shrimali"
-date: 2026-12-08
+date: 2026-11-27
 linktitle: "Vaayu part 2: teaching Rust to speak Vim"
 title: "Vaayu part 2: teaching Rust to speak Vim"
 categories:
@@ -18,10 +18,9 @@ weight: 10
 series:
 toc: true
 comments: true
-draft: true
 ---
 
-_Part 2 of the [Vaayu series](/posts/2026/11/why-i-wrote-my-own-editor/). [Part 1](/posts/2026/12/vaayu-part-1-text-is-a-tree/) was about storing text. This one is about the language you use to change it._
+_Part 2 of the [Vaayu series](/posts/2026/11/why-i-wrote-my-own-editor/). [Part 1](/posts/2026/11/vaayu-part-1-text-is-a-tree/) was about storing text. This one is about the language you use to change it._
 
 The best thing about Vim isn't the keys. It's that the keys form a **grammar**. Once you know `d` (delete) and `w` (word), you know `dw`. Once you also know `c` (change) and `i(` (inside parens), you get `ci(` without ever learning it. Learn N operators and M motions and you know N × M commands.
 
@@ -136,7 +135,7 @@ ed.buf_mut().insert_str_at(start, &convert(&text));
 ed.buf_mut().commit_edit();
 ```
 
-`begin_edit`/`commit_edit` make it one undo step ([part 1](/posts/2026/12/vaayu-part-1-text-is-a-tree/)).
+`begin_edit`/`commit_edit` make it one undo step ([part 1](/posts/2026/11/vaayu-part-1-text-is-a-tree/)).
 
 Vim also has special cases that you only learn from bug reports. Here's one that's in the code with a comment: a characterwise delete that covers _all_ the text of several lines (say `d}` from the start of a paragraph) is promoted to a linewise delete, so it takes the indentation and the trailing newline with it instead of leaving an empty line behind.
 
@@ -210,7 +209,7 @@ A "column" in an editor is three different things:
 - a **grapheme**: what a person sees as one character (`é` written as `e` + a combining accent, or a flag emoji, which is two code points),
 - a **cell**: how wide it is on screen (`界` takes two).
 
-`l` moves by grapheme. The cursor is drawn by cell. The rope is indexed by char. And LSP speaks UTF-16 ([part 5](/posts/2026/12/vaayu-part-5-incremental-tree-sitter-and-an-lsp-client-from-scratch/)), just to make it interesting. Vaayu uses `unicode-segmentation` and `unicode-width` and converts at the edges. Visual block mode on lines with wide characters is where every mistake shows up, so there are tests for exactly that:
+`l` moves by grapheme. The cursor is drawn by cell. The rope is indexed by char. And LSP speaks UTF-16 ([part 5](/posts/2026/11/vaayu-part-5-incremental-tree-sitter-and-an-lsp-client-from-scratch/)), just to make it interesting. Vaayu uses `unicode-segmentation` and `unicode-width` and converts at the edges. Visual block mode on lines with wide characters is where every mistake shows up, so there are tests for exactly that:
 
 ```rust
 let mut e = editor("a界bc\n界abc\nxy\n");
@@ -254,4 +253,4 @@ Neovim is the reference. Where Vaayu differs, it's either a bug or listed in the
 - I'd treat every count as hostile from the first commit. The overflow fix landed on day ten, after an audit found two reachable integer overflows. `saturating_mul` and a cap cost nothing to write up front.
 - I'd record the Vim reference data before writing Visual block mode, not after. The grammar was there on day one; the 214 recorded cases came almost four weeks later, and they immediately turned up Unicode block edits and replacement pastes that my tests, written from memory, had gotten wrong.
 
-Next, [part 3](/posts/2026/12/vaayu-part-3-drawing-a-terminal-frame-in-under-a-millisecond/): getting all this onto the screen, fast.
+Next, [part 3](/posts/2026/11/vaayu-part-3-drawing-a-terminal-frame-in-under-a-millisecond/): getting all this onto the screen, fast.

@@ -1,7 +1,7 @@
 ---
 author:
   name: "Kushashwa Ravi Shrimali"
-date: 2027-02-02
+date: 2026-11-27
 linktitle: "Vaayu part 10: git, GitHub, tests and tasks"
 title: "Vaayu part 10: git, GitHub, tests and tasks"
 categories:
@@ -18,10 +18,9 @@ weight: 10
 series:
 toc: true
 comments: true
-draft: true
 ---
 
-_Part 10 of the [Vaayu series](/posts/2026/11/why-i-wrote-my-own-editor/). This post is a tour of the everyday tools that used to be separate plugins in my Neovim config: git signs and hunks, GitHub PRs and CI, a test runner, project-wide replace, and a personal task tracker. They have one thing in common: they all write to the same Results list from [part 7](/posts/2027/01/vaayu-part-7-splits-floating-terminals-and-one-results-list/)._
+_Part 10 of the [Vaayu series](/posts/2026/11/why-i-wrote-my-own-editor/). This post is a tour of the everyday tools that used to be separate plugins in my Neovim config: git signs and hunks, GitHub PRs and CI, a test runner, project-wide replace, and a personal task tracker. They have one thing in common: they all write to the same Results list from [part 7](/posts/2026/11/vaayu-part-7-splits-floating-terminals-and-one-results-list/)._
 
 None of these is the most exciting thing in Vaayu. But they're what I use every hour, and they show the payoff of "no plugins, one surface" better than any single feature.
 
@@ -43,7 +42,7 @@ for op in diff.ops() {
 }
 ```
 
-Because it diffs in memory, the gutter updates as you type, not on save. The `HEAD` content is cached, and the diff is keyed on the buffer's `edit_seq` ([part 1](/posts/2026/12/vaayu-part-1-text-is-a-tree/)), so it only reruns when the text changed. A new file with no `HEAD` blob is diffed against an empty string, so the whole thing shows as added.
+Because it diffs in memory, the gutter updates as you type, not on save. The `HEAD` content is cached, and the diff is keyed on the buffer's `edit_seq` ([part 1](/posts/2026/11/vaayu-part-1-text-is-a-tree/)), so it only reruns when the text changed. A new file with no `HEAD` blob is diffed against an empty string, so the whole thing shows as added.
 
 `]c`/`[c` jump between hunks. Staging works on **saved** files: `:gitstage` lists the hunks, and Enter applies one, after checking it still applies to what's on disk. Partial staging against unsaved text is a great way to commit something that never existed, so Vaayu doesn't do it.
 
@@ -67,7 +66,7 @@ This replaced gh.nvim, Octo and Guh for me. It's built on the `gh` CLI, and the 
 Three decisions in there:
 
 1. **`gh`, not the GitHub API directly.** `gh` already handles login, tokens, enterprise hosts and SSO. Vaayu stores no credentials and asks for none.
-2. **Read-first.** Browsing PRs, reading review threads, opening a failed CI job's log at the failing line: all read-only. The only write is `:reviewpublish`, which is explicit, previewed, and covered in [part 11](/posts/2027/02/vaayu-part-11-private-code-reviews-that-survive-edits/).
+2. **Read-first.** Browsing PRs, reading review threads, opening a failed CI job's log at the failing line: all read-only. The only write is `:reviewpublish`, which is explicit, previewed, and covered in [part 11](/posts/2026/11/vaayu-part-11-private-code-reviews-that-survive-edits/).
 3. **Everything is a Results list.** A PR's changed files, its review threads and its failing checks all use the same keys and the same preview as grep results. A CI failure that mentions `src/foo.rs:42` is a jumpable location.
 
 `,Gp` lists PRs, `,Gv` shows the current branch's PR, `,Gd` its diff, `,Gr` its review threads, `,Gc` its CI checks, `,Gi` issues.
@@ -120,12 +119,12 @@ _(An illustrative entry, with the real fields.)_
 The interesting engineering is in making a plain text file safe to edit from two places (the day document and the list view) at once:
 
 - **Validation on every write**: the date has to match the file name, IDs must be unique, timestamps and statuses must parse. A bad save is refused, with the reason, instead of writing a file the next load can't read.
-- **A file lock and an expected snapshot**: a write takes `tasks.lock`, re-reads the file, and refuses if it changed since you loaded it. Then it writes atomically ([part 1](/posts/2026/12/vaayu-part-1-text-is-a-tree/)). No symlinks, `0600` permissions.
+- **A file lock and an expected snapshot**: a write takes `tasks.lock`, re-reads the file, and refuses if it changed since you loaded it. Then it writes atomically ([part 1](/posts/2026/11/vaayu-part-1-text-is-a-tree/)). No symlinks, `0600` permissions.
 - **Rollover without duplicates**: at startup, open tasks from earlier days move to today. That's two writes to two files, which can't be atomic together. So each moved task carries a `rollover_id`. If the editor dies between the writes, the next rollover sees the ID and finishes the move instead of copying the task twice.
 
 ## why one list matters
 
-Here's the thing I didn't appreciate until it was built. A failing test, a CI failure, a grep match, a diagnostic, a review comment and an overdue task are all rows in the same kind of list. I can send any of them to quickfix and walk through them with `]q`. I can filter them the same way. And the AI sidebar ([part 13](/posts/2027/02/vaayu-part-13-an-ai-agent-beside-the-code/)) can be handed any of them as context.
+Here's the thing I didn't appreciate until it was built. A failing test, a CI failure, a grep match, a diagnostic, a review comment and an overdue task are all rows in the same kind of list. I can send any of them to quickfix and walk through them with `]q`. I can filter them the same way. And the AI sidebar ([part 13](/posts/2026/11/vaayu-part-13-an-ai-agent-beside-the-code/)) can be handed any of them as context.
 
 In Neovim, each of these lived in a different plugin's UI, with different keys, and the only thing they shared was quickfix, if the plugin bothered to support it.
 
@@ -138,4 +137,4 @@ In Neovim, each of these lived in a different plugin's UI, with different keys, 
 
 - I'd have lived with the task tracker as a plain TOML file for a week before building commands around it. It landed on October 5, and the next five commits to it, all within four days, changed how it works: shortcuts, drafts, priorities and notes, rollover, flexible labels. A week of using a plain file would have told me most of that before any of it was code.
 
-Next, the three posts this editor was really built for. Starting with [part 11](/posts/2027/02/vaayu-part-11-private-code-reviews-that-survive-edits/): code reviews.
+Next, the three posts this editor was really built for. Starting with [part 11](/posts/2026/11/vaayu-part-11-private-code-reviews-that-survive-edits/): code reviews.

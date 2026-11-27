@@ -1,7 +1,7 @@
 ---
 author:
   name: "Kushashwa Ravi Shrimali"
-date: 2027-02-16
+date: 2026-11-27
 linktitle: "Vaayu part 12: code tours"
 title: "Vaayu part 12: code tours"
 categories:
@@ -19,10 +19,9 @@ weight: 10
 series:
 toc: true
 comments: true
-draft: true
 ---
 
-_Part 12 of the [Vaayu series](/posts/2026/11/why-i-wrote-my-own-editor/), the second of three posts on the workflows I built Vaayu for. [Part 11](/posts/2027/02/vaayu-part-11-private-code-reviews-that-survive-edits/) was about telling code what's wrong with it. This one is the reverse: code explaining itself to you._
+_Part 12 of the [Vaayu series](/posts/2026/11/why-i-wrote-my-own-editor/), the second of three posts on the workflows I built Vaayu for. [Part 11](/posts/2026/11/vaayu-part-11-private-code-reviews-that-survive-edits/) was about telling code what's wrong with it. This one is the reverse: code explaining itself to you._
 
 ## why this matters
 
@@ -84,11 +83,11 @@ Using an existing format means tours written for VS Code work in Vaayu, and the 
 - **`connections`**: arrows between annotations ("this calls that"). The Flow view (`,vf`) shows them as a list you can follow.
 - **`diff`**: either an illustrative before/after snippet, or a real git comparison (`base` → `target`, where the target can be the unsaved buffer). The Diff view (`,vd`) shows it.
 
-(That example is a shortened version of the real [`examples/visuals.tour`](https://github.com/krshrimali/vaayu/blob/master/examples/visuals.tour) in the repo, which walks through the code from [part 1](/posts/2026/12/vaayu-part-1-text-is-a-tree/).)
+(That example is a shortened version of the real [`examples/visuals.tour`](https://github.com/krshrimali/vaayu/blob/master/examples/visuals.tour) in the repo, which walks through the code from [part 1](/posts/2026/11/vaayu-part-1-text-is-a-tree/).)
 
 ## anchors: tours that don't rot
 
-CodeTour steps point at line numbers. Add an import at the top of the file, and every step in it points one line too high. That's the same problem as review comments in [part 11](/posts/2027/02/vaayu-part-11-private-code-reviews-that-survive-edits/), with the same answer: point at **content**, not just a line.
+CodeTour steps point at line numbers. Add an import at the top of the file, and every step in it points one line too high. That's the same problem as review comments in [part 11](/posts/2026/11/vaayu-part-11-private-code-reviews-that-survive-edits/), with the same answer: point at **content**, not just a line.
 
 A step or annotation can have a `pattern` (text on the line), a `context` (text on the line before, to tell repeated lines apart), and an `endPattern` (text on the last line, for when the code _inside_ the range changes length). Resolving one looks like this:
 
@@ -124,13 +123,13 @@ The important part is the `warnings`. When an anchor is ambiguous or missing, th
 
 `:tourcheck` (`,vk`) validates a whole tour in the background: missing files, unresolved or ambiguous anchors, broken connections, comparison sources that don't exist. Run it before you walk someone through a tour, and drift shows up as a warning instead of a quietly wrong arrow. (It's an editor command today; a headless `vaayu --tourcheck` for CI would be a nice addition.)
 
-Anchors are resolved once and reused across steps until the buffer changes. When you edit, stale indicators hide and re-resolve after 180 ms of idle time ([part 4](/posts/2026/12/vaayu-part-4-never-block-a-keystroke/)'s pattern again).
+Anchors are resolved once and reused across steps until the buffer changes. When you edit, stale indicators hide and re-resolve after 180 ms of idle time ([part 4](/posts/2026/11/vaayu-part-4-never-block-a-keystroke/)'s pattern again).
 
 ## reading a tour
 
 `:tours` lists the project's tours with their step counts, health (empty, invalid, missing files) and where you left off. Enter resumes; `r` starts over.
 
-During a tour, the screen has two panes: the **source** at the step's lines, with its annotations, and the **lesson**, the step's description rendered as Markdown ([part 8](/posts/2027/01/vaayu-part-8-pictures-in-a-terminal/), so lessons can include images and Mermaid diagrams).
+During a tour, the screen has two panes: the **source** at the step's lines, with its annotations, and the **lesson**, the step's description rendered as Markdown ([part 8](/posts/2026/11/vaayu-part-8-pictures-in-a-terminal/), so lessons can include images and Mermaid diagrams).
 
 | Key | Action |
 | --- | --- |
@@ -172,7 +171,7 @@ The lesson I took away: **tests check what you thought of; looking at real frame
 
 Writing a good tour by hand takes time. Reading code and explaining it is exactly what coding agents are good at. So:
 
-- **`:tournew name`** opens a small buffer where you describe the tour you want ("walk through how a keypress becomes a frame, for someone new to the codebase"). **`:toursave`** sends that to your agent ([part 13](/posts/2027/02/vaayu-part-13-an-ai-agent-beside-the-code/)) along with the authoring schema, with instructions to use unique patterns as anchors and to add visuals only when they help.
+- **`:tournew name`** opens a small buffer where you describe the tour you want ("walk through how a keypress becomes a frame, for someone new to the codebase"). **`:toursave`** sends that to your agent ([part 13](/posts/2026/11/vaayu-part-13-an-ai-agent-beside-the-code/)) along with the authoring schema, with instructions to use unique patterns as anchors and to add visuals only when they help.
 - The agent writes a `.tour` file. It's an ordinary project file: you review it, edit it, and commit it like code.
 - **`:tourcheck`** catches anchors the agent got wrong.
 - **`:tourexplain`** (`,vx`) goes the other way: on any step, ask the agent to explain the code there in more depth, with the step's annotations included as context.
@@ -181,7 +180,7 @@ This is the combination I find most useful: the agent does the first 80% quickly
 
 ## why tours matter more now
 
-When an agent hands me a large change, this is the loop tours are built for: ask it for a tour of what it did, check the tour (`:tourcheck`), walk through it, and leave review comments ([part 11](/posts/2027/02/vaayu-part-11-private-code-reviews-that-survive-edits/)) as I go. The tour tells me _where to look and in what order_; the review captures _what I think_. Together they turn "read 800 lines" into a guided path.
+When an agent hands me a large change, this is the loop tours are built for: ask it for a tour of what it did, check the tour (`:tourcheck`), walk through it, and leave review comments ([part 11](/posts/2026/11/vaayu-part-11-private-code-reviews-that-survive-edits/)) as I go. The tour tells me _where to look and in what order_; the review captures _what I think_. Together they turn "read 800 lines" into a guided path.
 
 ## vs the alternatives
 
@@ -195,4 +194,4 @@ When an agent hands me a large change, this is the loop tours are built for: ask
 - I'd have done the PTY capture audit before building more views. Several of the findings (lost notes, hidden progress) only appeared when features that were each fine on their own were combined.
 
 
-Next, [part 13](/posts/2027/02/vaayu-part-13-an-ai-agent-beside-the-code/): the agent that wrote those tours, and how it lives next to your code.
+Next, [part 13](/posts/2026/11/vaayu-part-13-an-ai-agent-beside-the-code/): the agent that wrote those tours, and how it lives next to your code.

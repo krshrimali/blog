@@ -56,16 +56,16 @@ Vaayu has no Lua, no plugin API, nothing to install. Everything is in the binary
 
 | In my Neovim config | In Vaayu |
 | --- | --- |
-| Trouble, quickfix, nvim-bqf, Snacks picker / fzf-lua results | one Results engine ([part 7](/posts/2027/01/vaayu-part-7-splits-floating-terminals-and-one-results-list/)) |
-| gitsigns, Neogit, lazygit | git gutter, hunk actions, git workspace, lazygit in a float ([part 10](/posts/2027/02/vaayu-part-10-git-github-tests-and-tasks/)) |
+| Trouble, quickfix, nvim-bqf, Snacks picker / fzf-lua results | one Results engine ([part 7](/posts/2026/11/vaayu-part-7-splits-floating-terminals-and-one-results-list/)) |
+| gitsigns, Neogit, lazygit | git gutter, hunk actions, git workspace, lazygit in a float ([part 10](/posts/2026/11/vaayu-part-10-git-github-tests-and-tasks/)) |
 | gh.nvim, Octo, Guh | one GitHub workspace on top of `gh` |
-| review.nvim (commented out, but I wanted it) | private reviews that survive edits ([part 11](/posts/2027/02/vaayu-part-11-private-code-reviews-that-survive-edits/)) |
-| codetours.nvim | code tours with visuals and AI authoring ([part 12](/posts/2027/02/vaayu-part-12-code-tours/)) |
-| Sidekick, promptbank.nvim, Copilot | `:ai`, an agent CLI in a sidebar ([part 13](/posts/2027/02/vaayu-part-13-an-ai-agent-beside-the-code/)) |
-| image.nvim | Markdown + Mermaid previews in the terminal ([part 8](/posts/2027/01/vaayu-part-8-pictures-in-a-terminal/)) |
+| review.nvim (commented out, but I wanted it) | private reviews that survive edits ([part 11](/posts/2026/11/vaayu-part-11-private-code-reviews-that-survive-edits/)) |
+| codetours.nvim | code tours with visuals and AI authoring ([part 12](/posts/2026/11/vaayu-part-12-code-tours/)) |
+| Sidekick, promptbank.nvim, Copilot | `:ai`, an agent CLI in a sidebar ([part 13](/posts/2026/11/vaayu-part-13-an-ai-agent-beside-the-code/)) |
+| image.nvim | Markdown + Mermaid previews in the terminal ([part 8](/posts/2026/11/vaayu-part-8-pictures-in-a-terminal/)) |
 | my own `terminal.lua` | split and floating terminals |
 | grug-far | reviewed project-wide find and replace |
-| nvim-treesitter, lspconfig, mason, blink.cmp, fidget | built in ([part 5](/posts/2026/12/vaayu-part-5-incremental-tree-sitter-and-an-lsp-client-from-scratch/)) |
+| nvim-treesitter, lspconfig, mason, blink.cmp, fidget | built in ([part 5](/posts/2026/11/vaayu-part-5-incremental-tree-sitter-and-an-lsp-client-from-scratch/)) |
 
 A diagnostic, a grep match, a failing test, a review comment and a GitHub CI failure are all "a location with some text". In Vaayu they all go through the same list, with the same keys, the same preview, and the same `Ctrl-Q` to send them to quickfix. That's the thing a plugin ecosystem can't easily give you, because no plugin owns the whole picture.
 
@@ -73,7 +73,7 @@ The cost is real: you can't add your own feature without writing Rust and rebuil
 
 ## where it stands against Neovim and Helix
 
-I'll go deep on benchmarks in [part 6](/posts/2027/01/vaayu-part-6-benchmarking-editors-honestly/), including where Vaayu loses. Here's the short version, from a 50,000-line Rust file in a 100×40 PTY, time to the editor's first output byte (median of three runs):
+I'll go deep on benchmarks in [part 6](/posts/2026/11/vaayu-part-6-benchmarking-editors-honestly/), including where Vaayu loses. Here's the short version, from a 50,000-line Rust file in a 100×40 PTY, time to the editor's first output byte (median of three runs):
 
 | | Vaayu | Neovim (`-u NONE`) | Helix |
 | --- | ---: | ---: | ---: |
@@ -104,32 +104,32 @@ The series is grouped in six parts. You can read the core (parts 1–5) as a sma
 
 **The core: text, keys, pixels, never blocking**
 
-1. [Text is a tree: ropes, edit logs, and saving without losing data](/posts/2026/12/vaayu-part-1-text-is-a-tree/)
-2. [Teaching Rust to speak Vim](/posts/2026/12/vaayu-part-2-teaching-rust-to-speak-vim/)
-3. [Drawing a terminal frame in under a millisecond](/posts/2026/12/vaayu-part-3-drawing-a-terminal-frame-in-under-a-millisecond/)
-4. [Never block a keystroke](/posts/2026/12/vaayu-part-4-never-block-a-keystroke/)
+1. [Text is a tree: ropes, edit logs, and saving without losing data](/posts/2026/11/vaayu-part-1-text-is-a-tree/)
+2. [Teaching Rust to speak Vim](/posts/2026/11/vaayu-part-2-teaching-rust-to-speak-vim/)
+3. [Drawing a terminal frame in under a millisecond](/posts/2026/11/vaayu-part-3-drawing-a-terminal-frame-in-under-a-millisecond/)
+4. [Never block a keystroke](/posts/2026/11/vaayu-part-4-never-block-a-keystroke/)
 
 **Understanding code, and proving it's fast**
 
-5. [Incremental tree-sitter and an LSP client from scratch](/posts/2026/12/vaayu-part-5-incremental-tree-sitter-and-an-lsp-client-from-scratch/)
-6. [Benchmarking editors honestly](/posts/2027/01/vaayu-part-6-benchmarking-editors-honestly/)
+5. [Incremental tree-sitter and an LSP client from scratch](/posts/2026/11/vaayu-part-5-incremental-tree-sitter-and-an-lsp-client-from-scratch/)
+6. [Benchmarking editors honestly](/posts/2026/11/vaayu-part-6-benchmarking-editors-honestly/)
 
 **Beyond text: what used to be plugins**
 
-7. [Splits, floating terminals and one Results list](/posts/2027/01/vaayu-part-7-splits-floating-terminals-and-one-results-list/)
-8. [Pictures in a terminal](/posts/2027/01/vaayu-part-8-pictures-in-a-terminal/)
-9. [The same editor in a browser tab](/posts/2027/01/vaayu-part-9-the-same-editor-in-a-browser-tab/)
-10. [Git, GitHub, tests and tasks](/posts/2027/02/vaayu-part-10-git-github-tests-and-tasks/)
+7. [Splits, floating terminals and one Results list](/posts/2026/11/vaayu-part-7-splits-floating-terminals-and-one-results-list/)
+8. [Pictures in a terminal](/posts/2026/11/vaayu-part-8-pictures-in-a-terminal/)
+9. [The same editor in a browser tab](/posts/2026/11/vaayu-part-9-the-same-editor-in-a-browser-tab/)
+10. [Git, GitHub, tests and tasks](/posts/2026/11/vaayu-part-10-git-github-tests-and-tasks/)
 
 **The workflows I built it for**
 
-11. [Private code reviews that survive edits](/posts/2027/02/vaayu-part-11-private-code-reviews-that-survive-edits/)
-12. [Code tours](/posts/2027/02/vaayu-part-12-code-tours/)
-13. [An AI agent beside the code](/posts/2027/02/vaayu-part-13-an-ai-agent-beside-the-code/)
+11. [Private code reviews that survive edits](/posts/2026/11/vaayu-part-11-private-code-reviews-that-survive-edits/)
+12. [Code tours](/posts/2026/11/vaayu-part-12-code-tours/)
+13. [An AI agent beside the code](/posts/2026/11/vaayu-part-13-an-ai-agent-beside-the-code/)
 
 **Building it**
 
-14. [10 weeks, 87k lines, 292 commits](/posts/2027/03/vaayu-part-14-10-weeks-87k-lines-292-commits/)
+14. [10 weeks, 87k lines, 292 commits](/posts/2026/11/vaayu-part-14-10-weeks-87k-lines-292-commits/)
 
 If you want to try it:
 

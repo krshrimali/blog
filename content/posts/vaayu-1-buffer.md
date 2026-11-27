@@ -1,7 +1,7 @@
 ---
 author:
   name: "Kushashwa Ravi Shrimali"
-date: 2026-12-01
+date: 2026-11-27
 linktitle: "Vaayu part 1: text is a tree"
 title: "Vaayu part 1: text is a tree"
 categories:
@@ -18,7 +18,6 @@ weight: 10
 series:
 toc: true
 comments: true
-draft: true
 ---
 
 _Part 1 of the [Vaayu series](/posts/2026/11/why-i-wrote-my-own-editor/). This one is about the data model every other feature hangs off: how the text is stored, how the rest of the editor finds out it changed, and how it gets back to disk without eating your file._

@@ -1,7 +1,7 @@
 ---
 author:
   name: "Kushashwa Ravi Shrimali"
-date: 2026-11-24
+date: 2026-11-27
 linktitle: "Why I wrote my own editor"
 title: "Why I wrote my own editor"
 categories:
@@ -18,7 +18,6 @@ weight: 10
 series:
 toc: true
 comments: true
-draft: true
 ---
 
 _This is the first post in a series on **Vaayu**, a modal terminal editor I wrote in Rust. This one is the "why". The rest are the "how", and there are a lot of them. The full list is at the [end of this post](#the-series)._

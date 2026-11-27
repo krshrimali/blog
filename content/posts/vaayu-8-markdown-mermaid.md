@@ -1,7 +1,7 @@
 ---
 author:
   name: "Kushashwa Ravi Shrimali"
-date: 2026-11-27
+date: 2026-11-27T08:00:00+05:30
 linktitle: "Vaayu part 8: pictures in a terminal"
 title: "Vaayu part 8: pictures in a terminal"
 categories:

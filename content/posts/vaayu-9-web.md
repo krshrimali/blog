@@ -1,7 +1,7 @@
 ---
 author:
   name: "Kushashwa Ravi Shrimali"
-date: 2026-11-27
+date: 2026-11-27T09:00:00+05:30
 linktitle: "Vaayu part 9: the same editor in a browser tab"
 title: "Vaayu part 9: the same editor in a browser tab"
 categories:

@@ -1,7 +1,7 @@
 ---
 author:
   name: "Kushashwa Ravi Shrimali"
-date: 2026-11-27
+date: 2026-11-27T01:00:00+05:30
 linktitle: "Vaayu part 1: text is a tree"
 title: "Vaayu part 1: text is a tree"
 categories:

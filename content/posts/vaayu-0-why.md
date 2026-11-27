@@ -1,7 +1,7 @@
 ---
 author:
   name: "Kushashwa Ravi Shrimali"
-date: 2026-11-27
+date: 2026-11-27T00:00:00+05:30
 linktitle: "Why I wrote my own editor"
 title: "Why I wrote my own editor"
 categories:

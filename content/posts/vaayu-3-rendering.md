@@ -1,7 +1,7 @@
 ---
 author:
   name: "Kushashwa Ravi Shrimali"
-date: 2026-11-27
+date: 2026-11-27T03:00:00+05:30
 linktitle: "Vaayu part 3: drawing a terminal frame in under a millisecond"
 title: "Vaayu part 3: drawing a terminal frame in under a millisecond"
 categories:

@@ -1,7 +1,7 @@
 ---
 author:
   name: "Kushashwa Ravi Shrimali"
-date: 2026-11-27
+date: 2026-11-27T05:00:00+05:30
 linktitle: "Vaayu part 5: incremental tree-sitter and an LSP client from scratch"
 title: "Vaayu part 5: incremental tree-sitter and an LSP client from scratch"
 categories:

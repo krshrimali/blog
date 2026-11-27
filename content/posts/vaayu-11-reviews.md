@@ -1,7 +1,7 @@
 ---
 author:
   name: "Kushashwa Ravi Shrimali"
-date: 2026-11-27
+date: 2026-11-27T11:00:00+05:30
 linktitle: "Vaayu part 11: private code reviews that survive edits"
 title: "Vaayu part 11: private code reviews that survive edits"
 categories:

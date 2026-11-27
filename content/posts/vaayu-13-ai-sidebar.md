@@ -1,7 +1,7 @@
 ---
 author:
   name: "Kushashwa Ravi Shrimali"
-date: 2026-11-27
+date: 2026-11-27T13:00:00+05:30
 linktitle: "Vaayu part 13: an AI agent beside the code"
 title: "Vaayu part 13: an AI agent beside the code"
 categories:

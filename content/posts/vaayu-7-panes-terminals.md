@@ -1,7 +1,7 @@
 ---
 author:
   name: "Kushashwa Ravi Shrimali"
-date: 2026-11-27
+date: 2026-11-27T07:00:00+05:30
 linktitle: "Vaayu part 7: splits, floating terminals and one results list"
 title: "Vaayu part 7: splits, floating terminals and one results list"
 categories:
